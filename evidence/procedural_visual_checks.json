@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "bradbury_globe_handoff": true,
+    "geographic_rover_moves": true,
+    "jezero_mola_label": true,
+    "repeat_bradbury_disk_reuse": true,
+    "return_to_globe": true,
+    "source_inspector": true,
+    "survey_cell_handoff": true
+  },
+  "first_build_ms": 15848.305,
+  "handoff_and_capture_ms": 27617,
+  "warm_build_ms": 151.504
+}

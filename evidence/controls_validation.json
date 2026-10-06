@@ -1,0 +1,22 @@
+{
+  "brake_input": true,
+  "camera_obstacle": true,
+  "camera_reset": true,
+  "gamepad_camera": true,
+  "gamepad_drive": true,
+  "gamepad_turn": true,
+  "gamepad_zoom": true,
+  "keyboard_command_m_s": 0.04,
+  "keyboard_distance_m": 0.128609076142311,
+  "keyboard_drive": true,
+  "mouse_orbit": true,
+  "observed_physics_hz": 720,
+  "observed_time_scale": 6.0,
+  "overlay": true,
+  "physics_dt": true,
+  "recovery": true,
+  "rover_pov": true,
+  "synthetic_gamepad_note": "Input events injected through Godot Input; no physical controller was available.",
+  "time_mode": true,
+  "zoom": true
+}

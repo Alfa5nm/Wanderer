@@ -1,0 +1,101 @@
+{
+  "case": "solver_40_16",
+  "configured_position_steps": 16,
+  "configured_velocity_steps": 40,
+  "final": {
+    "differential_error_deg": 0.317720368326388,
+    "forward_speed": 0.0398069508373737,
+    "heading": -0.00491005328693448,
+    "jolt_contact_proxy_n": 200.466796433422,
+    "mass_kg": 899.0,
+    "pitch": -0.21540188826612,
+    "position": [
+      -0.000549262738786638,
+      0.854548275470734,
+      1.25558519363403
+    ],
+    "roll": 0.0290320392322565,
+    "speed": 0.03980752825737,
+    "support_n": 3335.96319421921,
+    "wheels": [
+      {
+        "contacts": 2,
+        "id": "FL",
+        "jolt_contact_proxy_n": 33.3346492548097,
+        "lateral_m_s": -0.00000548969364899676,
+        "rate": 0.160428121685982,
+        "slip": 0.00478899186700834,
+        "steer_deg": -0.0373583002423874,
+        "steer_target_deg": 0.0,
+        "target": 0.159998834133148,
+        "torque": -0.187725164247968
+      },
+      {
+        "contacts": 2,
+        "id": "ML",
+        "jolt_contact_proxy_n": 33.5643393177511,
+        "lateral_m_s": -0.00000368905079994875,
+        "rate": 0.160314306616783,
+        "slip": 0.00460946686767342,
+        "steer_deg": 0.0,
+        "steer_target_deg": 0.0,
+        "target": 0.159995183348656,
+        "torque": -0.116586426884714
+      },
+      {
+        "contacts": 2,
+        "id": "RL",
+        "jolt_contact_proxy_n": 33.5637724776089,
+        "lateral_m_s": 0.0000171713836607523,
+        "rate": 0.160298720002174,
+        "slip": 0.00442241736319849,
+        "steer_deg": -0.0414902918538726,
+        "steer_target_deg": 0.0,
+        "target": 0.159995138645172,
+        "torque": -0.0890370405853902
+      },
+      {
+        "contacts": 2,
+        "id": "FR",
+        "jolt_contact_proxy_n": 33.3348566789627,
+        "lateral_m_s": -0.0000149312518260558,
+        "rate": 0.159605950117111,
+        "slip": 0.00271217164750843,
+        "steer_deg": 0.00431470102691831,
+        "steer_target_deg": 0.0,
+        "target": 0.159997910261154,
+        "torque": -0.00103009280906061
+      },
+      {
+        "contacts": 2,
+        "id": "MR",
+        "jolt_contact_proxy_n": 33.3347976703675,
+        "lateral_m_s": -0.00000344473392033251,
+        "rate": 0.15974086523056,
+        "slip": 0.00395894488335292,
+        "steer_deg": 0.0,
+        "steer_target_deg": 0.0,
+        "target": 0.159997910261154,
+        "torque": -0.0419943588523892
+      },
+      {
+        "contacts": 2,
+        "id": "RR",
+        "jolt_contact_proxy_n": 33.3343810339222,
+        "lateral_m_s": 0.0000148661501953029,
+        "rate": 0.159782245755196,
+        "slip": 0.00411030509274392,
+        "steer_deg": -0.0302617575559254,
+        "steer_target_deg": 0.0,
+        "target": 0.159997895359993,
+        "torque": -0.0415109381043287
+      }
+    ]
+  },
+  "max_abs_torque": 0.99006159727287,
+  "max_differential_error_deg": 0.317835173709611,
+  "mean_abs_slip_last5": 0.00374311426876882,
+  "mean_forward_speed_last5": 0.0398459383845329,
+  "mean_support_last5": 3336.4656136333,
+  "min_wheels_contact": 6
+}

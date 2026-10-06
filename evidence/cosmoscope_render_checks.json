@@ -1,0 +1,7 @@
+{
+  "automatic_bundled_tiles": true,
+  "no_external_worker": true,
+  "offline": true,
+  "refinement_settled": true,
+  "source_sample_preserved": true
+}

@@ -1,0 +1,105 @@
+{
+  "groups": [
+    {
+      "name": "ChassisVisual",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Rocker_L",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Bogie_L",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Wheel_FL",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Carrier_FL",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Wheel_ML",
+      "origin_error_m": 0.00000017508864402771
+    },
+    {
+      "name": "Wheel_RL",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Carrier_RL",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Rocker_R",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Bogie_R",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Wheel_FR",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Carrier_FR",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Wheel_MR",
+      "origin_error_m": 0.00000017508864402771
+    },
+    {
+      "name": "Wheel_RR",
+      "origin_error_m": 0.0
+    },
+    {
+      "name": "Carrier_RR",
+      "origin_error_m": 0.0
+    }
+  ],
+  "meshes": 73,
+  "pass": true,
+  "triangles": 48384,
+  "wheels": [
+    {
+      "diameter_y_m": 0.5,
+      "diameter_z_m": 0.49999988079071,
+      "name": "wheel_01_L",
+      "width_m": 0.399999976158142
+    },
+    {
+      "diameter_y_m": 0.5,
+      "diameter_z_m": 0.49999988079071,
+      "name": "wheel_02_L",
+      "width_m": 0.399999976158142
+    },
+    {
+      "diameter_y_m": 0.5,
+      "diameter_z_m": 0.49999988079071,
+      "name": "wheel_03_L",
+      "width_m": 0.399999916553497
+    },
+    {
+      "diameter_y_m": 0.5,
+      "diameter_z_m": 0.49999988079071,
+      "name": "wheel_01_R",
+      "width_m": 0.399999886751175
+    },
+    {
+      "diameter_y_m": 0.5,
+      "diameter_z_m": 0.49999988079071,
+      "name": "wheel_02_R",
+      "width_m": 0.399999916553497
+    },
+    {
+      "diameter_y_m": 0.5,
+      "diameter_z_m": 0.499999850988388,
+      "name": "wheel_03_R",
+      "width_m": 0.399999916553497
+    }
+  ]
+}

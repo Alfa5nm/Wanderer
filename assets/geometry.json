@@ -1,0 +1,132 @@
+{
+  "source_sha256": "77fe6665223e38972728af404f1a277f0b0ab467fce5cc0aed6eba93488b74e2",
+  "source_file": "D:\\Projects\\Competitions\\NASA APPS CHALLENGE 2026\\Research papers\\Mars Rover\\Curiosity_Blender_Research_Pack\\NASA_Curiosity_Clean.blend",
+  "export_blender": "5.0.1",
+  "coordinate_mapping": "Godot (X,Y,Z)=(Blender X,Blender Z,-Blender Y + original middle_y); +Z forward, +X left",
+  "status": "Visual asset measurements, not flight CAD",
+  "wheel_radius_m": 0.25,
+  "wheel_width_m": 0.4,
+  "global_scale": 1,
+  "ground_lift_m": 0.007220958669980376,
+  "arm_pose": "Estimated folded stow; shoulder tree -90deg Z, elbow tree +105deg Y; no flight encoder claim",
+  "removed_helper_objects": [
+    "_HazCam_F",
+    "_HazCam_rear_L",
+    "_HazCam_rear_R",
+    "_Hemi_1",
+    "_Hemi_2",
+    "_MAHLI_cam",
+    "_MARDI",
+    "_MastCam_L",
+    "_MastCam_R",
+    "_NavCam_top_L",
+    "_NavCam_top_R",
+    "_root_p",
+    "antenna_HG_02_p",
+    "Cube_01_p",
+    "Cube_02_p",
+    "Cube_03_p",
+    "Cube_04_p",
+    "HazCam_F",
+    "HazCam_rear_L",
+    "HazCam_rear_R",
+    "MAHLI_cam",
+    "MAHLI_lens_cover_p",
+    "MARDI",
+    "mast_p",
+    "MastCam_L",
+    "MastCam_R",
+    "NavCam_top_L",
+    "NavCam_top_R",
+    "shadow_arm",
+    "suspension_arm_B_L_p",
+    "suspension_arm_B_R_p",
+    "suspension_arm_F_L_p",
+    "suspension_arm_F_R_p"
+  ],
+  "groups": {
+    "ChassisVisual": [
+      0.0,
+      0.8572210073471069,
+      0.08899986371397972
+    ],
+    "Rocker_L": [
+      0.7943623065948486,
+      0.8921189904212952,
+      0.3030000738799572
+    ],
+    "Bogie_L": [
+      0.7949371933937073,
+      0.6505584716796875,
+      -0.45100367441773415
+    ],
+    "Wheel_FL": [
+      1.0586358308792114,
+      0.24761857092380524,
+      1.1815880499780178
+    ],
+    "Carrier_FL": [
+      1.0582431554794312,
+      0.6472190618515015,
+      1.1814974509179592
+    ],
+    "Wheel_ML": [
+      1.1888525485992432,
+      0.2505468428134918,
+      1.7508864402770996e-07
+    ],
+    "Wheel_RL": [
+      1.0581867694854736,
+      0.2504662275314331,
+      -1.0737556256353855
+    ],
+    "Carrier_RL": [
+      1.0576996803283691,
+      0.6499555706977844,
+      -1.0749999321997166
+    ],
+    "Rocker_R": [
+      -0.7991629838943481,
+      0.8921190500259399,
+      0.3030000142753124
+    ],
+    "Bogie_R": [
+      -0.7997376918792725,
+      0.6505584716796875,
+      -0.451003972440958
+    ],
+    "Wheel_FR": [
+      -1.0628914833068848,
+      0.25035539269447327,
+      1.1839090548455715
+    ],
+    "Carrier_FR": [
+      -1.0624990463256836,
+      0.6499561071395874,
+      1.1840002499520779
+    ],
+    "Wheel_MR": [
+      -1.1936531066894531,
+      0.2505464255809784,
+      -1.7508864402770996e-07
+    ],
+    "Wheel_RR": [
+      -1.0629870891571045,
+      0.250466525554657,
+      -1.076244119554758
+    ],
+    "Carrier_RR": [
+      -1.0625003576278687,
+      0.6499557495117188,
+      -1.0750004090368748
+    ]
+  },
+  "triangles": 48384,
+  "mesh_count": 73,
+  "material_count": 16,
+  "envelope_m": [
+    2.7825056314468384,
+    3.255871534347534,
+    2.2200962007045746
+  ]
+}

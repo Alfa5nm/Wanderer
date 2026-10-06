@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "compatibility_preserved": true,
+    "dust_uses_wall_time": false,
+    "fallback_retains_geometry": true,
+    "mapped_detail_ready": true,
+    "render_size_(1600, 900)": true,
+    "render_size_(1920, 1080)": true,
+    "shared_orbital_profile": true,
+    "transport_ready": true
+  },
+  "measurements": {
+    "initial_cache_mode": "warm",
+    "initial_prepare_ms": 250.025,
+    "performance_preset_1920x1080": {
+      "detail": {
+        "cancelled_requests": 0,
+        "disk_hits": 27,
+        "last_worker_ms": 2.196,
+        "max_queue": 2,
+        "max_upload_ms": 2.017,
+        "uploads": 27
+      },
+      "frames": 916,
+      "max_ms": 587.814,
+      "p50_ms": 10.112,
+      "p95_ms": 12.988,
+      "pixels": "(1920, 1080)",
+      "static_memory_mib": 449.045508384705,
+      "texture_memory_mib": 251.089392662048
+    }
+  }
+}

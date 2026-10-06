@@ -1,0 +1,86 @@
+{
+  "checks": {
+    "appearance_preserves_geometry": true,
+    "default_project_still_compatibility": true,
+    "expected_renderer": true,
+    "local_deployment": true,
+    "native_fog_only_forward": true,
+    "native_fog_switch_off": true,
+    "night_direct_and_fill_zero": true,
+    "night_no_glowing_fog": true,
+    "render_size_(1366, 768)": true,
+    "render_size_(1600, 900)": true,
+    "render_size_(1920, 1080)": true,
+    "rover_drive": true
+  },
+  "measurements": {
+    "(1366, 768)": {
+      "detail": {
+        "cancelled_requests": 0,
+        "disk_hits": 27,
+        "last_worker_ms": 47.193,
+        "max_queue": 2,
+        "max_upload_ms": 2.814,
+        "uploads": 26
+      },
+      "frames": 159,
+      "max_ms": 164.092,
+      "p50_ms": 29.202,
+      "p95_ms": 43.75,
+      "pixels": "(1366, 768)",
+      "static_memory_mib": 470.897247314453,
+      "texture_memory_mib": 351.69921875
+    },
+    "(1600, 900)": {
+      "detail": {
+        "cancelled_requests": 0,
+        "disk_hits": 27,
+        "last_worker_ms": 47.193,
+        "max_queue": 2,
+        "max_upload_ms": 2.814,
+        "uploads": 26
+      },
+      "frames": 118,
+      "max_ms": 196.692,
+      "p50_ms": 34.843,
+      "p95_ms": 104.239,
+      "pixels": "(1600, 900)",
+      "static_memory_mib": 470.883060455322,
+      "texture_memory_mib": 396.486328125
+    },
+    "(1920, 1080)": {
+      "detail": {
+        "cancelled_requests": 0,
+        "disk_hits": 27,
+        "last_worker_ms": 47.193,
+        "max_queue": 2,
+        "max_upload_ms": 2.814,
+        "uploads": 26
+      },
+      "frames": 101,
+      "max_ms": 70.185,
+      "p50_ms": 49.334,
+      "p95_ms": 66.325,
+      "pixels": "(1920, 1080)",
+      "static_memory_mib": 470.86682510376,
+      "texture_memory_mib": 445.279296875
+    },
+    "no_native_1600x900": {
+      "detail": {
+        "cancelled_requests": 0,
+        "disk_hits": 27,
+        "last_worker_ms": 47.193,
+        "max_queue": 2,
+        "max_upload_ms": 2.814,
+        "uploads": 26
+      },
+      "frames": 121,
+      "max_ms": 288.796,
+      "p50_ms": 36.841,
+      "p95_ms": 58.882,
+      "pixels": "(1600, 900)",
+      "static_memory_mib": 470.884536743164,
+      "texture_memory_mib": 385.330078125
+    }
+  }
+}

@@ -1,0 +1,1187 @@
+{
+  "schema": "mars-geographic-pyramid-v1",
+  "reference_radius_m": 3396000.0,
+  "source_manifest_sha256": "daa4812afce6ec6ceb8ce2c738c382fc866a8438854306b0ac1941cd9549ee5d",
+  "note": "Resampled sourced normalized rasters; no second datum conversion or invented detail.",
+  "datasets": [
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165416043,
+      "sha256": "c61e875dd21e049a3c65e72a0e739e14c3496b55747fcd3ee88568deee2f9f76",
+      "valid_fraction": 0.5924072265625,
+      "prepared_spacing_m": 5.087588097665367,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.4169921875,
+        -4.6142578125,
+        137.4609375,
+        -4.5703125
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/DTEEC_018854_1755_018920_1755_U01.tif",
+      "id": "pyramid_hirise_bradbury_12_7223_2152",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "elevation",
+      "path": "hirise_bradbury_12_7223_2152.height",
+      "title": "HiRISE elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "absolute_vertical_accuracy_m": null,
+      "observation_dates": [
+        "2010-08-04",
+        "2010-08-09"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "asset": "dtm",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.336,
+              -4.4693
+            ],
+            [
+              137.427,
+              -4.458
+            ],
+            [
+              137.457,
+              -4.7034
+            ],
+            [
+              137.366,
+              -4.7142
+            ],
+            [
+              137.336,
+              -4.4693
+            ]
+          ]
+        ]
+      },
+      "lod_range": [
+        0,
+        18
+      ],
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "preparation_input_sha256": "bb180af24507089597b0e6f454814a109bf79368ab6beb81bd8257cc11dd139d",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_path": "hirise_bradbury_12_7223_2152.validity.z",
+      "validity_mask_encoding": "bit-lsb",
+      "validity_mask_sha256": "75c2b868e06f57fb35e53dd566686251eaf430d59de3ae81a9e2b23a01ca6697",
+      "tile": {
+        "z": 12,
+        "x": 7223,
+        "y": 2152
+      },
+      "parent": {
+        "z": 11,
+        "x": 3611,
+        "y": 1076
+      }
+    },
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165416043,
+      "sha256": "71a7920ea3d6378587c23f0b4a5f17cf9130bf6bd3c5ead548dae59c8075478b",
+      "valid_fraction": 1.0,
+      "prepared_spacing_m": 2.5437940488326833,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.4169921875,
+        -4.59228515625,
+        137.43896484375,
+        -4.5703125
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/DTEEC_018854_1755_018920_1755_U01.tif",
+      "id": "pyramid_hirise_bradbury_13_14446_4304",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "elevation",
+      "path": "hirise_bradbury_13_14446_4304.height",
+      "title": "HiRISE elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "absolute_vertical_accuracy_m": null,
+      "observation_dates": [
+        "2010-08-04",
+        "2010-08-09"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "asset": "dtm",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.336,
+              -4.4693
+            ],
+            [
+              137.427,
+              -4.458
+            ],
+            [
+              137.457,
+              -4.7034
+            ],
+            [
+              137.366,
+              -4.7142
+            ],
+            [
+              137.336,
+              -4.4693
+            ]
+          ]
+        ]
+      },
+      "lod_range": [
+        0,
+        18
+      ],
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "preparation_input_sha256": "bb180af24507089597b0e6f454814a109bf79368ab6beb81bd8257cc11dd139d",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_path": "hirise_bradbury_13_14446_4304.validity.z",
+      "validity_mask_encoding": "bit-lsb",
+      "validity_mask_sha256": "19996b029ca15cc8d01c1de45eee1cb4be37bc803011f55f2185afe236f67066",
+      "tile": {
+        "z": 13,
+        "x": 14446,
+        "y": 4304
+      },
+      "parent": {
+        "z": 12,
+        "x": 7223,
+        "y": 2152
+      }
+    },
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165416043,
+      "sha256": "2914e7370915fac05d2b388bb9d5e3ee2ccd48beb3539bcd131295901b1a902a",
+      "valid_fraction": 0.12469100952148438,
+      "prepared_spacing_m": 2.5437940488326833,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.43896484375,
+        -4.59228515625,
+        137.4609375,
+        -4.5703125
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/DTEEC_018854_1755_018920_1755_U01.tif",
+      "id": "pyramid_hirise_bradbury_13_14447_4304",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "elevation",
+      "path": "hirise_bradbury_13_14447_4304.height",
+      "title": "HiRISE elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "absolute_vertical_accuracy_m": null,
+      "observation_dates": [
+        "2010-08-04",
+        "2010-08-09"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "asset": "dtm",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.336,
+              -4.4693
+            ],
+            [
+              137.427,
+              -4.458
+            ],
+            [
+              137.457,
+              -4.7034
+            ],
+            [
+              137.366,
+              -4.7142
+            ],
+            [
+              137.336,
+              -4.4693
+            ]
+          ]
+        ]
+      },
+      "lod_range": [
+        0,
+        18
+      ],
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "preparation_input_sha256": "bb180af24507089597b0e6f454814a109bf79368ab6beb81bd8257cc11dd139d",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_path": "hirise_bradbury_13_14447_4304.validity.z",
+      "validity_mask_encoding": "bit-lsb",
+      "validity_mask_sha256": "1f1dee2bc8c4651ed9a1223ff403284e0350756d2f3f05e53360d847703dacf0",
+      "tile": {
+        "z": 13,
+        "x": 14447,
+        "y": 4304
+      },
+      "parent": {
+        "z": 12,
+        "x": 7223,
+        "y": 2152
+      }
+    },
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165416043,
+      "sha256": "51cb5eb1a07bcb3cb76e25039d2720b24bd03de3728a934cc88e06bba0f6a5ed",
+      "valid_fraction": 1.0,
+      "prepared_spacing_m": 2.5437940488326833,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.4169921875,
+        -4.6142578125,
+        137.43896484375,
+        -4.59228515625
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/DTEEC_018854_1755_018920_1755_U01.tif",
+      "id": "pyramid_hirise_bradbury_13_14446_4305",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "elevation",
+      "path": "hirise_bradbury_13_14446_4305.height",
+      "title": "HiRISE elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "absolute_vertical_accuracy_m": null,
+      "observation_dates": [
+        "2010-08-04",
+        "2010-08-09"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "asset": "dtm",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.336,
+              -4.4693
+            ],
+            [
+              137.427,
+              -4.458
+            ],
+            [
+              137.457,
+              -4.7034
+            ],
+            [
+              137.366,
+              -4.7142
+            ],
+            [
+              137.336,
+              -4.4693
+            ]
+          ]
+        ]
+      },
+      "lod_range": [
+        0,
+        18
+      ],
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "preparation_input_sha256": "bb180af24507089597b0e6f454814a109bf79368ab6beb81bd8257cc11dd139d",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_path": "hirise_bradbury_13_14446_4305.validity.z",
+      "validity_mask_encoding": "bit-lsb",
+      "validity_mask_sha256": "19996b029ca15cc8d01c1de45eee1cb4be37bc803011f55f2185afe236f67066",
+      "tile": {
+        "z": 13,
+        "x": 14446,
+        "y": 4305
+      },
+      "parent": {
+        "z": 12,
+        "x": 7223,
+        "y": 2152
+      }
+    },
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165416043,
+      "sha256": "bd480668da85f0d26f5e4799dfea1d143f82d9fe92befa05cfc85b0efad6a2e8",
+      "valid_fraction": 0.24506759643554688,
+      "prepared_spacing_m": 2.5437940488326833,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.43896484375,
+        -4.6142578125,
+        137.4609375,
+        -4.59228515625
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/DTEEC_018854_1755_018920_1755_U01.tif",
+      "id": "pyramid_hirise_bradbury_13_14447_4305",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "elevation",
+      "path": "hirise_bradbury_13_14447_4305.height",
+      "title": "HiRISE elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "absolute_vertical_accuracy_m": null,
+      "observation_dates": [
+        "2010-08-04",
+        "2010-08-09"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "asset": "dtm",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.336,
+              -4.4693
+            ],
+            [
+              137.427,
+              -4.458
+            ],
+            [
+              137.457,
+              -4.7034
+            ],
+            [
+              137.366,
+              -4.7142
+            ],
+            [
+              137.336,
+              -4.4693
+            ]
+          ]
+        ]
+      },
+      "lod_range": [
+        0,
+        18
+      ],
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "preparation_input_sha256": "bb180af24507089597b0e6f454814a109bf79368ab6beb81bd8257cc11dd139d",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_path": "hirise_bradbury_13_14447_4305.validity.z",
+      "validity_mask_encoding": "bit-lsb",
+      "validity_mask_sha256": "e32f95252ae51c1269fab8f5d5c13557fe885266ba8373e9a0bd477550646308",
+      "tile": {
+        "z": 13,
+        "x": 14447,
+        "y": 4305
+      },
+      "parent": {
+        "z": 12,
+        "x": 7223,
+        "y": 2152
+      }
+    },
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165416043,
+      "sha256": "7f6f0202ee1128e48d6e099a500b5cd7b7e7fe84623f3c85ede0dd86e77f649c",
+      "valid_fraction": 1.0,
+      "prepared_spacing_m": 1.2718970244163417,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.427978515625,
+        -4.59228515625,
+        137.43896484375,
+        -4.581298828125
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/DTEEC_018854_1755_018920_1755_U01.tif",
+      "id": "pyramid_hirise_bradbury_14_28893_8609",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "elevation",
+      "path": "hirise_bradbury_14_28893_8609.height",
+      "title": "HiRISE elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "absolute_vertical_accuracy_m": null,
+      "observation_dates": [
+        "2010-08-04",
+        "2010-08-09"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "asset": "dtm",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.336,
+              -4.4693
+            ],
+            [
+              137.427,
+              -4.458
+            ],
+            [
+              137.457,
+              -4.7034
+            ],
+            [
+              137.366,
+              -4.7142
+            ],
+            [
+              137.336,
+              -4.4693
+            ]
+          ]
+        ]
+      },
+      "lod_range": [
+        0,
+        18
+      ],
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "preparation_input_sha256": "bb180af24507089597b0e6f454814a109bf79368ab6beb81bd8257cc11dd139d",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_path": "hirise_bradbury_14_28893_8609.validity.z",
+      "validity_mask_encoding": "bit-lsb",
+      "validity_mask_sha256": "19996b029ca15cc8d01c1de45eee1cb4be37bc803011f55f2185afe236f67066",
+      "tile": {
+        "z": 14,
+        "x": 28893,
+        "y": 8609
+      },
+      "parent": {
+        "z": 13,
+        "x": 14446,
+        "y": 4304
+      }
+    },
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165416043,
+      "sha256": "a0b08758daba494360e6a129ea29ab51f6e05334cc5f04fc291a7986e00d7868",
+      "valid_fraction": 0.3091468811035156,
+      "prepared_spacing_m": 1.2718970244163417,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.43896484375,
+        -4.59228515625,
+        137.449951171875,
+        -4.581298828125
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/DTEEC_018854_1755_018920_1755_U01.tif",
+      "id": "pyramid_hirise_bradbury_14_28894_8609",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "elevation",
+      "path": "hirise_bradbury_14_28894_8609.height",
+      "title": "HiRISE elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "absolute_vertical_accuracy_m": null,
+      "observation_dates": [
+        "2010-08-04",
+        "2010-08-09"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "asset": "dtm",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.336,
+              -4.4693
+            ],
+            [
+              137.427,
+              -4.458
+            ],
+            [
+              137.457,
+              -4.7034
+            ],
+            [
+              137.366,
+              -4.7142
+            ],
+            [
+              137.336,
+              -4.4693
+            ]
+          ]
+        ]
+      },
+      "lod_range": [
+        0,
+        18
+      ],
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "preparation_input_sha256": "bb180af24507089597b0e6f454814a109bf79368ab6beb81bd8257cc11dd139d",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_path": "hirise_bradbury_14_28894_8609.validity.z",
+      "validity_mask_encoding": "bit-lsb",
+      "validity_mask_sha256": "d11fd621f577bf771593e655cb9cdea3304cf31ddc77b471c06288705dee0d62",
+      "tile": {
+        "z": 14,
+        "x": 28894,
+        "y": 8609
+      },
+      "parent": {
+        "z": 13,
+        "x": 14447,
+        "y": 4304
+      }
+    },
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165416043,
+      "sha256": "21b7795e624ee7b42deef9b9c68c2ba6903552065ab994d0a5af32ef41de8ee5",
+      "valid_fraction": 1.0,
+      "prepared_spacing_m": 1.2718970244163417,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.427978515625,
+        -4.603271484375,
+        137.43896484375,
+        -4.59228515625
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/DTEEC_018854_1755_018920_1755_U01.tif",
+      "id": "pyramid_hirise_bradbury_14_28893_8610",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "elevation",
+      "path": "hirise_bradbury_14_28893_8610.height",
+      "title": "HiRISE elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "absolute_vertical_accuracy_m": null,
+      "observation_dates": [
+        "2010-08-04",
+        "2010-08-09"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "asset": "dtm",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.336,
+              -4.4693
+            ],
+            [
+              137.427,
+              -4.458
+            ],
+            [
+              137.457,
+              -4.7034
+            ],
+            [
+              137.366,
+              -4.7142
+            ],
+            [
+              137.336,
+              -4.4693
+            ]
+          ]
+        ]
+      },
+      "lod_range": [
+        0,
+        18
+      ],
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "preparation_input_sha256": "bb180af24507089597b0e6f454814a109bf79368ab6beb81bd8257cc11dd139d",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_path": "hirise_bradbury_14_28893_8610.validity.z",
+      "validity_mask_encoding": "bit-lsb",
+      "validity_mask_sha256": "19996b029ca15cc8d01c1de45eee1cb4be37bc803011f55f2185afe236f67066",
+      "tile": {
+        "z": 14,
+        "x": 28893,
+        "y": 8610
+      },
+      "parent": {
+        "z": 13,
+        "x": 14446,
+        "y": 4305
+      }
+    },
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165416043,
+      "sha256": "a8d4a49958b71f023f26e87394587ab839134f8036ac3ef0a4bf2d1dceba4679",
+      "valid_fraction": 0.4297370910644531,
+      "prepared_spacing_m": 1.2718970244163417,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.43896484375,
+        -4.603271484375,
+        137.449951171875,
+        -4.59228515625
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/DTEEC_018854_1755_018920_1755_U01.tif",
+      "id": "pyramid_hirise_bradbury_14_28894_8610",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "elevation",
+      "path": "hirise_bradbury_14_28894_8610.height",
+      "title": "HiRISE elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "absolute_vertical_accuracy_m": null,
+      "observation_dates": [
+        "2010-08-04",
+        "2010-08-09"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "asset": "dtm",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.336,
+              -4.4693
+            ],
+            [
+              137.427,
+              -4.458
+            ],
+            [
+              137.457,
+              -4.7034
+            ],
+            [
+              137.366,
+              -4.7142
+            ],
+            [
+              137.336,
+              -4.4693
+            ]
+          ]
+        ]
+      },
+      "lod_range": [
+        0,
+        18
+      ],
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "preparation_input_sha256": "bb180af24507089597b0e6f454814a109bf79368ab6beb81bd8257cc11dd139d",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_path": "hirise_bradbury_14_28894_8610.validity.z",
+      "validity_mask_encoding": "bit-lsb",
+      "validity_mask_sha256": "251ab3426451b8bd00db6fef3ecc66536d6736dbe4bf5040a2f3c4b18616d616",
+      "tile": {
+        "z": 14,
+        "x": 28894,
+        "y": 8610
+      },
+      "parent": {
+        "z": 13,
+        "x": 14447,
+        "y": 4305
+      }
+    },
+    {
+      "scale": 0.0003598811243059,
+      "offset": 0.0558451891606461,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165415834,
+      "sha256": "cc927ac32f2a795cb330db1dab72de55aeb25f0f9047a6af6d9625ca5260d03a",
+      "valid_fraction": 0.5916671752929688,
+      "prepared_spacing_m": 5.087588097665367,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.4169921875,
+        -4.6142578125,
+        137.4609375,
+        -4.5703125
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/ESP_018854_1755_RED_C_01_ORTHO.tif",
+      "id": "pyramid_hirise_bradbury_image_12_7223_2152",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "imagery",
+      "path": "hirise_bradbury_image_12_7223_2152.tile",
+      "title": "HiRISE grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [
+        "2010-08-04"
+      ],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "validity_mask_path": "hirise_bradbury_image_12_7223_2152.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb",
+      "preparation_input_sha256": "8811c2fcc03491b2356df19dcd40d04e0602170b3d34ad216fb0dff8fa71b542",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_sha256": "40fc7efeb4c4c6e10d8869554d839dea87328ee3cbe1434d1b2a045c45601f26",
+      "tile": {
+        "z": 12,
+        "x": 7223,
+        "y": 2152
+      },
+      "parent": {
+        "z": 11,
+        "x": 3611,
+        "y": 1076
+      }
+    },
+    {
+      "scale": 0.0003598811243059,
+      "offset": 0.0558451891606461,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165415834,
+      "sha256": "ec2983863ce114ea81560106bf97fd8462e16d6ae44dba3a8a6a6f9dd1024972",
+      "valid_fraction": 1.0,
+      "prepared_spacing_m": 2.5437940488326833,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.4169921875,
+        -4.59228515625,
+        137.43896484375,
+        -4.5703125
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/ESP_018854_1755_RED_C_01_ORTHO.tif",
+      "id": "pyramid_hirise_bradbury_image_13_14446_4304",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "imagery",
+      "path": "hirise_bradbury_image_13_14446_4304.tile",
+      "title": "HiRISE grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [
+        "2010-08-04"
+      ],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "validity_mask_path": "hirise_bradbury_image_13_14446_4304.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb",
+      "preparation_input_sha256": "8811c2fcc03491b2356df19dcd40d04e0602170b3d34ad216fb0dff8fa71b542",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_sha256": "19996b029ca15cc8d01c1de45eee1cb4be37bc803011f55f2185afe236f67066",
+      "tile": {
+        "z": 13,
+        "x": 14446,
+        "y": 4304
+      },
+      "parent": {
+        "z": 12,
+        "x": 7223,
+        "y": 2152
+      }
+    },
+    {
+      "scale": 0.0003598811243059,
+      "offset": 0.0558451891606461,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165415834,
+      "sha256": "d73b026ed7e23b2285b5bd4c4486420e69191cbd8045810be831f5958c4b22f0",
+      "valid_fraction": 0.12320709228515625,
+      "prepared_spacing_m": 2.5437940488326833,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.43896484375,
+        -4.59228515625,
+        137.4609375,
+        -4.5703125
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/ESP_018854_1755_RED_C_01_ORTHO.tif",
+      "id": "pyramid_hirise_bradbury_image_13_14447_4304",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "imagery",
+      "path": "hirise_bradbury_image_13_14447_4304.tile",
+      "title": "HiRISE grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [
+        "2010-08-04"
+      ],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "validity_mask_path": "hirise_bradbury_image_13_14447_4304.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb",
+      "preparation_input_sha256": "8811c2fcc03491b2356df19dcd40d04e0602170b3d34ad216fb0dff8fa71b542",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_sha256": "4222334eaed3d9cd2d93db1b46bddf513d2b86a69a41ddaca1e4ebc5a8f89947",
+      "tile": {
+        "z": 13,
+        "x": 14447,
+        "y": 4304
+      },
+      "parent": {
+        "z": 12,
+        "x": 7223,
+        "y": 2152
+      }
+    },
+    {
+      "scale": 0.0003598811243059,
+      "offset": 0.0558451891606461,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165415834,
+      "sha256": "ca2d9386447e79722d85f36628a5122312307ed5af3115aae85472525d87b590",
+      "valid_fraction": 1.0,
+      "prepared_spacing_m": 2.5437940488326833,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.4169921875,
+        -4.6142578125,
+        137.43896484375,
+        -4.59228515625
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/ESP_018854_1755_RED_C_01_ORTHO.tif",
+      "id": "pyramid_hirise_bradbury_image_13_14446_4305",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "imagery",
+      "path": "hirise_bradbury_image_13_14446_4305.tile",
+      "title": "HiRISE grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [
+        "2010-08-04"
+      ],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "validity_mask_path": "hirise_bradbury_image_13_14446_4305.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb",
+      "preparation_input_sha256": "8811c2fcc03491b2356df19dcd40d04e0602170b3d34ad216fb0dff8fa71b542",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_sha256": "19996b029ca15cc8d01c1de45eee1cb4be37bc803011f55f2185afe236f67066",
+      "tile": {
+        "z": 13,
+        "x": 14446,
+        "y": 4305
+      },
+      "parent": {
+        "z": 12,
+        "x": 7223,
+        "y": 2152
+      }
+    },
+    {
+      "scale": 0.0003598811243059,
+      "offset": 0.0558451891606461,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165415834,
+      "sha256": "03a950b8c56146b65a11a9a0201bc889dc250d77a557c07393732f4308b1ec78",
+      "valid_fraction": 0.24348068237304688,
+      "prepared_spacing_m": 2.5437940488326833,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.43896484375,
+        -4.6142578125,
+        137.4609375,
+        -4.59228515625
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/ESP_018854_1755_RED_C_01_ORTHO.tif",
+      "id": "pyramid_hirise_bradbury_image_13_14447_4305",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "imagery",
+      "path": "hirise_bradbury_image_13_14447_4305.tile",
+      "title": "HiRISE grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [
+        "2010-08-04"
+      ],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "validity_mask_path": "hirise_bradbury_image_13_14447_4305.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb",
+      "preparation_input_sha256": "8811c2fcc03491b2356df19dcd40d04e0602170b3d34ad216fb0dff8fa71b542",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_sha256": "77947e977091e8ebc67dcc7a817f3d5500dc5e821bfaa884efd36170b2e3706e",
+      "tile": {
+        "z": 13,
+        "x": 14447,
+        "y": 4305
+      },
+      "parent": {
+        "z": 12,
+        "x": 7223,
+        "y": 2152
+      }
+    },
+    {
+      "scale": 0.0003598811243059,
+      "offset": 0.0558451891606461,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165415834,
+      "sha256": "91091fd2509b5bffaebb5f0f2d64f7bd9ef384cf2a8bfaa903e90b83d6f4ba7d",
+      "valid_fraction": 1.0,
+      "prepared_spacing_m": 1.2718970244163417,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.427978515625,
+        -4.59228515625,
+        137.43896484375,
+        -4.581298828125
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/ESP_018854_1755_RED_C_01_ORTHO.tif",
+      "id": "pyramid_hirise_bradbury_image_14_28893_8609",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "imagery",
+      "path": "hirise_bradbury_image_14_28893_8609.tile",
+      "title": "HiRISE grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [
+        "2010-08-04"
+      ],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "validity_mask_path": "hirise_bradbury_image_14_28893_8609.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb",
+      "preparation_input_sha256": "8811c2fcc03491b2356df19dcd40d04e0602170b3d34ad216fb0dff8fa71b542",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_sha256": "19996b029ca15cc8d01c1de45eee1cb4be37bc803011f55f2185afe236f67066",
+      "tile": {
+        "z": 14,
+        "x": 28893,
+        "y": 8609
+      },
+      "parent": {
+        "z": 13,
+        "x": 14446,
+        "y": 4304
+      }
+    },
+    {
+      "scale": 0.0003598811243059,
+      "offset": 0.0558451891606461,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165415834,
+      "sha256": "90ce6fd10eec2c8a34fd121ab02913230699ce38c754647cab8ad00583a49ad5",
+      "valid_fraction": 0.306121826171875,
+      "prepared_spacing_m": 1.2718970244163417,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.43896484375,
+        -4.59228515625,
+        137.449951171875,
+        -4.581298828125
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/ESP_018854_1755_RED_C_01_ORTHO.tif",
+      "id": "pyramid_hirise_bradbury_image_14_28894_8609",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "imagery",
+      "path": "hirise_bradbury_image_14_28894_8609.tile",
+      "title": "HiRISE grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [
+        "2010-08-04"
+      ],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "validity_mask_path": "hirise_bradbury_image_14_28894_8609.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb",
+      "preparation_input_sha256": "8811c2fcc03491b2356df19dcd40d04e0602170b3d34ad216fb0dff8fa71b542",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_sha256": "d87d7b68a4b449e6d214ab2dded014a7ccfdb49c57283dad8b1e61a70b6a366f",
+      "tile": {
+        "z": 14,
+        "x": 28894,
+        "y": 8609
+      },
+      "parent": {
+        "z": 13,
+        "x": 14447,
+        "y": 4304
+      }
+    },
+    {
+      "scale": 0.0003598811243059,
+      "offset": 0.0558451891606461,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165415834,
+      "sha256": "85084601922f7b566f0976de1b8fd6ca221c420425a42acf63aae5701edc5fbd",
+      "valid_fraction": 1.0,
+      "prepared_spacing_m": 1.2718970244163417,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.427978515625,
+        -4.603271484375,
+        137.43896484375,
+        -4.59228515625
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/ESP_018854_1755_RED_C_01_ORTHO.tif",
+      "id": "pyramid_hirise_bradbury_image_14_28893_8610",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "imagery",
+      "path": "hirise_bradbury_image_14_28893_8610.tile",
+      "title": "HiRISE grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [
+        "2010-08-04"
+      ],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "validity_mask_path": "hirise_bradbury_image_14_28893_8610.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb",
+      "preparation_input_sha256": "8811c2fcc03491b2356df19dcd40d04e0602170b3d34ad216fb0dff8fa71b542",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_sha256": "19996b029ca15cc8d01c1de45eee1cb4be37bc803011f55f2185afe236f67066",
+      "tile": {
+        "z": 14,
+        "x": 28893,
+        "y": 8610
+      },
+      "parent": {
+        "z": 13,
+        "x": 14446,
+        "y": 4305
+      }
+    },
+    {
+      "scale": 0.0003598811243059,
+      "offset": 0.0558451891606461,
+      "projection": "+proj=longlat +R=3396190 +no_defs",
+      "source_spacing_m": 1.0117630165415834,
+      "sha256": "28e363b3f9ffc8f6d7a4d39a1b19985ac22dedcd72562f431d0a11b6dfe9b897",
+      "valid_fraction": 0.4266929626464844,
+      "prepared_spacing_m": 1.2718970244163417,
+      "width": 512,
+      "height": 512,
+      "bounds": [
+        137.43896484375,
+        -4.603271484375,
+        137.449951171875,
+        -4.59228515625
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/ESP_018854_1755_RED_C_01_ORTHO.tif",
+      "id": "pyramid_hirise_bradbury_image_14_28894_8610",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "imagery",
+      "path": "hirise_bradbury_image_14_28894_8610.tile",
+      "title": "HiRISE grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [
+        "2010-08-04"
+      ],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "validity_mask_path": "hirise_bradbury_image_14_28894_8610.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb",
+      "preparation_input_sha256": "8811c2fcc03491b2356df19dcd40d04e0602170b3d34ad216fb0dff8fa71b542",
+      "source_projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "validity_mask_sha256": "32fd0da94f283845cd111812c3d8ad2fe5a88be1bd9bfa2bf445990b6b7ef853",
+      "tile": {
+        "z": 14,
+        "x": 28894,
+        "y": 8610
+      },
+      "parent": {
+        "z": 13,
+        "x": 14447,
+        "y": 4305
+      }
+    }
+  ]
+}

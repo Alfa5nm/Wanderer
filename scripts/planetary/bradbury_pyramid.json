@@ -1,0 +1,17 @@
+{
+  "source_root": "planetary_map/assets/terrain",
+  "output": "planetary_map/assets/terrain/pyramids",
+  "datasets": [
+    "hirise_bradbury",
+    "hirise_bradbury_image"
+  ],
+  "bounds": [
+    137.435,
+    -4.595,
+    137.448,
+    -4.582
+  ],
+  "min_level": 12,
+  "max_level": 14,
+  "size": 512
+}

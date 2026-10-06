@@ -1,0 +1,9 @@
+{
+  "ambient_disabled": true,
+  "orbital_frame_median_ms": 6.815,
+  "orbital_frame_p95_ms": 11.495,
+  "six_coarse_faces_ready": true,
+  "sun_direction_shared": true,
+  "without_atmosphere_median_ms": 6.866,
+  "without_atmosphere_p95_ms": 11.301
+}

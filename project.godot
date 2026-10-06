@@ -1,0 +1,27 @@
+config_version=5
+
+[application]
+config/name="The Curiosity Voyage"
+run/main_scene="res://planetary_map/mars_globe.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+
+[display]
+window/size/viewport_width=1440
+window/size/viewport_height=900
+window/size/window_width_override=1280
+window/size/window_height_override=800
+window/stretch/mode="canvas_items"
+
+[physics]
+3d/physics_engine="Jolt Physics"
+3d/default_gravity=3.71
+common/physics_ticks_per_second=120
+common/max_physics_steps_per_frame=16
+jolt_physics_3d/simulation/velocity_steps=20
+jolt_physics_3d/simulation/position_steps=8
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+environment/defaults/default_clear_color=Color(0.22, 0.13, 0.09, 1)

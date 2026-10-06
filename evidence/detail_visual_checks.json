@@ -1,0 +1,81 @@
+{
+  "checks": {
+    "appearance_keeps_collision": true,
+    "bradbury_deployment": true,
+    "drive_with_detail": true,
+    "jezero_cell_deployment": true,
+    "jezero_source_fallback": true,
+    "mola_cell_deployment": true,
+    "mola_source_fallback": true,
+    "night_has_no_ambient_fill": true,
+    "normalized_morph_mode": true,
+    "progressive_visual_refinement": true,
+    "refinement_keeps_collision": true,
+    "render_size_(1366, 768)": true,
+    "render_size_(1600, 900)": true,
+    "render_size_(1920, 1080)": true,
+    "repeat_deployment": true,
+    "source_and_cinematic_render_differ": true,
+    "source_disables_gravel": true
+  },
+  "measurements": {
+    "bradbury_navigation": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 2,
+        "last_worker_ms": 71.76,
+        "max_queue": 2,
+        "max_upload_ms": 2.463,
+        "uploads": 4
+      },
+      "frames": 272,
+      "max_ms": 48.703,
+      "p50_ms": 6.799,
+      "p95_ms": 11.773,
+      "static_memory_mib": 494.350382804871,
+      "texture_memory_mib": 213.987944602966
+    },
+    "detail_final": {
+      "cancelled_requests": 3,
+      "disk_hits": 2,
+      "last_worker_ms": 1356.047,
+      "max_queue": 2,
+      "max_upload_ms": 2.463,
+      "uploads": 6
+    },
+    "first_build_ms": 19146.218,
+    "jezero": {
+      "detail": {
+        "cancelled_requests": 0,
+        "disk_hits": 13,
+        "last_worker_ms": 4.171,
+        "max_queue": 2,
+        "max_upload_ms": 0.644,
+        "uploads": 12
+      },
+      "frames": 145,
+      "max_ms": 10.059,
+      "p50_ms": 6.961,
+      "p95_ms": 8.328,
+      "static_memory_mib": 491.397782325745,
+      "texture_memory_mib": 199.598612785339
+    },
+    "mola": {
+      "detail": {
+        "cancelled_requests": 0,
+        "disk_hits": 12,
+        "last_worker_ms": 2.634,
+        "max_queue": 2,
+        "max_upload_ms": 0.507,
+        "uploads": 12
+      },
+      "frames": 146,
+      "max_ms": 8.034,
+      "p50_ms": 6.911,
+      "p95_ms": 7.7,
+      "static_memory_mib": 491.316205978394,
+      "texture_memory_mib": 200.265276908875
+    },
+    "warm_build_ms": 288.055
+  }
+}

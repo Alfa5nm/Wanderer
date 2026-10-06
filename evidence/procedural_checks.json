@@ -1,0 +1,244 @@
+{
+  "checks": {
+    "appearance_preserves_collision_identity": true,
+    "bradbury_generates": true,
+    "bradbury_numeric_hirise": true,
+    "cavity_disk_reuse": true,
+    "collision_exactly_matches_mesh": true,
+    "corrupt_cache_rejected": true,
+    "drive_on_generated_terrain": true,
+    "fine_mesh_retains_measured_height": true,
+    "fresh_evaluator_disk_cache": true,
+    "height_matches_source": true,
+    "local_metres_poles_and_longitude_seam": true,
+    "mixed_lod_canonical_boundaries": true,
+    "morph_keeps_shared_edges_fixed": true,
+    "optional_shading_failure_retains_sourced_patch": true,
+    "public_route_absent": true,
+    "route_conforms_and_no_terrain_rebuild": true,
+    "rover_spawn_and_contact": true,
+    "same_pipeline_other_tiles_poles_and_seam": true,
+    "seed_change_preserves_terrain": true,
+    "seeded_rocks_repeatable": true,
+    "shared_chunk_edges_and_normals": true,
+    "source_appearance_disables_cosmetics": true,
+    "spacing_rebuilds_only_geometry_chain": true,
+    "style_preserves_geometry_collision_and_cavity": true,
+    "wrong_port_type_rejected": true
+  },
+  "measurements": {
+    "(-89.999, 20.0)": {
+      "build_ms": 2328.318,
+      "size_m": "(16.0, 256.0)",
+      "sources": {
+        "MOLA 64 ppd": 926.0
+      }
+    },
+    "(0.0, 179.999)": {
+      "build_ms": 2512.891,
+      "size_m": "(256.0, 256.0)",
+      "sources": {
+        "MOLA 64 ppd": 926.0
+      }
+    },
+    "(18.44, 77.45)": {
+      "build_ms": 2630.495,
+      "size_m": "(256.0, 256.0)",
+      "sources": {
+        "MOLA 64 ppd": 926.0
+      }
+    },
+    "(89.999, -40.0)": {
+      "build_ms": 2457.305,
+      "size_m": "(16.0, 256.0)",
+      "sources": {
+        "MOLA 64 ppd": 926.0
+      }
+    },
+    "build_ms": 4712.184,
+    "chunk_count": 40,
+    "cold_default_ms": 15368.083,
+    "driven_rover": {
+      "differential_error_deg": 0.313344119421125,
+      "forward_speed": 0.0408720001578331,
+      "heading": 0.0465213761625235,
+      "jolt_contact_proxy_n": 320.414031126363,
+      "mass_kg": 899.0,
+      "pitch": -3.93412023314882,
+      "position": [
+        -0.034233845770359,
+        0.893196046352386,
+        0.00719934748485684
+      ],
+      "roll": 1.92000075352326,
+      "speed": 0.0408759526908398,
+      "support_n": 3335.85218624592,
+      "wheels": [
+        {
+          "contacts": 2,
+          "id": "FL",
+          "jolt_contact_proxy_n": 34.2783612016698,
+          "lateral_m_s": -0.0000156260575749911,
+          "rate": 0.165617525577545,
+          "slip": 0.00346721245691627,
+          "steer_deg": -0.27759944190906,
+          "steer_target_deg": 0.0,
+          "target": 0.159995719790459,
+          "torque": 6.77946080627807
+        },
+        {
+          "contacts": 4,
+          "id": "ML",
+          "jolt_contact_proxy_n": 71.4450483015527,
+          "lateral_m_s": -0.00000454623659607023,
+          "rate": 0.169901356101036,
+          "slip": 0.0138762995984787,
+          "steer_deg": 0.0,
+          "steer_target_deg": 0.0,
+          "target": 0.159836962819099,
+          "torque": 5.30660257581585
+        },
+        {
+          "contacts": 4,
+          "id": "RL",
+          "jolt_contact_proxy_n": 70.3692912117761,
+          "lateral_m_s": -0.000133813271531835,
+          "rate": 0.168381854891777,
+          "slip": 0.00417419069081493,
+          "steer_deg": 0.655093064830888,
+          "steer_target_deg": 0.0,
+          "target": 0.159977316856384,
+          "torque": 7.11142476872775
+        },
+        {
+          "contacts": 2,
+          "id": "FR",
+          "jolt_contact_proxy_n": 31.7776019689201,
+          "lateral_m_s": -0.000132651694002561,
+          "rate": 0.17308321595192,
+          "slip": 0.0394414561748875,
+          "steer_deg": 0.188880581476406,
+          "steer_target_deg": 0.0,
+          "target": 0.159988045692444,
+          "torque": 7.75907376592623
+        },
+        {
+          "contacts": 4,
+          "id": "MR",
+          "jolt_contact_proxy_n": 78.7655544924819,
+          "lateral_m_s": -0.00000489974627271295,
+          "rate": 0.164989337325096,
+          "slip": 0.0101212518109468,
+          "steer_deg": 0.0,
+          "steer_target_deg": 0.0,
+          "target": 0.159760594367981,
+          "torque": 9.14916651671684
+        },
+        {
+          "contacts": 2,
+          "id": "RR",
+          "jolt_contact_proxy_n": 33.7781739499627,
+          "lateral_m_s": -0.0000406427134294063,
+          "rate": 0.164765954017639,
+          "slip": 0.00378204140340063,
+          "steer_deg": 0.349217107413433,
+          "steer_target_deg": 0.0,
+          "target": 0.159854918718338,
+          "torque": 9.24283564988329
+        }
+      ]
+    },
+    "sampled_spawn_height": 0.0,
+    "settled_rover": {
+      "differential_error_deg": 0.313515337208969,
+      "forward_speed": 0.000177767389686778,
+      "heading": 0.059142361016943,
+      "jolt_contact_proxy_n": 309.352114457899,
+      "mass_kg": 899.0,
+      "pitch": -3.8824430218885,
+      "position": [
+        -0.034199733287096,
+        0.890757918357849,
+        -0.037267379462719
+      ],
+      "roll": 1.90297565324335,
+      "speed": 0.00017792328435462,
+      "support_n": 3335.31496203874,
+      "wheels": [
+        {
+          "contacts": 2,
+          "id": "FL",
+          "jolt_contact_proxy_n": 34.2911428210288,
+          "lateral_m_s": -0.000000175367262045256,
+          "rate": 0.000646239146590233,
+          "slip": -0.00138475588755682,
+          "steer_deg": -0.25980822095572,
+          "steer_target_deg": 0.0,
+          "target": 0.0,
+          "torque": 6.64990036055168
+        },
+        {
+          "contacts": 4,
+          "id": "ML",
+          "jolt_contact_proxy_n": 69.387913899754,
+          "lateral_m_s": 0.0000003602407332437,
+          "rate": 0.000725067162420601,
+          "slip": 0.000387386535294354,
+          "steer_deg": 0.0,
+          "steer_target_deg": 0.0,
+          "target": 0.0,
+          "torque": 5.50527416173099
+        },
+        {
+          "contacts": 4,
+          "id": "RL",
+          "jolt_contact_proxy_n": 66.1582241720887,
+          "lateral_m_s": -0.000000649938783681137,
+          "rate": 0.000649560475721955,
+          "slip": -0.00160788185894489,
+          "steer_deg": 0.658649296067668,
+          "steer_target_deg": 0.0,
+          "target": 0.0,
+          "torque": 7.21083936697106
+        },
+        {
+          "contacts": 2,
+          "id": "FR",
+          "jolt_contact_proxy_n": 33.9406210364077,
+          "lateral_m_s": -0.000000688388581693289,
+          "rate": 0.000729645893443376,
+          "slip": 0.000714161433279514,
+          "steer_deg": 0.290214374177345,
+          "steer_target_deg": 0.0,
+          "target": 0.0,
+          "torque": 8.15424847535433
+        },
+        {
+          "contacts": 4,
+          "id": "MR",
+          "jolt_contact_proxy_n": 71.633332212021,
+          "lateral_m_s": 0.000000366982533250848,
+          "rate": 0.000692376226652414,
+          "slip": 0.000331622140947729,
+          "steer_deg": 0.0,
+          "steer_target_deg": 0.0,
+          "target": 0.0,
+          "torque": 8.97787432539208
+        },
+        {
+          "contacts": 2,
+          "id": "RR",
+          "jolt_contact_proxy_n": 33.940880316599,
+          "lateral_m_s": 0.000000585955035603547,
+          "rate": 0.000598243728745729,
+          "slip": -0.00230487203225493,
+          "steer_deg": 0.333598741693335,
+          "steer_target_deg": 0.0,
+          "target": 0.0,
+          "torque": 9.0409505771244
+        }
+      ]
+    },
+    "warm_default_ms": 410.622
+  }
+}

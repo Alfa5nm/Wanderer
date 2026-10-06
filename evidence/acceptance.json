@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Export and wheel dimensions",
+    "passed": true,
+    "measured": "73 meshes; 48384 triangles",
+    "tolerance": "Origins within 0.01 mm; diameter/width within 1 mm of 0.500/0.400 m"
+  },
+  {
+    "name": "Mass conservation",
+    "passed": true,
+    "measured": "899 kg in every case, including redistribution",
+    "tolerance": "0.001 kg bookkeeping tolerance"
+  },
+  {
+    "name": "Level settling",
+    "passed": true,
+    "measured": "Mean forward drift -0.000716 m/s",
+    "tolerance": "Below 0.002 m/s over last 5 s; numerical creep criterion"
+  },
+  {
+    "name": "Whole-assembly static support",
+    "passed": true,
+    "measured": "3335.29 N inferred from momentum",
+    "tolerance": "Within 2% of 3335.29 N; does NOT validate individual contact loads"
+  },
+  {
+    "name": "Baseline straight speed",
+    "passed": true,
+    "measured": "0.039782 m/s",
+    "tolerance": "Within 5% of 0.040 m/s"
+  },
+  {
+    "name": "Straight distance",
+    "passed": true,
+    "measured": "1.1635 m in 30 s",
+    "tolerance": "Within 0.03 m of 1.168 m; includes 1.6 s acceleration ramp"
+  },
+  {
+    "name": "Straight heading",
+    "passed": true,
+    "measured": "-0.0116 degrees",
+    "tolerance": "Below 0.5 degree drift"
+  },
+  {
+    "name": "Wheel rotation",
+    "passed": true,
+    "measured": "0.15979 rad/s (1.526 rpm)",
+    "tolerance": "Within 5% of 0.160 rad/s; effective-radius/contact approximation"
+  },
+  {
+    "name": "Reverse",
+    "passed": true,
+    "measured": "-0.039956 m/s",
+    "tolerance": "Within 5% of -0.040 m/s"
+  },
+  {
+    "name": "Point turn",
+    "passed": true,
+    "measured": "Yaw 99.80 deg; middle-axle center drift 0.0103 m",
+    "tolerance": "20% yaw envelope including alignment and wide-cylinder scrub; center drift <0.1 m"
+  },
+  {
+    "name": "Corner alignment",
+    "passed": true,
+    "measured": "[-47.88, 0.0, 45.2, 48.18, 0.0, -45.62]",
+    "tolerance": "Actual corner angles within 5 deg of targets; middles fixed at zero"
+  },
+  {
+    "name": "Arc geometry",
+    "passed": true,
+    "measured": "Chord-derived radius 4.137 m; yaw 35.05 deg",
+    "tolerance": "Within 15% of ideal 4 m radius; finite steering settling and scrub included"
+  },
+  {
+    "name": "Differential constraint",
+    "passed": true,
+    "measured": "Residual on 0.314 deg / off 65.770 deg; pitch on -3.30 / off -36.19 deg",
+    "tolerance": "On residual <0.5 deg; disabled control >10 deg establishes mechanical influence"
+  },
+  {
+    "name": "100 mm traversal",
+    "passed": true,
+    "measured": "Final chassis z 4.381 m; minimum 6 contacting wheels",
+    "tolerance": "All wheel centers clear the 0.65 m long obstacle by finish; recovered roll <5 deg"
+  },
+  {
+    "name": "Wheel contact loss",
+    "passed": true,
+    "measured": "Minimum 4 contacting wheels after ground drops 0.4 m under front pair",
+    "tolerance": "Front wheels lose support; articulated chassis remains finite and upright"
+  },
+  {
+    "name": "uphill_10",
+    "passed": true,
+    "measured": "0.03974 m/s; roll 0.03 deg",
+    "tolerance": "Within 10% commanded speed at end, no rollover; not an operational slope rating"
+  },
+  {
+    "name": "downhill_10",
+    "passed": true,
+    "measured": "0.03970 m/s; roll 0.03 deg",
+    "tolerance": "Within 10% commanded speed at end, no rollover; not an operational slope rating"
+  },
+  {
+    "name": "cross_slope_10",
+    "passed": true,
+    "measured": "0.03978 m/s; roll -9.97 deg",
+    "tolerance": "Within 10% commanded speed at end, no rollover; not an operational slope rating"
+  },
+  {
+    "name": "uphill_25",
+    "passed": true,
+    "measured": "0.03944 m/s; roll 0.05 deg",
+    "tolerance": "Within 10% commanded speed at end, no rollover; not an operational slope rating"
+  },
+  {
+    "name": "Torque-limited wall stall",
+    "passed": true,
+    "measured": "Peak 80.00 Nm; final mean speed -0.000006 m/s",
+    "tolerance": "Saturates at 80 Nm; no forward penetration/drive-through"
+  },
+  {
+    "name": "Low-friction traction loss",
+    "passed": true,
+    "measured": "Downslope -3.386 m/s; pitch -20.26 deg",
+    "tolerance": "Must slide rather than climb while remaining on the large test plane; no soil validation claimed"
+  },
+  {
+    "name": "Timestep convergence",
+    "passed": true,
+    "measured": "120 vs 240 Hz speed difference 0.002%",
+    "tolerance": "Below 2% for straight case; does not establish all-contact convergence"
+  },
+  {
+    "name": "Solver convergence",
+    "passed": true,
+    "measured": "20/8 vs 40/16 iterations speed difference 0.160%",
+    "tolerance": "Fresh process with verified configuration; below 2% straight-speed change"
+  },
+  {
+    "name": "Input and camera",
+    "passed": true,
+    "measured": "15 synthetic/runtime checks passed",
+    "tolerance": "Keyboard, synthetic gamepad, orbit, zoom, reset, POV, recovery, overlay, time dt and camera obstruction"
+  },
+  {
+    "name": "Original NASA file preserved",
+    "passed": false,
+    "measured": "e6e808d2d1d4f9191d86c006f7c3ef58cebc5180fab088786cf9f27ecf05b3bc",
+    "tolerance": "SHA-256 exactly matches original inspection"
+  }
+]

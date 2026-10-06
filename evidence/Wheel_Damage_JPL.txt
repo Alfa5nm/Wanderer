@@ -1,0 +1,1130 @@
+
+PAGE 1
+Assessing Mars Curiosity Rover Wheel Damage
+Arturo Rankin, Nikunj Patel, Evan Graser, Jiun-Kai Freddy Wang, Kimberly Rink
+Jet Propulsion Laboratory, California Institute of Technology
+4800 Oak Grove Dr.
+Pasadena, CA 91109
+(818) 354-9269
+arankin@jpl.nasa.gov
+Abstract—An alarming rate of wheel skin cracks was ﬁrst ob-
+served on the Mars Science Laboratory (MSL) Curiosity rover
+about 14 months after the start of its surface mission. Nine years
+later (as of August 2, 2021), Curiosity has four broken wheel
+grousers, three on the left middle wheel and one on the right
+middle wheel. There are a substantial number of wheel skin
+cracks on the left front, left middle, and right middle wheels
+such that the number of grousers on each that are considered
+at risk of breaking are 10, 7, and 11, respectively. Although the
+current level of wheel damage does not signiﬁcantly limit Cu-
+riosity’s mission objectives, a higher damage rate could impact
+surface operations, so the damage rate is closely monitored. On
+November 30, 2013, the MSL Surface Operations team began
+periodically acquiring images of Curiosity’s wheels. In this
+paper, we describe the process the Mobility Operations team
+uses to assess wheel damage, the current state of Curiosity’s
+wheels, and how the wheel damage assessments have inﬂuenced
+driving guidelines and wheel imaging frequency.
+TABLE OF CONTENTS
+1. I NTRODUCTION . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1
+2. W HEEL IMAGING . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3
+3. P ROCESS FOR ASSESSING WHEEL DAMAGE . . . . . . .5
+4. C URRENT STATE OF CURIOSITY ’S WHEELS . . . . . . .8
+5. H OW WHEEL DAMAGE ASSESSMENT HAS INFLU -
+ENCED DRIVING GUIDELINES . . . . . . . . . . . . . . . . . . . .15
+6. S UMMARY . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .18
+ACKNOWLEDGMENTS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .18
+REFERENCES . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .18
+BIOGRAPHY . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .19
+1. I NTRODUCTION
+The Mars Science Laboratory (MSL) Curiosity rover landed
+on Mars on August 6, 2012 and driving commenced seven-
+teen Martian solar days (sols) later. As of sol 3195, Curiosity
+has driven 26,256 m over a variety of terrain types and
+slopes [1]. The previous Mars rovers, Mars Pathﬁnder (MPF)
+Sojourner [2] and Mars Exploration Rovers (MER) Spirit and
+Opportunity [3], did not experience any wheel damage during
+their lifetimes. In October 2013, the Curiosity Operations
+team observed signiﬁcant wheel damage after less than 4 km
+of driving. Lessons learned from the resulting investigation
+into the causes of the damage informed the redesign of the
+wheels for the Mars 2020 (M2020) Perseverance rover, which
+landed on Mars on February 18, 2021, and no wheel damage
+has been observed in its ﬁrst eight months of driving.
+Figure 1 illustrates the size differences between a MPF, MER,
+and MSL rover and their wheels, and Table 1 compares key
+wheel speciﬁcations for MPF, MER, MSL, and M2020. The
+978-1-6654-3760-8/22/$31.00 ©2022 IEEE
+Figure 1. MPF (left), MER (middle), and MSL (right)
+ﬂight-like testbed rovers in the Jet Propulsion Laboratory
+(JPL) Mars Yard, illustrating the size differences between the
+rovers and their wheels. Image Credit: NASA/JPL-Caltech.
+Table 1. Comparison of Mars rover mass and wheel
+speciﬁcations.
+MPF MER MSL M2020
+Rover
+mass
+11.5 kg 185 kg 899 kg 1,025 kg
+Wheel
+diameter
+including
+grouser
+14 cm 26.2 cm 50.0 cm 52.3 cm
+Wheel
+width
+7.9 cm 21.5 cm 40.0 cm 33.6 cm
+Wheel
+surface
+thickness
+0.2 mm
+stainless
+steel
+3.25
+mm alu-
+minum
+0.75
+mm alu-
+minum
+1.651
+mm alu-
+minum
+Wheel
+grousers
+34 rows
+of spot-
+welded
+stainless
+steel
+cleats
+25
+straight
+grousers
+19
+chevroned
+grousers
+plus 8
+straight
+grousers
+48
+gently
+curved
+grousers
+size of the MSL and M2020 rovers are nearly identical with
+the M2020 rover being 126 kg heavier. The surface of each
+of Curiosity’s six identical wheels consists of 19 cleat-like
+features (called grousers) across the entire width of the wheel
+for traction, a set of odometry features that leave a distinctive
+pattern for performing visual odometry (VO) on otherwise
+featureless terrain, and a thin layer of skin (0.75 mm). Each
+grouser contains four chevron features designed to mitigate
+wheel side slippage. Other features that provide structural
+strength are a vertical rim on each edge of the wheel and a
+stiffening ring around the interior of the wheel, located two-
+thirds of the wheel width from the inside edge of the wheel.
+A drive actuator is attached to each wheel’s stiffening ring by
+1
+
+PAGE 2
+Figure 2. An unrolled MSL wheel. Each wheel contains 19 grousers and an odometry feature that spells ”JPL” in Morse code.
+Figure 3. Primary features of the MSL wheel. Image
+Credit: NASA/JPL-Caltech
+six titanium ﬂexures (spokes) that also function as suspension
+springs [4]. Figures 2 and 3 illustrate the sections and
+features of the MSL wheel.
+The MPF wheel body, MER wheel, and MSL wheel are
+constructed of aluminum for its high strength-to-weight ratio.
+Several factors put MSL wheels at a higher risk of damage
+than MPF and MER.
+1. Curiosity has a signiﬁcantly larger mass than MPF
+(78.17x) and MER (4.86x), which translates into larger
+load bearing forces on its wheels.
+2. Curiosity’s wheels are nearly four times as tall as MPF
+wheels and twice as tall as MER wheels, enabling them
+to climb over taller rocks, which translates into longer
+contact times with rocks and larger wheel drops off of
+rocks.
+3. Curiosity’s wheels have fewer grousers than MER
+wheels, which translates into a larger distance between
+grousers and more opportunities for rock features to
+contact and damage wheel skin.
+4. Curiosity’s wheels have thinner skin than MER wheels
+(0.75 mm vs. 3.52 mm), making them more susceptible
+to skin punctures.
+The decision to use 0.75 mm wheel skin for MSL’s wheels,
+the absolute minimum thickness that was machinable, was
+a consequence of the need to minimize both the total mass
+of the rover and also the loads experienced by the suspen-
+sion system when it is deployed during the Entry-Descent-
+Landing (EDL) phase of the mission. While the MSL wheels
+were designed to operate with considerable damage, the rate
+at which damage was occurring was unexpected and raised
+concerns regarding wheel life expectancy and the ability to
+meet the mission goal of performing science over at least 20
+km of odometry.
+In December 2013, a multi-institution Tiger team of 13
+individuals with expertise in geology, mechanical system
+engineering, failure analysis, rover operations, mobility per-
+formance, stress analysis, ADAMS analysis, and materials
+was formed to determine the cause of the excessive wheel
+wear and to recommend a strategy to reduce the wheel
+damage rate. Extensive characterization of the mechanism
+of wheel damage per terrain type is described in [5] and [6]
+and summarized in [7]. In general, the high wheel damage
+rate was attributed to a combination of driving over pointed,
+embedded rocks not seen at previous Mars rover landing
+sites, and the use of a motor control algorithm that drove
+each wheel at the same speed, irrespective of wheel/terrain
+interaction. To reduce the rate of wheel damage, a terrain-
+adaptive wheel speed control software patch called TRCTL
+was developed and installed on Curiosity [8].
+The size of cracks in wheel skin can grow over time, increas-
+ing the loading on nearby grousers. Wheel life-cycle testing
+in the JPL Mars Yard showed that a grouser is at risk of
+breaking once at least 70% of the skin between the wheel’s
+inner edge and the stiffener ring is cracked on both sides of
+the grouser. Periodic imaging of the wheels and a method for
+quantifying and tracking the damage level of each wheel was
+implemented.
+Wheel damage inspection images are acquired by the Mars
+Hand Lens Imager (MAHLI), an instrument mounted on
+the turret on the end of the robotic arm. Supplemental
+wheel damage inspection images of the right wheels are also
+acquired by the Mast Camera (Mastcam), which is mounted
+on the Remote Sensing Mast (RSM). Single position MAHLI
+wheel imaging (SPMWI) sequencing was developed to ac-
+quire an image of each wheel in a single wheel position. Full
+MAHLI wheel imaging (FMWI) sequencing was developed
+to acquire an image of each wheel in ﬁve equal-distance
+wheel positions.
+2
+
+PAGE 3
+Figure 4. Mosaic of the six MAHLI wheel images acquired on sol 177. Image Credit: NASA/JPL-Caltech
+Figure 5. A frame from the sol 2030 underbelly FMWI
+animation generated during uplink planning.
+Wheel damage assessment is primarily performed with
+FMWI after driving a speciﬁed number of meters. The ﬁrst
+FMWI was completed on sol 490. Since then, the FMWI
+frequency has been adjusted several times and is currently
+executed every kilometer. After each FMWI, wheel damage
+is assessed by measuring each individual crack in wheel
+images and tabulating the cumulative crack length within
+each skin section and the cumulative crack length for each
+wheel, denoted left front (LF), left middle (LM), left rear
+(LR), right front (RF), right middle (RM), and right rear (RR).
+SPMWI provides a snapshot of a portion of each wheel at
+a less uniform cadence and is used to identify signiﬁcant
+changes in damage level, but not to measure crack lengths.
+As of sol 3150, Curiosity has three broken grousers on
+the LM wheel and one broken grouser on the RM wheel.
+Changes in the damage growth rate have inﬂuenced the wheel
+imaging frequency, the method of damage tracking, and
+driving guidelines throughout Curiosity’s mission. In this
+paper we describe wheel imaging, the process for assessing
+wheel damage and how it has evolved over time, the current
+state of Curiosity’s wheels, and how the damage assessment
+has inﬂuenced driving methods and restrictions.
+Figure 6. Cropped sol 34 MAHLI image of the LM wheel
+showing the ﬁrst observed damage to Curiosity wheels.
+Image Credit: NASA/JPL-Caltech
+2. W HEEL IMAGING
+Prior to launch, cracks had been observed in MSL wheels on a
+testbed rover. Therefore, early in the mission, the Operations
+team periodically performed SPMWI to monitor the health of
+the wheels. The ﬁrst and second SPMWI were performed on
+sol 34 and 177, after 108.9 m and 723.4 m cumulative odom-
+etry, respectively. A sequence was executed that moved the
+robotic arm into a conﬁguration that positioned the MAHLI
+to point under the belly of the rover to acquire images of each
+wheel. Figure 4 shows a mosaic of the six sol 177 MAHLI
+wheel images and Figure 5 illustrates the arm conﬁguration
+for underbelly wheel imaging.
+The ﬁrst Curiosity wheel damage was discovered during an
+inspection of the sol 34 MAHLI image of the LM wheel. As
+shown in Figure 6, light could be seen shining through a crack
+in the LM wheel skin, as observed from the underside of the
+wheel. The Tiger team concluded that this crack is likely from
+wheel/terrain interaction during Curiosity’s touchdown on the
+surface of Mars.
+3
+
+PAGE 4
+Figure 7. A frame from the sol 2115 overhead FMWI
+animation generated during uplink planning.
+In the sol 275 SPMWI (after 727.2 m), a few pin hole punc-
+tures were observed in several wheels. More concerning, in
+the sol 463 SPMWI (after 4,420.2 m cumulative odometry),
+medium-sized holes were observed in the LF and LM wheels.
+The SPMWI frequency guideline was then increased to every
+50 m. Six sols later (on sol 469), another SPMWI was
+performed and several cracks were observed in the RM, LM,
+and LF wheels. After three more SPMWI (on sols 472, 476,
+and 486), Curiosity started its ﬁrst FMWI on sol 488 and
+completed it on sol 490.
+FMWI enables wheel damage characterization over the full
+surface of the six wheels. MAHLI and Mastcam take images
+of each wheel, then the rover drives forward to rotate the
+wheels. The cameras image the newly exposed sections, and
+the process is repeated until all wheels rotate one revolution
+for full coverage. The arm must be stowed during driving
+to protect it from impacting terrain and experiencing terrain
+induced shock while extended. Therefore, the arm is stowed
+prior to executing each FMWI drive step and unstowed after
+for imaging. During FMWI drive steps, visual odometry is
+enabled to document wheel slippage. TRCTL is not used for
+FMWI driving so that each wheel rotates the same amount
+during each drive step, regardless of the terrain shape.
+For the ﬁrst two FMWI (sols 488+490 and 512+513+515),
+the drive distance between acquiring sets of wheel images
+was 0.262 m, which corresponds to a wheel rotation of 60 ◦.
+Wheel imaging was performed before the ﬁrst drive step and
+after each of ﬁve drive steps over a total drive distance of
+1.31 m. Starting with the sol 521 FMWI, the drive distance
+between acquiring sets of wheel images has been 0.314 m,
+which corresponds to a wheel rotation of 72◦. Wheel imaging
+is performed before the ﬁrst drive step and after each of four
+drive steps over a total drive distance of 1.256 m.
+Starting on sol 587, the number of MAHLI images acquired at
+every wheel position was reduced from six to four, decreasing
+the overall number of MAHLI wheel images needing to be
+downlinked each FMWI from 30 to 20. Two MAHLI images
+of the middle wheels were identiﬁed as redundant given the
+images of the rear wheels also have the middle wheels in
+the frame. The redundant images were removed from the
+imaging sequence.
+By sol 2113, Curiosity had driven 600.5 m since the previous
+FMWI and was 100 m overdue for a FMWI. However, there
+was a dust storm in the vicinity of Curiosity and there was
+concern about dust collecting on the MAHLI lens during a
+FMWI. On sol 2114, a set of MAHLI wheel images were
+captured with the MAHLI lens cover closed, but analysis
+by the mobility team deemed the quality of the images
+insufﬁcient for performing wheel damage assessment.
+On sol 2115, a change was made to acquire overhead MAHLI
+wheel images instead of underbelly MAHLI wheel images.
+The MAHLI pointing during overhead wheel imaging is
+closer to nadir than during underbelly wheel imaging, de-
+creasing the risk of dust accumulating on the lens while the
+lens cover is open. Figure 7 illustrates the arm conﬁguration
+for acquiring overhead MAHLI wheel images.
+Because the base of the arm is on the left side of the rover,
+only the left wheels and RF wheel can be imaged with the
+MAHLI from an overhead arm conﬁguration. Similarly, be-
+cause the RSM is mounted on the right side of the rover, only
+the right wheels can be imaged by the Mastcam. Since sol
+2115, wheel damage assessment has been performed using
+overhead MAHLI wheel images to assess the left wheels and
+the RF wheel, and Mastcam wheel images to assess the RM
+and RR wheels.
+The RM wheel is the closest wheel to the RSM and cannot be
+fully imaged by the Mastcam using a single pointing angle.
+Therefore, at each wheel position, two Mastcam images
+are acquired of the RM wheel using slightly different RSM
+pointing angles. Figure 8 illustrates the three Mastcam wheel
+images and Figure 9 illustrates the four overhead MAHLI
+wheel images. In the images of the rear wheels, a portion
+of the wheels are occluded by the bogie suspension arms.
+This is acceptable for wheel damage assessment since the rear
+wheels currently have insigniﬁcant damage.
+MAHLI and Mastcam wheel images are captured at a reso-
+lution of 1632x1200 and 1408x1200 pixels, respectively. On
+FMWI sols, Rover Planners (RPs) build a drive sequence that
+includes FMWI commands. Additional driving is sometimes
+included in the drive sequence after the FMWI activities.
+On sol 3195, the duration of the FMWI portion of the drive
+sequence was 117.7 minutes.
+The plot in Figure 10 illustrates the period of increased
+SPMWI frequency and start of FMWI after a medium size
+hole was observed in the LF and LM wheels on sol 463. A
+FMWI event is often completed in a single sol, but it also has
+been common to complete it over two or more sols. On sol
+1269, two SPMWI events were performed in part to image
+the terrain under the RR wheel following a RR drive actuator
+stall on sol 1267. Since sol 2407, all of the FMWI events
+have been performed on a single sol.
+Figure 11 illustrates that post SPMWI or FMWI driving can
+be planned. Post SPMWI and FMWI driving was common
+around sol 500-750. During that period, there were three
+drives after MAHLI wheel imaging that exceeded 100 m.
+Figure 12 illustrates what the cumulative odometry was prior
+to each MAHLI wheel imaging event.
+4
+
+PAGE 5
+Figure 8. The three sol 3195 Mastcam wheel images. Image Credit: NASA/JPL-Caltech
+Figure 9. The four sol 3195 MAHLI wheel images. Image Credit: NASA/JPL-Caltech
+3. P ROCESS FOR ASSESSING WHEEL
+DAMAGE
+Curiosity wheel damage assessment is performed by the MSL
+Wheel Wear team, which is a subset of the MSL Mobility
+Operations team. The wheel damage assessment process has
+several evaluations of increasing detail at each stage.
+1. Tactical assessment (15 minutes)
+2. Initial look assessment (1 day)
+3. Crack length measurement (1-2 weeks)
+Tactical operations involves assessing rover health and safety
+from the most recent downlinked data, and generating and
+reviewing next-sol sequences prior to a pre-scheduled uplink
+window. The tactical and initial look assessments are quali-
+tative evaluations focused on identifying major changes that
+may impact tactical operations. For example, discovery of a
+signiﬁcant change in wheel state may lead to changes in sol
+plans or constraints. Tactical and initial look assessments are
+followed by measurements of the cracks (damage features)
+to quantify wheel damage. The measurements are compiled
+with historical data for long term trending.
+5
+
+PAGE 6
+Figure 10. MAHLI wheel imaging events per sol.
+Figure 11. Total odometry achieved on each sol MAHLI
+wheel imaging was performed.
+When a new set of FMWI images is received, a mobility
+downlink analyst checks for any major changes in wheel
+damage during the next tactical shift. Images are compared
+to the previous set for new grouser breaks, new damage
+features, large growth in existing features, and other off-
+nominal changes such as rocks stuck within wheel holes. This
+tactical assessment usually takes less than 15 minutes and
+is focused on identifying changes in wheel state that may
+restrict activities that can be planned for the next sol. The
+six wheels are then divided across the Wheel Wear team for
+more detailed assessments. Each member is assigned one or
+two wheels on a rotating basis to reduce assessor bias.
+For the initial look assessment, each wheel is evaluated in
+detail for qualitative changes. Current images are compared
+with those from the previous FMWI set to identify grouser
+breaks, new features, and existing features that grew or
+merged. The Wheel Wear team discusses initial look ﬁndings
+to establish consensus on the states of the wheels, and to
+determine if additional analysis is required. The initial look
+assessment is generally performed in less than one day.
+An example is the identiﬁcation of a large skin ﬂap protruding
+into the LM wheel, ﬁrst seen in MAHLI images on sol 1127.
+Figure 12. Cumulative odometry prior to each MAHLI
+wheel imaging event.
+It required analysis to determine the risk to the LM wheel
+actuator’s cable bundle. The Wheel Wear team agreed that
+it was not long enough to be an immediate hazard, and since
+the base of it was a grouser, it could not grow any longer. The
+risks from skin ﬂaps are discussed in Section 4 and the large
+skin ﬂap on the LM wheel is illustrated in Figure 27.
+After completing the qualitative assessments, the cracks on
+the wheels are measured. Each wheel has a crack map that
+shows the locations and shapes of the features on it. The
+LM wheel crack map is illustrated in Figure 13. Cracks are
+numbered in order of their discovery (larger numbers are the
+most recent). The size of each crack is expressed in terms
+of a dimensionless ratio by dividing the length of a crack
+along the width of the skin section, by the width of the skin
+section. This is done by taking a pixel measurement of the
+skin section that a crack is on, and a pixel measurement of
+the crack length parallel to the previous measurement. As
+illustrated in Figure 14, an image manipulation tool such as
+GNU Image Manipulation Program (GIMP) is used to take
+pixel measurements.
+The measurements are compiled in a spreadsheet to track
+long-term trends. The spreadsheet has logic to accommodate
+cracks that could not be measured due to lighting conditions,
+and for cracks that merge together. It provides the data for
+other trending tools such as a crack length analysis dashboard
+(Figure 22) that summarizes the conditions of the wheels, and
+the life model for comparison with Mars Yard three-wheel
+test track data (Figure 29).
+Due to the changes in conditions between FMWI sets, the
+measurement process is manually intensive. Sunlight may
+highlight particular features on a given sol more than pre-
+viously seen and completely obscure others. The wheel
+positions are not consistent between FMWI sets so asses-
+sors must visually orient themselves based on the wheel
+grousers and damage features, especially where only the non-
+odometry grousers are visible. This process of correlating 2D
+representations of 3D features to 2D imagery in inconsistent
+conditions results in measurement variance.
+Figure 15 and Table 2 show the variability between measure-
+ments of each crack, grouped by wheel. The front and middle
+wheels have tight distributions with average differences an
+6
+
+PAGE 7
+Figure 13. Sol 3195 LM wheel crack map. Image Credit: NASA/JPL-Caltech
+Figure 14. Sol 3195 pixel measurement of the LM wheel using GIMP. Image Credit: NASA/JPL-Caltech
+order of magnitude smaller than the average crack measure-
+ment. The larger spread for the two rear wheels is due to
+the low sample size from not having accumulated as much
+damage. Numbers in the ”Overall” row in Table 2 are the
+average length and average differences of all cracks on all
+wheels. The data shows that variances between a crack’s
+measurements are minor relative to the width of the wheel,
+with the overall average difference between measurements of
+all wheels being just 1.498 mm compared to the wheel width
+of 400 mm. The rear wheels have fewer and smaller damage
+features than the middle and front wheels. This combined
+with a reduced resolution from being further away in wheel
+images results in fewer measurements made throughout the
+mission and contributes to the larger measurement error seen
+on the LR and RR wheels.
+7
+
+PAGE 8
+Figure 15. Variability between measurements of cracks, by
+wheel.
+Table 2. Summary of Crack Measurements
+Wheel Average
+Crack
+Length
+Measure-
+ment [mm]
+Average
+Difference
+Between
+Measure-
+ments [mm]
+Number of
+Measure-
+ment
+Samples
+LF 35.546 2.348 1208
+LM 43.639 1.611 1144
+LR 22.203 9.931 4
+RF 16.582 0.740 472
+RM 36.518 1.083 1559
+RR 22.524 -5.048 19
+Overall 35.011 1.498 4406
+4. C URRENT STATE OF CURIOSITY ’S
+WHEELS
+The current state of Curiosity’s wheels is best understood
+when put in context with the progression of wheel wear over
+the course of the mission. Key wheel wear events are listed
+in Table 3.
+On sol 490, the ﬁrst FMWI was completed after the ﬁrst
+sizeable holes on the rover wheels were observed. Following
+this event, a Tiger team was formed that conducted extensive
+testing and algorithm development to reduce the wheel dam-
+age rate. A signiﬁcant event in the life of each wheel is when
+grouser breaks are ﬁrst discovered. By sol 3195, the Wheel
+Wear team had discovered three grouser breaks on the LM
+wheel and one grouser break on the RM wheel. The ﬁrst two
+grouser breaks on the LM wheel were discovered in sol 1641
+wheel images and the 3rd grouser break on the LM wheel was
+discovered in sol 3079 wheel images.
+TRCTL was approved for nominal use in ﬂight on sol 1678,
+following the discovery of the ﬁrst two LM grouser breaks in
+sol 1641 wheel images. Since then, the wheel grouser break
+rate has been signiﬁcantly slower than predicted by the Tiger
+team. However, while there have been decreases in damage
+rates, it is challenging to distinguish if they are due to TRCTL
+or driving over easier terrain. The ﬁrst and only grouser break
+Table 3. Key wheel wear events
+Sol Event
+34 The ﬁrst SPMWI. First wheel damage observed (a
+crack on the LM wheel)
+490 The ﬁrst FMWI was performed after sizeable holes
+were observed on sol 463
+516 Restriction against use of Autonomous navigation
+(AutoNav) and multi-sol drives started
+1641 Two grouser breaks discovered on the LM wheel
+(grousers 10 and 12)
+1678 TRCTL was approved for nominal use in ﬂight
+1781 AutoNav is once again permitted in all terrain types
+when conditions warrant it
+2407 First grouser break discovered on the RM wheel
+(grouser 12)
+3079 Third grouser break discovered on the LM wheel
+(grouser 11)
+3195 Latest FMWI (downlinked August 2, 2021)
+Figure 16. A break occurred on grousers 10 and 12 of the
+LM wheel sometime between sol 1591 and 1641.
+on the RM wheel was discovered in sol 2407 Mastcam wheel
+images.
+On sol 2115, the Operations team implemented overhead
+capturing of MAHLI wheel images, which resulted in more
+detailed documentation of the wheel state. The current status
+of Curiosity’s wheels is based on the latest FMWI performed
+on sol 3195, from which the Wheel Wear team concluded
+that maintaining a cadence of conducting FMWI every 1 km
+is sufﬁcient for monitoring wheel damage.
+According to Tiger team guidelines, three grouser breaks on
+a single wheel is considered a milestone that requires reeval-
+uation of the current driving and wheel imaging guidelines.
+After the sol 3079 FMWI, when the 3rd grouser break on the
+LM wheel was documented, the Wheel Wear team concluded
+that based on the rate of damage observed over the past few
+FMWI, the 3rd grouser break should not be alarming and the
+current guidelines for driving are effective for reducing wheel
+damage. Figures 16, 17 and 18 illustrate the progression of
+grouser breaks on the LM wheel.
+Figure 16 shows the state of LM wheel grousers 10, 11,
+and 12 on sol 1591, before any grouser breaks had been
+discovered, and on sol 1641, when the grouser 10 and 12
+breaks were discovered. In the sol 1641 image, there is
+obvious separation where the grouser 12 break occurred,
+but the grouser 10 break is subtle, not detected by a clear
+8
+
+PAGE 9
+Figure 17. Status of the grouser 10 and 12 breaks on the
+LM wheel on sol 2407.
+Figure 18. A view of the grouser 10, 11, and 12 breaks on
+the LM wheel on sol 3079. The grouser 11 break is
+observable from a top-down and side view.
+separation but by a slight misalignment in the top-down view
+of the grouser.
+Figure 17 shows the state of LM wheel grouser breaks 10
+and 12 on sol 2407. At the grouser 12 break, there is much
+less lateral separation than previously seen on sol 1641 and
+a visible lateral bend in grouser 12. At the grouser 10 break,
+there is no visible separation or misalignment, but the crack
+from the base to the top of the grouser is visible from a side
+view of the grouser.
+Figure 18 shows the 3rd grouser break (on grouser number
+11) on the LM wheel, discovered on sol 3079. The break is
+slightly visible in a top-down view and conﬁrmed in a side
+Figure 19. A view of the grouser 12 break on the RM wheel
+on sol 2407. The grouser break is not observable from a
+top-down view, but can be clearly seen from views of both
+sides of grouser 12.
+view. The biggest damage feature on the LM wheel is named
+Moria (named after the Dwarven city from J.R.R. Tolkien’s
+works, and voted for by the MSL team). As illustrated in
+Figure 19, the only grouser break on the RM wheel (on
+grouser number 12) is not visible from a top-down view of the
+grouser, but is visible from views of each side of the grouser.
+Figures 20 and 21 show wheel status per skin section and
+cumulative damage per wheel section, respectively, for the
+front and middle wheels on sols 490, 1682, and 2115. There
+was a signiﬁcant increase in wheel damage from sol 490 to
+1682 and a relatively small increase from sol 1682 to 2115.
+The red lines in Figure 20 are the broken grousers and blue
+lines are the at-risk grouser due to high damage in the skin
+section around them. The yellow skin sections in Figure 20
+are ones with some damage and orange skin sections are ones
+with signiﬁcant damage. The green sections in Figure 20 are
+the wheel sections with minimal damage.
+The percentage of wheel damage per skin section can be seen
+in Figure 21. The damage on the RR and LR wheels is not
+depicted in the ﬁgures; this is due to the minimal damage
+these wheels have experienced. The relatively low damage
+on the LR and RR wheels is illustrated in Figure 22.
+After 26,255 m of driving on Mars (as of sol 3195), damage to
+Curiosity’s wheels is less severe than predicted by the Tiger
+team (see Section 5). The number of grouser breaks is less
+than what the Tiger team expected by this amount of total
+odometry, and the Wheel Wear team has observed a relatively
+slow increase in wheel damage. Table 4 shows the number of
+features on each wheel, and the cumulative crack length for
+each wheel is shown in Table 5.
+Table 4. Number of features on each wheel.
+Left Right
+Front 60 33
+Middle 44 64
+Rear 2 5
+9
+
+PAGE 10
+Figure 20. Damage per wheel skin sections for sols 490, 1682 and 2115
+Table 5. Cumulative crack length of each wheel (mm).
+Left Right
+Front 3,341 772
+Middle 2,950 3,466
+Rear 65 129
+The RM wheel has the most features and largest cumulative
+crack length, followed by the LF wheel and then the LM
+wheel. The LF wheel has nearly twice as many features
+and 4.3 times the cumulative crack length as the RF wheel.
+There is no obvious explanation for the disparity in damage
+between the LF and RF wheel, and although there are several
+hypotheses, this subject is still under investigation.
+Figure 22 shows wheel status per skin section and cumulative
+damage per wheel section, as of sol 3195. Figures 23, 24,
+25 and 26 contain all the front and middle wheel images
+acquired during the sol 3195 FMWI, with some notable
+features annotated by their identiﬁcation numbers.
+10
+
+PAGE 11
+Figure 21. Cumulative damage per wheel sections for sol 490, 1682 and 2115.
+11
+
+PAGE 12
+Figure 22. Wheel skin section status and cumulative damage per wheel sections, as of sol 3195
+12
+
+PAGE 13
+Figure 23. Sol 3195 MAHLI images of the LF wheel. Image Credit: NASA/JPL-Caltech
+Figure 24. Sol 3195 MAHLI images of the RF wheel. Image Credit: NASA/JPL-Caltech
+13
+
+PAGE 14
+Figure 25. Sol 3195 MAHLI images of the LM wheel. Image Credit: NASA/JPL-Caltech
+Figure 26. Sol 3195 Mastcam images of the RM wheel. Image Credit: NASA/JPL-Caltech
+14
+
+PAGE 15
+Figure 27. Sol 3005 overhead MAHLI view (top) and sol
+3011 underbelly MAHLI view (bottom) of a ﬂap of skin bent
+inward on the LM wheel inbetween grousers 12 and 13.
+Where there is a large hole in a wheel, a skin section has either
+broken away from the wheel and fallen onto the Martian
+surface or the skin section is still attached to the wheel and
+is pushed inward. A skin section that is still attached to
+the wheel and pushed inward is called a ﬂap. A ﬂap is
+identiﬁed by the wheel it is on and the crack number it is
+associated with. Figure 27 shows an overhead and underbelly
+MAHLI view of ﬂap LM-4, acquired on sol 3005 and 3011,
+respectively. Flap LM-4 is in between grouser 12 and 13 and
+was ﬁrst observed in the sol 1127 FMWI.
+Theoretically, a ﬂap could be long enough to contact the
+cable that runs to a wheel actuator. Damage to a wheel
+actuator cable could cause loss of commandability of that
+wheel. Therefore, ﬂaps are monitored each FMWI. However,
+the risk of a ﬂap causing damage to a wheel actuator cable is
+considered low. Finite element analysis indicates that a ﬂap
+of wheel skin long enough to reach a wheel actuator cable
+would break off before contacting a cable.
+The length of ﬂap LM-4 is estimated to be 109.8 mm, well
+short of the 181.5 mm minimum distance between the inner
+Figure 28. Wheel life testing was performed in the JPL
+Mars Yard using a three-wheel test rig with rocker and bogie
+suspension arms and a front, middle, and rear wheel. Image
+Credit: NASA/JPL-Caltech
+wheel surface and the wheel actuator cable. The base of ﬂap
+LM-4 is folded at grouser 13, therefore, ﬂap LM-4 cannot
+grow any longer.
+5. H OW WHEEL DAMAGE ASSESSMENT HAS
+INFLUENCED DRIVING GUIDELINES
+After completing the ﬁrst FMWI on sol 490 and convening
+the Tiger team, the MSL Operations team put numerous con-
+straints in place with the goal of minimizing wheel damage
+while the Tiger team conducted its investigation into the
+mechanics of wheel wear. These constraints and practices
+changed and evolved quickly as the team’s understanding
+of wheel wear improved. Drive distance was restricted to
+distances over which terrain could be evaluated by RPs during
+the drive planning process. This effectively restricted the
+use of Curiosity’s autonomous navigation (AutoNav) driving
+modes which conduct terrain safety assessments in real time
+at distances beyond what can be evaluated for safety by RPs.
+Drives during this period of time were typically less than 30
+m. Beyond that distance, it was difﬁcult to identify high-
+risk rocks to wheel damage in navigation camera images.
+The team also captured SPMWI as often as possible, after
+or between drives along the strategic route.
+Figure 28 illustrates a three-wheel test rig used in the Mars
+Yard to perform wheel life testing [5]. As Mars Yard testing
+conﬁrmed the role of small, pointed, embedded rocks on
+accruing wheel damage, the strategic route planning team
+altered the route planned for the rover with the goal of tran-
+sitioning to more wheel friendly terrain without signiﬁcantly
+increasing total drive distance towards the next goal. Use of
+AutoNav and multi-sol driving was formally restricted on sol
+516.
+The Operations team also implemented a policy to maxi-
+mize backwards driving, which was proven to reduce wheel
+damage to the middle and front wheels at the expense of
+increasing damage to the less worn rear wheels. Driving
+backwards increases the duration and complexity of a drive
+due to the added time for additional turning and terrain imag-
+ing. SPMWI continued to be performed at 30 m intervals,
+15
+
+PAGE 16
+while FMWI, initially requested at approximately 100 m
+intervals, was increased to 200 m on sol 537.
+Additional testing informed the team that the extra odometry
+accumulated on the wheels while turning (which requires
+steering the front and rear wheels in place) negated the
+advantages of driving backwards. The emphasis on priori-
+tizing backward driving was removed under conditions where
+terrain is rated as benign or when there are no areas that allow
+for turning at low cost to the wheels. Current Wheel Wear
+Driving Guidelines:
+1. Minimize Turning
+• Drive forward in benign terrain.
+• In challenging terrain, drive backwards if there are areas
+of benign terrain which allow for the turning at low cost
+to the wheels. Otherwise drive forward.
+2. AutoNav is permitted for single sol use in any traversable
+terrain
+• No distance restriction on AutoNav as long as the
+rover is constrained to stay on strategically approved
+terrain. RPs and Surface Properties Scientist (SPS) may
+extrapolate to unseen terrain based on ground images and
+homogenous terrain from orbital images.
+3. Minimize wheel contact with embedded rocks that can
+results in single points of contact.
+4. When driving on loose material, minimize wheel contact
+with rocks taller than 8 cm that could result in a single
+point of contact. Smaller rocks are expected to be
+depressed into the terrain and are less of a threat to the
+wheels.
+To facilitate strategic route planning with the reduction of
+wheel damage in mind, extensive efforts were made to map
+the different terrain types making up the preferred MSL
+route in conjunction with geologists on the MSL science
+team. Mars Yard wheel testing along with damage rate data
+provided by FMWI assessments informed the classiﬁcation
+of different types with respect to their likelihood to cause
+wheel damage. This allowed the Operations team to select
+paths that biased the rover away from travelling over regions
+identiﬁed as ”Irregular Sharp Outcrop”, the most threatening
+to wheel health [6]. Terrain classiﬁcations for wheel wear
+were updated and revised frequently over the next few years
+of the MSL mission.
+One goal of wheel wear terrain classiﬁcation was the cre-
+ation of a predictive damage model based on terrain type.
+Using wheel wear crack measurements accumulated with
+every FMWI since sol 490 and damage curves from different
+terrain types tested in the Mars Yard, the Wheel Wear team
+established a numerical ranking scale for different terrains.
+The model went into use on sol 1127. The goal of the scale
+was to capture the approximate rate of damage growth seen
+driving over different terrains and use the rates to estimate
+the impact of future drive routes on wheel wear. The range of
+values (1-10) capture uncertainty or error in the damage scale
+due to potential differences in speciﬁc interactions between
+rock, substrate, and wheel. The original terrain rankings were
+modiﬁed on sol 1798 to account for an additional 6 km of
+wheel wear data. The majority of driving during this period
+was spent on variations of Murray Formation terrain. Both
+sets of ratings are shown in Table 6.
+Since reaching approximately 11,000 m on the surface of
+Mars, wheel damage rates have remained consistently lower
+than terrain classiﬁcation-based predictions, even as the rover
+has traversed multiple distinct geologic regions. This is
+Table 6. Terrain Classiﬁcation Damage Ratings
+Terrain
+Class
+Description Rating
+Released
+Sol 1127
+Rating
+Updated
+Sol 1798
+Ripples Sandy 1 1
+Smooth Sandy, small
+rocks will press
+into substrate
+1-3 1-3
+Smooth
+with
+Rocks
+Sandy, avoidable
+large rocks
+3-4 3-4
+Murray
+Forma-
+tion
+Hard and smooth,
+size of loose
+rocks on surface
+determines range
+of wheel damage
+6-10 2-6
+Caprock
+Smooth
+Hard substrate
+with sand patches
+6-7 4-5
+Caprock Hard substrate
+with embedded
+rock
+7-9 4-7
+Caprock
+Rough
+Hard substrate
+with a high
+density of
+embedded rock
+7-10 5-8
+Rock
+Field
+Ranges from
+loose rock
+scattered in sand
+to large
+embedded rocks
+in substrate
+4-9 4-9
+attributed to RP drive guidelines effectively preventing MSL
+from driving over sharp embedded rocks along with an over-
+all reduction in terrain risk. A large percentage of early
+mission driving was done on caprock on the plains. The
+transition onto the softer bedrock of Mount Sharp (Murray
+Formation) marked a key inﬂection point in the damage
+curves of the front and middle wheels. Most wheel wear ac-
+cumulated since leaving the Pahrump Hills region at 11,000
+km is associated wheel interactions with small pebbles and
+occasional unavoidable rocks that are largely terrain type
+independent. Further attempts to reclassify terrain types with
+respect to wheel wear were made in 2019, but did not result in
+a more accurate model when compared to historical damage
+rates. Use of the wheel wear terrain classiﬁcation ratings as a
+tool for estimating future damage rates was discontinued after
+the sol 2592 FMWI.
+Following the sol 1512 FMWI (15,080 m driven), the re-
+quired cadence of wheel imaging was reduced signiﬁcantly in
+response to a drop-off in wheel damage rate. Regular SPMWI
+was discontinued and became an activity only executed if
+requested by the Wheel Wear team. The FMWI cadence was
+updated to occur every 500 m.
+Performing FMWI is a resource expensive activity to perform
+on Mars. The activity itself can take between 2 and 2.5 hours
+to execute and requires the repeated unstowing and stowing
+of the robotic arm between short drives to capture images
+of the wheels in all ﬁve positions. Given the consistent rate
+of damage seen over the course of several years, the FMWI
+cadence was reduced again to 1000 m on sol 2781, which has
+remained the cadence as of sol 3195.
+16
+
+PAGE 17
+Figure 29. Wheel Damage vs Distance Driven as of the sol 3195 FMWI.
+While damage rates have remained approximately linear for
+several years and many kilometers of driving, several major
+milestones in wheel life have been observed. The sol 1641
+FMWI image set revealed the ﬁrst two broken grousers on the
+LM wheel just a few sols before the ﬁrst TRCTL checkout
+test on Mars on sol 1646. Tiger team testing established
+three broken grousers on a single wheel as a signiﬁcant wheel
+life milestone, equating to a wheel reaching 60% of its
+life. The Wheel Wear team’s primary goal is to extend the
+life of Curiosity’s damaged wheels so the mobility system
+can continue to support MSL’s extended mission science
+objectives.
+The historical damage rate of the ﬂight vehicle’s wheels
+is typically compared to the rate of damage seen by the
+”Good Blue” test wheel, a wheel driven to failure during
+wheel life testing on artiﬁcial terrain with a moderate damage
+risk rating. The color rated terrains were created by terrain
+scientists on the Tiger Team to best represent the range of
+terrain severity Curiosity had driven on to that point, with
+Good Blue and Bad Blue differentiating the least and most
+harsh variations of nominal driving terrain. Good Blue would
+rate a 4-5 on the terrain classiﬁcation scale developed later,
+while Bad Blue would rate 7-8. The Good Blue test wheel
+serves as a convenient reference to the ﬂight wheels because
+its damage rate expressed as growth of total crack length over
+distance driven is comparable to the linear rates observed in
+ﬂight for the last 15 km of driving.
+Two metrics derived from wheel life testing are used to
+compare the state of the ﬂight wheels to test articles:
+1. Total damage accumulated on a wheel
+2. Distance driven since the ﬁrst broken grouser.
+Wheel life testing identiﬁed 3200 mm as the average amount
+of damage seen on a single wheel when its 3rd grouser broke.
+As of sol 3195, the latest FMWI as of this publication, wheels
+LF, LM, and RM are all within +/- 2 standard deviations of
+this value, but only LM has experienced 3 broken grousers.
+The second metric estimates that the 3rd broken grouser could
+be expected on a wheel 3.6 km after the ﬁrst break is seen.
+LM, by comparison, drove 9.2 km before the 3rd break was
+seen on sol 3079. These trends speak to the efﬁcacy of
+TRCTL and RP driving guidelines reducing the frequency
+and likelihood of the high energy terrain interactions required
+to break wheel grousers. Figure 29 shows the damage
+accumulation on all 6 wheels over the course of the mission.
+Wheel life testing indicates that performance degradation
+of a single wheel and its impact on the mobility system
+performance as a whole is not seen until all 19 grousers are
+broken on a single wheel. Of particular concern is the loss of
+structural integrity of the wheel at end-of-life, which poses a
+threat to the rest of the mobility system hardware, including
+the drive and steer actuators. Testing conducted in 2018
+determined that if a wheel reaches the heavily damaged state
+17
+
+PAGE 18
+of 19 broken grousers, the broken sections of the wheel can
+be removed in-situ through a process called Wheel Shedding,
+further extending the life of the wheel beyond 19 broken
+grousers. It is not expected that this will be required on
+MSL. The milestone for deciding whether to pursue Wheel
+Shedding in ﬂight is when 14 broken grousers are seen on a
+single wheel [9].
+The rate of broken grousers of the Good Blue test wheel
+is used as a worst-case estimate for when LM could reach
+the 14 broken grousers milestone. Flight data has already
+demonstrated that LM’s broken grousers are well below the
+pace of Good Blue. Also factored into this prediction is the
+estimated reduction in drive distance per year as the MSL
+rover continues to age. MSL’s Multi-Mission Radioisotope
+Thermoelectric Generator (MMRTG) power source output
+decays over time, reducing the amount of energy available
+each day for science and engineering activities on Mars. One
+impact of the reduction in available power is an inability to
+maintain MSL’s historical 3 km/yr drive rate. As wheel dam-
+age and broken grouser estimates are a function of distance
+driven, the reduction in drive rate will lengthen the estimated
+remaining life of the wheels.
+6. S UMMARY
+After notable damage to Curiosity’s wheels was observed
+early in the mission, FMWI was developed as a routine
+activity to assess and quantify wheel wear. It is the primary
+means of understanding the rate of wheel damage, an increase
+in which could restrict drive distance resulting in reduced
+science return. FMWI is a manually intensive process, so
+there is a continuing need to improve its efﬁciency as the
+mission’s resources shrink. The most recent FMWI on sol
+3195 provided the mission with an update on the current state
+of Curiosity’s wheels after 26.3 km of driving. Curiosity
+currently has several large skin sections missing and a total of
+4 broken grousers, three on the LM wheel and one on the RM
+wheel. That’s signiﬁcantly less than the 14 grouser breaks
+predicted on a single wheel after 24 km of driving [10].
+Because Curiosity has recently been trending below wheel
+damage predictions, the FMWI cadence has been relaxed rel-
+ative to requirements earlier in the mission. In addition to the
+development of FMWI, several operational strategies were
+initially pursued to reduce the rate of wheel damage. The
+most effective of these has proved to be hazard avoidance.
+The RPs avoid hazards by identifying sharp obstacles and
+intentionally navigating around them. The reduced damage
+rate is also attributed to the implementation of the TRCTL
+driving algorithm. Other mitigation strategies such as terrain
+classiﬁcation and SPMWI were developed but were eventu-
+ally retired due to lack of added value.
+Although Curiosity’s wheels continue to accumulate damage
+as the rover continues to drive across mixed Martian terrain,
+an individual wheel can absorb signiﬁcant damage before it
+causes any impact to mobility performance. Testing in the
+JPL Mars Yard on the Scarecrow testbed rover [11] indicates
+that Curiosity could continue to drive indeﬁnitely on the
+portion of a wheel that remains when all the grousers on a
+wheel breaks, if the unconstrained portion of the wheel can
+be safely shed [9].
+The wheels for the Mars 2020 (M2020) Perseverance rover
+were redesigned with knowledge from MSL to prevent it from
+experiencing wheel damage as severe as its older sibling.
+Figure 30 contains a side-by-side view of a Curiosity wheel
+and a Perseverance wheel. Most notably, the Perseverance
+wheel has skin that is more than twice as thick and has nearly
+twice as many grousers. Over the ﬁrst eight months of Mars
+2020 surface operations (as of sol 223), Perseverance has
+driven 2,663.7 meters. As expected, no wheel damage has
+been observed. Although TRCTL has been implemented as a
+patch for Perseverance, it would require additional validation
+testing if a decision was made to use it on Perseverance.
+Figure 30. Side-by-side view of a Curiosity and
+Perseverance wheel. Image Credit: NASA/JPL-Caltech.
+ACKNOWLEDGMENTS
+The research described in this paper was performed at the
+Jet Propulsion Laboratory, California Institute of Technology,
+under contract with the National Aeronautics and Space
+Administration. The authors would like to thank the Mars
+Science Laboratory Program for supporting this research,
+Howard Eisen for providing MPF wheel documentation,
+Patrick Degrosse for providing MSL and M2020 wheel docu-
+mentation, and Matt Heverly for discussions related to wheel
+wear.
+REFERENCES
+[1] A. Rankin, M. Maimone, J. Biesiadecki, N. Patel,
+D. Levine, and O. Toupet, “Driving Curiosity: Mars
+rover mobility trends duing the ﬁrst seven years,” in
+IEEE Aerospace Conference, Big Sky, Montana, USA,
+Mar. 2020.
+[2] D. Bickler, “Roving over Mars,” ASME Mechanical
+Engineering Magazine, vol. 120, no. 4, pp. 73–77, Apr.
+1998.
+[3] E. Tunstel, M. Maimone, A. Trebi-Ollennu, J. Yen,
+R. Petras, and R. Willson, “Mars Exploration Rover
+mobility and robotic arm operational performance,” in
+IEEE International Conference on Systems, Man and
+Cybernetics, Waikoloa, Hawaii, USA, Oct. 2005.
+[4] S. Haggart and J. Waydo, “The mobility system wheel
+design for NASA’s Mars Science Laboratory mission,”
+in 11th European Conference of the International So-
+ciety for Terrain-Vehicle Systems , Torino, Italy, Nov.
+2008.
+[5] R. Rainen, “Mars Science Laboratory wheel damage
+mechanical tiger ream ﬁnal report,” Nov. 2015, MSL
+Internal Document.
+[6] R. Arvidson, P. DeGrosse, J. Grotzinger, M. Heverly,
+J. Shechet, S. Moreland, M. Newby, N. Stein, A. Steffy,
+18
+
+PAGE 19
+F. Zhou, A. Zastrow, A. Vasavada, A. Fraeman, and
+E. Stilly, “Relating geologic units and mobility system
+kinematics contributing to Curiosity wheel damage at
+Gale Crater, Mars,”Journal of Terramechanics, vol. 73,
+pp. 73–93, Oct. 2017.
+[7] E. Lakdawalla, “Curiosity wheel dam-
+age: The problem and solutions,”
+https://www.planetary.org/articles/08190630-curiosity-
+wheel-damage, Aug. 2014, accessed: 2021-11-07.
+[8] O. Toupet, J. Biesiadecki, A. Rankin, A. Steffy,
+G. Meirion-Grifﬁth, D. Levine, M. Schadegg, and
+M. Maimone, “Terrain-adaptive wheel speed control on
+the Curiosity Mars rover: Algorithm and ﬂight results,”
+Journal of Field Robotics, vol. 37, no. 5, pp. 699–728,
+Aug. 2020.
+[9] E. Graser, S. McGill, A. Rankin, and A. Bielawiec,
+“Rimmed wheel performance on the Mars Science Lab-
+oratory Scarecrow rover,” in IEEE Aerospace Confer-
+ence, Big Sky, Montana, Mar. 2020.
+[10] A. Steffy, “Wheel wear strategic plan,” Oct. 2016, MSL
+Internal Document.
+[11] M. Heverly, J. Matthews, J. Lin, D. Fuller, M. Maimone,
+J. Biesiadecki, and J. Leichty, “Traverse performance
+characterization for the Mars Science Laboratory rover,”
+Journal of Field Robotics, vol. 30, no. 6, pp. 835–846,
+Sep. 2013.
+BIOGRAPHY [
+Arturo Rankin received his Ph.D. in
+Mechanical Engineering at the Univer-
+sity of Florida in 1997. He is currently a
+Robotic Systems Engineer in the Robot
+Operations group at the Jet Propulsion
+Laboratory, and the M2020 Robot Op-
+erations deputy lead. Prior to that, he
+was the MSL Mobility/Mechanisms team
+lead and the MSL Flight Software team
+lead.
+Nikunj Patel is a Tactical Downlink
+Lead for MSL, which follows the re-
+sponsibilities of a ﬂight director on the
+mission. In addition to that, he is also
+the Mobility Subject Matter Expert and
+the Wheel Wear team lead for Curios-
+ity Rover. He received his Masters in
+Aerospace Engineering from University
+of Central Florida (UCF) where he led
+multiple cubesatellite development ma-
+chines through AIAA and UCF . In addition to that, Nikunj
+designed the ﬁrst Ground Support Biobarrier (GSB) that
+would be utilized by NASA’s Planetary Protection (PP) team
+to meet stringent bioburden requirements for future life detec-
+tion missions to other terrestrial bodies.
+Evan Graser is a Systems Engineer in
+the Engineering Operations for Surface
+Missions group at JPL. He is currently
+the MSL Mobility/Mechanisms subsys-
+tem team lead and the deputy lead of the
+M2020 Perseverance Mobility downlink
+team. He is a member and the lead
+trainer of the MSL Engineering Oper-
+ations Systems team. Evan received is
+MS in Aerospace Engineering from the
+University of Colorado, Boulder.
+Jiun-Kai Freddy Wang is a Mechatron-
+ics Engineer in the Mechanisms and Mo-
+bility group at JPL. He built and tested
+MSL heritage actuators and seal dis-
+pensing mechanisms for the Mars 2020
+mission before joining MSL as a member
+of the Mobility/Mechanisms subsystem
+team. He received his Bachelor of Sci-
+ence in Mechanical Engineering from
+Rensselaer Polytechnic Institute.
+Kimberly Rink is a Systems Engineer
+in the Engineering Operations for Sur-
+face Missions group at JPL. She cur-
+rently leads the Fault Protection subsys-
+tem team, operates and maintains the ve-
+hicle and mission systems testbeds, and
+is a member of the Mobility/Mechanisms
+subsystem team for MSL. Kim received
+her MS in Aeronautics and Astronautics
+from Purdue University.
+19

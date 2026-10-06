@@ -1,0 +1,14 @@
+[
+  {
+    "product_id": "DTEEC_023957_1755_024023_1755_U01",
+    "lat": -4.5895,
+    "lon": 137.4417,
+    "height_above_areoid_m": null
+  },
+  {
+    "product_id": "DTEEC_018854_1755_018920_1755_U01",
+    "lat": -4.5895,
+    "lon": 137.4417,
+    "height_above_areoid_m": -4492.5087890625
+  }
+]

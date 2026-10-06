@@ -1,0 +1,513 @@
+{
+  "total_mass": {
+    "value": 899,
+    "unit": "kg",
+    "status": "Documented",
+    "source": "NASA landing press kit 2012 p.3",
+    "note": ""
+  },
+  "gravity": {
+    "value": 3.71,
+    "unit": "m/s^2",
+    "status": "Documented",
+    "source": "JPL planetary physical parameters; research pack",
+    "note": ""
+  },
+  "wheel_radius": {
+    "value": 0.25,
+    "unit": "m",
+    "status": "Derived",
+    "source": "JPL Wheel Damage Table 1",
+    "note": "Includes grousers. Smooth cylinder collision envelope."
+  },
+  "wheel_width": {
+    "value": 0.4,
+    "unit": "m",
+    "status": "Documented",
+    "source": "JPL Wheel Damage Table 1",
+    "note": ""
+  },
+  "baseline_speed": {
+    "value": 0.04,
+    "unit": "m/s",
+    "status": "Documented",
+    "source": "NASA landing press kit 2012",
+    "note": ""
+  },
+  "chassis_mass": {
+    "value": 699,
+    "unit": "kg",
+    "status": "Estimated",
+    "source": "Mass budget",
+    "note": "Includes locked arm, turret, mast, electronics and MMRTG. Residual after mobility bodies."
+  },
+  "rocker_mass": {
+    "value": 35,
+    "unit": "kg each",
+    "status": "Estimated",
+    "source": "Provisional mass budget",
+    "note": ""
+  },
+  "bogie_mass": {
+    "value": 20,
+    "unit": "kg each",
+    "status": "Estimated",
+    "source": "Provisional mass budget",
+    "note": ""
+  },
+  "carrier_mass": {
+    "value": 9,
+    "unit": "kg each",
+    "status": "Estimated",
+    "source": "Provisional mass budget",
+    "note": ""
+  },
+  "wheel_mass": {
+    "value": 9,
+    "unit": "kg each",
+    "status": "Estimated",
+    "source": "Provisional mass budget",
+    "note": "Not a NASA wheel mass measurement."
+  },
+  "drive_torque": {
+    "value": 80,
+    "unit": "N m",
+    "status": "Estimated",
+    "source": "Provisional actuator model",
+    "note": "Not flight actuator data; sensitivity 0.5x and 1.5x."
+  },
+  "drive_kp": {
+    "value": 48,
+    "unit": "N m s/rad",
+    "status": "Calibrated",
+    "source": "Finite PI speed servo; settled and driven at 120/240 Hz",
+    "note": "Numerical tuning, not flight controller gains."
+  },
+  "drive_ki": {
+    "value": 24,
+    "unit": "N m/rad",
+    "status": "Calibrated",
+    "source": "Finite PI speed servo with clamp",
+    "note": "Numerical tuning, not flight controller gains."
+  },
+  "steering_torque": {
+    "value": 200,
+    "unit": "N m",
+    "status": "Estimated",
+    "source": "Provisional actuator model",
+    "note": "Sized for rigid-cylinder static scrub; not flight data."
+  },
+  "steering_rate": {
+    "value": 0.25,
+    "unit": "rad/s",
+    "status": "Estimated",
+    "source": "Provisional actuator model",
+    "note": ""
+  },
+  "steering_limit": {
+    "value": 1.48,
+    "unit": "rad",
+    "status": "Estimated",
+    "source": "Provisional actuator travel, +/-84.8 deg",
+    "note": ""
+  },
+  "steering_kp": {
+    "value": 1200,
+    "unit": "N m/rad",
+    "status": "Estimated",
+    "source": "Bounded steering servo",
+    "note": ""
+  },
+  "steering_kd": {
+    "value": 60,
+    "unit": "N m s/rad",
+    "status": "Estimated",
+    "source": "Bounded steering servo",
+    "note": ""
+  },
+  "differential_stiffness": {
+    "value": 50000,
+    "unit": "N m/rad",
+    "status": "Estimated",
+    "source": "Compliant ideal gear constraint",
+    "note": "qL+qR approaches zero; finite compliance rather than an exact gear joint."
+  },
+  "differential_damping": {
+    "value": 500,
+    "unit": "N m s/rad",
+    "status": "Estimated",
+    "source": "Numerical stabilization of differential",
+    "note": ""
+  },
+  "differential_torque": {
+    "value": 3000,
+    "unit": "N m",
+    "status": "Estimated",
+    "source": "Coupling safety clamp",
+    "note": ""
+  },
+  "acceleration": {
+    "value": 0.025,
+    "unit": "m/s^2",
+    "status": "Estimated",
+    "source": "Player command ramp",
+    "note": ""
+  },
+  "yaw_acceleration": {
+    "value": 0.02,
+    "unit": "rad/s^2",
+    "status": "Estimated",
+    "source": "Player command ramp",
+    "note": ""
+  },
+  "baseline_yaw_rate": {
+    "value": 0.025,
+    "unit": "rad/s",
+    "status": "Estimated",
+    "source": "Playable point-turn command",
+    "note": ""
+  },
+  "linear_damping": {
+    "value": 0.015,
+    "unit": "1/s",
+    "status": "Estimated",
+    "source": "Numerical damping, not measured drag",
+    "note": ""
+  },
+  "angular_damping": {
+    "value": 0.025,
+    "unit": "1/s",
+    "status": "Estimated",
+    "source": "Numerical damping, not measured joint friction",
+    "note": ""
+  },
+  "wheel_friction": {
+    "value": 1.0,
+    "unit": "dimensionless",
+    "status": "Estimated",
+    "source": "Jolt contact material; terrain chooses effective friction",
+    "note": ""
+  },
+  "rock_friction": {
+    "value": 0.85,
+    "unit": "dimensionless",
+    "status": "Estimated",
+    "source": "Hard-ground rigid contact",
+    "note": ""
+  },
+  "regolith_friction": {
+    "value": 0.6,
+    "unit": "dimensionless",
+    "status": "Estimated",
+    "source": "Rigid consolidated-ground approximation",
+    "note": ""
+  },
+  "sand_friction": {
+    "value": 0.25,
+    "unit": "dimensionless",
+    "status": "Estimated",
+    "source": "Low-friction rigid sand proxy",
+    "note": "No sinkage, shear history, compaction or embedding; not terramechanics."
+  },
+  "game_time_scale": {
+    "value": 6.0,
+    "unit": "sim seconds/wall second",
+    "status": "Estimated",
+    "source": "Time acceleration",
+    "note": "Physics tick frequency multiplied with time scale to preserve dt."
+  },
+  "physics_hz": {
+    "value": 120,
+    "unit": "Hz",
+    "status": "Estimated",
+    "source": "Fixed-step integration; convergence compared at 240 Hz",
+    "note": ""
+  },
+  "chassis_inertia": {
+    "value": [
+      170,
+      230,
+      180
+    ],
+    "unit": "kg m^2 XYZ",
+    "status": "Estimated",
+    "source": "Lumped rectangular internal mass distribution",
+    "note": "Applied in rover.gd. Not solid external mesh; sensitivity required."
+  },
+  "rocker_inertia": {
+    "value": [
+      12,
+      14,
+      3
+    ],
+    "unit": "kg m^2 XYZ",
+    "status": "Estimated",
+    "source": "Slender-link approximation",
+    "note": ""
+  },
+  "bogie_inertia": {
+    "value": [
+      4,
+      5,
+      1
+    ],
+    "unit": "kg m^2 XYZ",
+    "status": "Estimated",
+    "source": "Slender-link approximation",
+    "note": ""
+  },
+  "carrier_inertia": {
+    "value": [
+      0.8,
+      0.4,
+      0.8
+    ],
+    "unit": "kg m^2 XYZ",
+    "status": "Estimated",
+    "source": "Carrier lump",
+    "note": ""
+  },
+  "wheel_inertia": {
+    "value": [
+      0.56,
+      0.4,
+      0.4
+    ],
+    "unit": "kg m^2 XYZ",
+    "status": "Estimated",
+    "source": "Thin-hoop axial inertia m*r^2; transverse includes width",
+    "note": ""
+  },
+  "rocker_limit": {
+    "value": 0.7,
+    "unit": "rad",
+    "status": "Estimated",
+    "source": "Provisional travel",
+    "note": ""
+  },
+  "bogie_limit": {
+    "value": 0.8,
+    "unit": "rad",
+    "status": "Estimated",
+    "source": "Provisional travel",
+    "note": ""
+  },
+  "chassis_collision_size": {
+    "value": [
+      1.36,
+      0.5,
+      1.85
+    ],
+    "unit": "m XYZ",
+    "status": "Estimated",
+    "source": "Simplified body collision; asset-inspected envelope",
+    "note": ""
+  },
+  "steering_readiness": {
+    "value": 0.12,
+    "unit": "rad",
+    "status": "Estimated",
+    "source": "Drive fades to zero while steering error exceeds 6.9 degrees",
+    "note": ""
+  },
+  "floating_torque_fraction": {
+    "value": 0.12,
+    "unit": "dimensionless",
+    "status": "Estimated",
+    "source": "Unloaded wheel speed limiting",
+    "note": ""
+  },
+  "slip_denominator_floor": {
+    "value": 0.01,
+    "unit": "m/s",
+    "status": "Estimated",
+    "source": "Regularization near zero speed",
+    "note": ""
+  },
+  "rocker_collision_radius": {
+    "value": 0.1,
+    "unit": "m",
+    "status": "Estimated",
+    "source": "Simplified pivot collision sphere",
+    "note": ""
+  },
+  "bogie_collision_radius": {
+    "value": 0.085,
+    "unit": "m",
+    "status": "Estimated",
+    "source": "Simplified pivot collision sphere",
+    "note": ""
+  },
+  "carrier_collision_radius": {
+    "value": 0.06,
+    "unit": "m",
+    "status": "Estimated",
+    "source": "Simplified carrier collision sphere",
+    "note": ""
+  },
+  "origin_ChassisVisual": {
+    "value": [
+      0.0,
+      0.8572210073471069,
+      0.08899986371397972
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Estimated",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Body/pivot origin; not flight CAD. Chassis origin approximates locked-equipment COM."
+  },
+  "origin_Rocker_L": {
+    "value": [
+      0.7943623065948486,
+      0.8921189904212952,
+      0.3030000738799572
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Bogie_L": {
+    "value": [
+      0.7949371933937073,
+      0.6505584716796875,
+      -0.45100367441773415
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Wheel_FL": {
+    "value": [
+      1.0586358308792114,
+      0.24761857092380524,
+      1.1815880499780178
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Carrier_FL": {
+    "value": [
+      1.0582431554794312,
+      0.6472190618515015,
+      1.1814974509179592
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Wheel_ML": {
+    "value": [
+      1.1888525485992432,
+      0.2505468428134918,
+      1.7508864402770996e-07
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Wheel_RL": {
+    "value": [
+      1.0581867694854736,
+      0.2504662275314331,
+      -1.0737556256353855
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Carrier_RL": {
+    "value": [
+      1.0576996803283691,
+      0.6499555706977844,
+      -1.0749999321997166
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Rocker_R": {
+    "value": [
+      -0.7991629838943481,
+      0.8921190500259399,
+      0.3030000142753124
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Bogie_R": {
+    "value": [
+      -0.7997376918792725,
+      0.6505584716796875,
+      -0.451003972440958
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Wheel_FR": {
+    "value": [
+      -1.0628914833068848,
+      0.25035539269447327,
+      1.1839090548455715
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Carrier_FR": {
+    "value": [
+      -1.0624990463256836,
+      0.6499561071395874,
+      1.1840002499520779
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Wheel_MR": {
+    "value": [
+      -1.1936531066894531,
+      0.2505464255809784,
+      -1.7508864402770996e-07
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Wheel_RR": {
+    "value": [
+      -1.0629870891571045,
+      0.250466525554657,
+      -1.076244119554758
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  },
+  "origin_Carrier_RR": {
+    "value": [
+      -1.0625003576278687,
+      0.6499557495117188,
+      -1.0750004090368748
+    ],
+    "unit": "m XYZ Godot",
+    "status": "Measured from the visual asset",
+    "source": "assets/geometry.json; NASA visual asset",
+    "note": "Wheel centers or existing mechanical pivot origins; axes not certified flight data."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "process_id": 10156,
+  "observed_working_set_mib": 794.1796875,
+  "observed_peak_working_set_mib": 847.1171875,
+  "observed_private_memory_mib": 1309.796875,
+  "observed_peak_commit_mib": 1459.50390625,
+  "note": "Recorded from the process observation during the final rendered verification; peak counters refer to the observation time, not the entire completed session. Includes engine, source buffers, shader/driver allocations and terrain."
+}

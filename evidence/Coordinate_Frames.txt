@@ -1,0 +1,343 @@
+
+PAGE 1
+Mars Science Laboratory
+MSL Coordinate Systems for 
+Science Instruments
+Last updated: 3 March 2013
+Primary Contributions from Justin Maki 1
+Minor inputs from the Remote Sensing Mast 
+Functional Design Description by Noah Warner1
+1Jet Propulsion Laboratory, California Institute of Technology
+Copyright 2013. California Institute of Technology. U.S. Government sponsorship acknowledged.
+
+
+PAGE 2
+Mars Science Laboratory
+Primary Rover Operations Coordinate Frames
+Frame 
+Name
+Description Origin  
+Type
+Direction 
+Type
+Location of Origin +X
+Direction
++Y
+Direction
++Z
+Direction
+Typical use case
+SITE Site Frame Mars 
+fixed
+Mars 
+fixed
+Frame origin is attached to Mars, sits on 
+the nominal Martian surface.  New sites 
+are declared by a command sent by the
+Rover Planners, typically at the end of a 
+drive, usually associated with an 
+accompanying  Navcam 360‐degree 
+panorama. 
+North East Nadir Targeted  remote 
+sensing (XYZ), target
+designation, driving.  
+This is the most 
+commonly used frame 
+in operations.
+RNAV Rover  
+Navigation 
+Frame
+Rover 
+fixed
+Rover 
+fixed
+Frame origin is fixed relative to the 
+rover,  located at the nominal Martian
+surface, centered under the rover turn‐
+in‐place rotation axis.  
+Forward
+drive 
+direction
+Starboard 
+direction
+Down 
+(chassis 
+nadir)
+Pointing  cameras to 
+fixed locations relative 
+to the rover body 
+(usually used in special 
+cases only).
+LL Mars  Local 
+Level 
+Frame
+Rover 
+fixed
+Mars 
+fixed
+Frame origin is fixed relative to the 
+rover,  located at the nominal Martian
+surface, centered under the rover turn‐
+in‐place rotation axis.  
+North East Nadir Untargeted  remote 
+sensing (az/el), for
+example, drive 
+direction imaging, 
+general terrain 
+imaging, cases where 
+accurate XYZ position 
+is unknown
+2
+
+PAGE 3
+Mars Science Laboratory
+Definition of the RNAV Frame
+• The RNAV origin is located on the nominal 
+(flat) surface of Mars, beneath the rover, 
+centered on the turn‐in‐place axis of rotation.
+– When the rover turns in place, the RNAV origin 
+stays fixed
+• The +ZRNAV axis points downward (relative to 
+the rover chassis) and is perpendicular to the 
+XRNAV/YRNAV plane.   
+• The +XRNAV axis points in the forward drive 
+direction.
+• The +YRNAV axis points towards the starboard 
+side of the rover (i.e, to the right when facing 
+forward).
+ +XRNAV+YRNAV
++ZRNAV (chassis nadir)
+• The RNAV coordinate system is right‐
+handed, orthogonal, and defined by axes 
+XRNAV YRNAV, and ZRNAV (shown in red, 
+below). 
+3
+
+PAGE 4
+Mars Science Laboratory
+Definition of the RNAV Frame (cont.)
+RNAV Frame Side View RNAV Frame Front View
+4
+
+PAGE 5
+Mars Science Laboratory
+Definition of Mars Local Level Frame
+• The Mars Local Level Coordinate Frame (LL Frame) is right handed, orthogonal, and defined by axes 
+XLL, YLL, and ZLL (shown in blue, below).  
+• It is a North (XLL) East (YLL) Nadir (ZLL) frame.
+• When a site frame is declared, the LL frame origin is coincident with the RNAV frame.
+• The frame origin is attached to the rover, but the directions of the axis are Mars fixed.
+– Can be thought of as a compass
++XRNAV+YRNAV
++ZRNAV = chassis nadir (fixed to rover body, downward if on flat ground)
++XLL = North
++YLL = East +ZLL = gravity nadir
+This angle is the 
+rover heading 
+(yaw)
+5
+
+PAGE 6
+Mars Science Laboratory
+A site frame is a LL frame that is attached to the Martian surface whenever the site 
+index is incremented (shown in green, below).
+Definition of Site Frame
++XRNAV+YRNAV
++ZRNAV = chassis nadir (fixed to rover 
+body, downward if on flat ground)
++Xsite = North
++Ysite = East
++Zsite = gravity nadir
+1.  Declare a site frame
+2.  Drive
+3. The  rover position 
+in site frame is 
+given by (XLL,YLL,ZLL), 
+typically specified 
+in meters.
++XLL = North
++YLL = East
++ZLL = gravity nadir
+6
+
+PAGE 7
+Mars Science Laboratory
+Site to Site Translations
+Given two site frames, SN and SN+1, the rover position 
+expressed in site N coordinates is given by:
+(XN+1,YN+1,ZN+1) + SN,N+1,
+where (XN+1,YN+1,ZN+1) is the rover position in Site N+1 and 
+SN,N+1 is the vector that describes the position of Site N+1 
+expressed in Site N frame coordinates.
+Site N
+Site N+1
+SN,N+1
+7
+
+PAGE 8
+Mars Science Laboratory
+• As the rover drives across the Martian surface, it accumulates errors in its position with respect 
+to the local site frame origin.
+• When these accumulated errors become large enough (or whenever it is convenient), the rover 
+drivers declare a new site frame by executing a command onboard the rover.
+• When a new site frame is declared, the rover position becomes (0,0,0) in the current site frame.
+• Often a new site will be declared when acquiring a Navcam 360‐degree panorama.
+Multiple Site Frames
+Site 1
+Site 2
+Site 3
+Site 4Images are tagged 
+with SITE_INDEX=1
+Images are tagged 
+with SITE_INDEX=2
+Images are tagged 
+with SITE_INDEX=3
+Images are tagged 
+with SITE_INDEX=4
+8
+
+PAGE 9
+Mars Science Laboratory
+Cartesian (XYZ) versus Angles (az/el)
+There are 2 common methods of pointing the 
+cameras within the RNAV and Local Level/Site:
+– Cartesian 3‐D points (X,Y ,Z)
+• Referenced from the coordinate frame origin
+– Azimuth and Elevation Angles
+• Referenced from +X axis (azimuth) and X/Y plane 
+(elevation)
+9
+
+PAGE 10
+Mars Science Laboratory
+Site Frame (LL) XYZ:
++X is North
++Y is East
+‐X is South
+‐Y is West
++Z is down
+‐Z is up
+RNAV XYZ:
++X is Forward
++Y is to the right (when facing forward)
+‐X is Rearward
+‐Y is to the left (when facing forward)
++Z is down
+‐Z is up
+Coordinate Type:  XYZ
++X+Y
++Z
+(x,y,z)
+10
+
+PAGE 11
+Mars Science Laboratory
+LL az/el pointing:
+Azimuth 0 is North
+Azimuth 90 is East
+Azimuth 180 is South
+Azimuth 270 is West
+Elevation 0 is at the horizon (flat surface)
+Elevation 90 is straight up (zenith)
+Elevation ‐90 is straight down*
+RNAV az/el pointing:
+Azimuth 0 is in the forward drive direction
+Azimuth 90 is to the right (when facing forward)
+Azimuth 180 is in the rearward direction
+Azimuth 270 is to the left (when facing forward)
+Elevation 0 is parallel to the deck
+Elevation 90 is straight up (relative to the deck)
+Elevation ‐90 is straight down* (relative to the deck)
+*Note:  The RSM can only point down to approximately ‐85 degrees in the RNAV frame.
+Note:  When using az/el pointing, the boresights are positioned so that they are parallel to the corresponding 
+coordinate frame vectors.  For example, an LL elevation angle of 0 places the boresight parallel to the LL X/Y plane. 
+Azimuth/Elevation Angle Definitions
++X+Y
++Z
+azimuth
+elevation
+11
+
+PAGE 12
+Mars Science Laboratory
+Other coordinate types
+In addition to XYZ and AZ/EL absolute pointing, there are other 
+options available:
+– AZ/EL RELATIVE pointing can move the camera boresights relative to their 
+current position
+• Example:  If the camera is pointed North, a relative azimuth move of +90 degrees will 
+point the camera to the East.
+– JOINT Frame pointing (absolute and relative) allows pointing of the 
+cameras using Remote Sensing Mast (RSM) joint angles (measured relative 
+to the RSM joint hardstops)
+• Only used in special circumstances.
+12
+
+PAGE 13
+Mars Science Laboratory
+Other Rover Operations Coordinate Frames
+Frame 
+Type FRAME Description
+Mobility
+WHEEL_LF Left  front wheel 
+WHEEL_RF Right  front wheel
+WHEEL_LM Left  middle wheel
+WHEEL_RM Right  middle wheel
+WHEEL_LR Left  rear wheel
+WHEEL_RR Right  rear wheel
+NAV_GOAL Current rover  navigation goal
+NAV_VTT Visual  Target Tracking target
+WHEEL_RR Right  rear wheel
+Remote
+Sensing
+Mast (RSM)
+RSM_BASE RSM  base
+RSM_HEAD RSM  head
+RSM_JOINTS
+Joint‐space (coordinate type must be 
+JOINTS_ABS)
+NCAML Left  Navcam on active rover computer
+NCAMR Right  Navcam on active rover computer
+RMI ChemCam Remote  Micro Imager
+MCAML Left  Mastcam
+MCAMR Right  Mastcam
+CCAM_CAL ChemCam calibration  target
+MCAM_CAL Mastcam calibration  target
+Inertial
+Vectors
+SUN Sun
+Earth Earth
+Phobos Phobos
+Deimos Deimos
+Frame 
+Type FRAME Description
+SA/SPaH
+ARM Robotic  arm base
+TURRET Robotic  arm turret
+MAHLI MAHLI
+SCOOP_TIP Scoop  tip
+SCOOP_TCP Scoop  tool control point
+PORTION CHIMRA  portioner
+APXS APXS
+DRILL Drill
+DRT Dust  removal tool
+ARM_TGT Arm  target
+ARM_GUARDED Last  arm guarded move
+DROPOFF CHIMRA  dropoff frame
+SAM1 SAM  inlet 1
+SAM2 SAM  inlet 2
+CHEMIN Chemin inlet
+OCM1, OCM2, etc. Indexed  Organic Check Material
+TRAY observation  tray
+Other
+Body
+Mounted
+RAD RAD  instrument on the rover deck
+REMS_UV REMS  UV sensor on the rover deck
+REMS_BOOM1 REMS  Boom 1
+REMS_BOOM2 REMS  Boom
+ 2
+HCAML Left  Hazcam on active rover computer
+HCAMR Right  Hazcam on active rover computer
+FIDUCIAL Indexed  fiducials
+13

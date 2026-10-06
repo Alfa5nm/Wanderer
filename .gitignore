@@ -1,0 +1,9 @@
+.godot/
+*.blend1
+*.tmp
+.tools/
+.tmp_*.py
+__pycache__/
+*.pyc
+evidence/*.log
+evidence/*.jsonl

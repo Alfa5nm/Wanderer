@@ -1,0 +1,125 @@
+{
+  "checks": {
+    "atmosphere_persists_deployment": true,
+    "bradbury_daylight_sky_fill": true,
+    "bradbury_deployment": true,
+    "bradbury_night_dust_hidden": true,
+    "bradbury_night_has_zero_fill": true,
+    "bradbury_quality_changes_no_geometry": true,
+    "bradbury_rover_drives": true,
+    "bradbury_same_sun_in_haze": true,
+    "bradbury_source_hides_cosmetic_dust": true,
+    "compatibility_preserved": true,
+    "jezero_daylight_sky_fill": true,
+    "jezero_deployment": true,
+    "jezero_night_dust_hidden": true,
+    "jezero_night_has_zero_fill": true,
+    "jezero_quality_changes_no_geometry": true,
+    "jezero_rover_drives": true,
+    "jezero_same_sun_in_haze": true,
+    "jezero_source_hides_cosmetic_dust": true,
+    "mola_daylight_sky_fill": true,
+    "mola_deployment": true,
+    "mola_night_dust_hidden": true,
+    "mola_night_has_zero_fill": true,
+    "mola_quality_changes_no_geometry": true,
+    "mola_rover_drives": true,
+    "mola_same_sun_in_haze": true,
+    "mola_source_hides_cosmetic_dust": true,
+    "render_size_(1366, 768)": true,
+    "render_size_(1600, 900)": true,
+    "render_size_(1920, 1080)": true,
+    "repeat_deployment": true,
+    "shared_orbital_profile": true
+  },
+  "measurements": {
+    "adapter": "NVIDIA GeForce GTX 1650",
+    "bradbury_navigation_(1366, 768)": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 8,
+        "last_worker_ms": 31.153,
+        "max_queue": 2,
+        "max_upload_ms": 2.604,
+        "uploads": 26
+      },
+      "frames": 1101,
+      "max_ms": 22.071,
+      "p50_ms": 8.699,
+      "p95_ms": 14.238,
+      "pixels": "(1366, 768)",
+      "static_memory_mib": 499.968890190125,
+      "texture_memory_mib": 230.441653251648
+    },
+    "bradbury_navigation_(1600, 900)": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 8,
+        "last_worker_ms": 31.153,
+        "max_queue": 2,
+        "max_upload_ms": 2.604,
+        "uploads": 26
+      },
+      "frames": 1146,
+      "max_ms": 13.126,
+      "p50_ms": 8.652,
+      "p95_ms": 10.509,
+      "pixels": "(1600, 900)",
+      "static_memory_mib": 499.936141014099,
+      "texture_memory_mib": 244.357913017273
+    },
+    "bradbury_navigation_(1920, 1080)": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 8,
+        "last_worker_ms": 85.635,
+        "max_queue": 2,
+        "max_upload_ms": 2.604,
+        "uploads": 25
+      },
+      "frames": 911,
+      "max_ms": 57.653,
+      "p50_ms": 10.778,
+      "p95_ms": 13.341,
+      "pixels": "(1920, 1080)",
+      "static_memory_mib": 499.867747306824,
+      "texture_memory_mib": 266.913607597351
+    },
+    "cold_prepare_ms": 16775.092,
+    "jezero_navigation": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 2,
+        "last_worker_ms": 146.003,
+        "max_queue": 2,
+        "max_upload_ms": 0.636,
+        "uploads": 36
+      },
+      "frames": 853,
+      "max_ms": 21.264,
+      "p50_ms": 11.201,
+      "p95_ms": 17.519,
+      "pixels": "(1600, 900)",
+      "static_memory_mib": 504.855273246765,
+      "texture_memory_mib": 245.024577140808
+    },
+    "mola_navigation": {
+      "detail": {
+        "cancelled_requests": 2,
+        "disk_hits": 8,
+        "last_worker_ms": 165.479,
+        "max_queue": 2,
+        "max_upload_ms": 0.421,
+        "uploads": 36
+      },
+      "frames": 773,
+      "max_ms": 26.675,
+      "p50_ms": 12.422,
+      "p95_ms": 18.821,
+      "pixels": "(1600, 900)",
+      "static_memory_mib": 504.728135108948,
+      "texture_memory_mib": 245.691241264343
+    },
+    "warm_prepare_ms": 283.57
+  }
+}

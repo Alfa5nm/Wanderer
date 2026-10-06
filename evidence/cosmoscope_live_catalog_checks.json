@@ -1,0 +1,17 @@
+{
+  "published_count": 34,
+  "cold": {
+    "hits": 0,
+    "misses": 2,
+    "stale_hits": 0,
+    "failures": 0
+  },
+  "warm_delta": {
+    "hits": 2,
+    "misses": 0,
+    "stale_hits": 0,
+    "failures": 0
+  },
+  "provider": "USGS Astrogeology STAC",
+  "footprints_are_not_valid_pixel_coverage": true
+}

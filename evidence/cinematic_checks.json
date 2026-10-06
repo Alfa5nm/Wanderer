@@ -1,0 +1,13 @@
+{
+  "distant_selection_pullback": true,
+  "drag_applied_on_frame": true,
+  "events_accumulated": true,
+  "flight_interrupts": true,
+  "held_drag_no_between_event_sway": true,
+  "motion_30_60_120_equivalent": true,
+  "near_surface_sensitivity": true,
+  "polar_flight_finite": true,
+  "release_stops_mouse_motion": true,
+  "sun_light_alignment": true,
+  "true_dark_ambient": true
+}

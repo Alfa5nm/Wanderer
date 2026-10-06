@@ -1,0 +1,15 @@
+{
+  "core_decoded_budget": true,
+  "corrupt_tile_rejected": true,
+  "decoded_core_mib": 492.448757171631,
+  "disk_cache_cap": true,
+  "fallback_survives_corruption": true,
+  "interrupted_worker_cancelled": true,
+  "missing_cache_asset_detected": true,
+  "offline_preserves_bundled": true,
+  "packaged_remote_read": true,
+  "remote_valid_hirise_found": true,
+  "stream_eviction_preserves_core": true,
+  "warm_cache_without_worker": true,
+  "worker_failure_keeps_core": true
+}

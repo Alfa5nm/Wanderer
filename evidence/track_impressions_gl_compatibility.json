@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "actual_shallow_rut_and_shoulder": true,
+    "bounded_tiles": true,
+    "centimetre_visual_mesh": true,
+    "collision_unchanged": true,
+    "dense_tiles_ready": true,
+    "overlap_is_idempotent": true,
+    "render_size_(1366, 768)": true,
+    "render_size_(1600, 900)": true,
+    "render_size_(1920, 1080)": true,
+    "shared_single_mask": true,
+    "source_restores_ground": true,
+    "source_toggle_restores_marks": true
+  },
+  "measurements": {
+    "moving_1600x900": {
+      "detail": {
+        "cancelled_requests": 0,
+        "disk_hits": 27,
+        "last_worker_ms": 50.448,
+        "max_queue": 2,
+        "max_upload_ms": 3.645,
+        "uploads": 26
+      },
+      "frames": 278,
+      "max_ms": 45.62,
+      "p50_ms": 17.122,
+      "p95_ms": 26.104,
+      "pixels": "(1600, 900)",
+      "static_memory_mib": 438.369331359863,
+      "texture_memory_mib": 246.307133674622
+    }
+  }
+}

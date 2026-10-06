@@ -1,0 +1,4 @@
+rasterio==1.5.2
+numpy==2.5.3
+Pillow==12.3.0
+PyInstaller==6.22.3

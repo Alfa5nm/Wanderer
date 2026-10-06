@@ -1,0 +1,319 @@
+{
+  "reference_radius_m": 3396000.0,
+  "mola": [
+    {
+      "id": "megr90n000gb",
+      "bounds": [
+        0,
+        0,
+        180,
+        90
+      ],
+      "width": 11520,
+      "height": 5760,
+      "ppd": 64,
+      "offset_m": 3396000.0
+    },
+    {
+      "id": "megr90n180gb",
+      "bounds": [
+        180,
+        0,
+        360,
+        90
+      ],
+      "width": 11520,
+      "height": 5760,
+      "ppd": 64,
+      "offset_m": 3396000.0
+    },
+    {
+      "id": "megr00n000gb",
+      "bounds": [
+        0,
+        -90,
+        180,
+        0
+      ],
+      "width": 11520,
+      "height": 5760,
+      "ppd": 64,
+      "offset_m": 3396000.0
+    },
+    {
+      "id": "megr00n180gb",
+      "bounds": [
+        180,
+        -90,
+        360,
+        0
+      ],
+      "width": 11520,
+      "height": 5760,
+      "ppd": 64,
+      "offset_m": 3396000.0
+    }
+  ],
+  "datasets": [
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "source_spacing_m": 1.0117630165416043,
+      "sha256": "bb180af24507089597b0e6f454814a109bf79368ab6beb81bd8257cc11dd139d",
+      "valid_fraction": 0.5171943306922913,
+      "prepared_spacing_m": 1.0117630165416043,
+      "width": 4096,
+      "height": 4096,
+      "bounds": [
+        137.407,
+        -4.624,
+        137.476,
+        -4.555
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/DTEEC_018854_1755_018920_1755_U01.tif",
+      "id": "hirise_bradbury",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "elevation",
+      "path": "hirise_bradbury.height",
+      "title": "HiRISE elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "absolute_vertical_accuracy_m": null,
+      "observation_dates": [
+        "2010-08-04",
+        "2010-08-09"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "asset": "dtm",
+      "footprint": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.336,
+              -4.4693
+            ],
+            [
+              137.427,
+              -4.458
+            ],
+            [
+              137.457,
+              -4.7034
+            ],
+            [
+              137.366,
+              -4.7142
+            ],
+            [
+              137.336,
+              -4.4693
+            ]
+          ]
+        ]
+      },
+      "lod_range": [
+        0,
+        18
+      ],
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ]
+    },
+    {
+      "scale": 0.0003598811243059,
+      "offset": 0.0558451891606461,
+      "projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "source_spacing_m": 1.0117630165415834,
+      "sha256": "8811c2fcc03491b2356df19dcd40d04e0602170b3d34ad216fb0dff8fa71b542",
+      "valid_fraction": 0.5168251991271973,
+      "prepared_spacing_m": 1.0117630165415834,
+      "width": 4096,
+      "height": 4096,
+      "bounds": [
+        137.407,
+        -4.624,
+        137.476,
+        -4.555
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/hirise/controlled/dtm/ESP_018854_1755_ESP_018920_1755/ESP_018854_1755_RED_C_01_ORTHO.tif",
+      "id": "hirise_bradbury_image",
+      "product_id": "DTEEC_018854_1755_018920_1755_U01",
+      "kind": "imagery",
+      "path": "hirise_bradbury_image.tile",
+      "title": "HiRISE grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [
+        "2010-08-04"
+      ],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_hirise_socet_dtms/items/DTEEC_018854_1755_018920_1755_U01",
+      "observation_source_urls": [
+        "https://www.uahirise.org/ESP_018854_1755",
+        "https://www.uahirise.org/ESP_018920_1755"
+      ],
+      "observation_date_note": "Stereo acquisition dates verified against HiRISE observation pages; catalog timestamp is excluded",
+      "validity_mask_path": "hirise_bradbury_image.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb"
+    },
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "source_spacing_m": 20.0,
+      "sha256": "2034fd9a5279dbe275c4f8a303254507cbd84f14a8460572f1f0781b943ebaa4",
+      "valid_fraction": 0.5996708273887634,
+      "prepared_spacing_m": 20.0,
+      "width": 4096,
+      "height": 4096,
+      "bounds": [
+        137.075,
+        -5.402,
+        137.634,
+        -4.129
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W/T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W-DEM-geoid-adj.tif",
+      "id": "ctx_gale",
+      "product_id": "T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W",
+      "kind": "elevation",
+      "path": "ctx_gale.height",
+      "title": "CTX elevation",
+      "vertical_datum": "radial offset from 3396000 m",
+      "observation_dates": [],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_ctx_controlled_usgs_dtms/items/T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W"
+    },
+    {
+      "scale": 1.0,
+      "offset": 0.0,
+      "projection": "PROJCS[\"Mars (2015) - Sphere / Ocentric / Equirectangular, clon = 0\",GEOGCS[\"Mars (2015) - Sphere / Ocentric\",DATUM[\"Mars (2015) - Sphere\",SPHEROID[\"Mars (2015) - Sphere\",3396190,0,AUTHORITY[\"IAU\",\"49900\"]],AUTHORITY[\"IAU\",\"49900\"]],PRIMEM[\"Reference Meridian\",0,AUTHORITY[\"IAU\",\"49900\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"IAU\",\"49900\"]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"IAU\",\"49910\"]]",
+      "source_spacing_m": 20.0,
+      "sha256": "e8c93d2030a96922878912e1d472343ab25091056bcfe3a40672e1a485d7e547",
+      "valid_fraction": 0.5996708273887634,
+      "prepared_spacing_m": 24.562724592177357,
+      "width": 3072,
+      "height": 3072,
+      "bounds": [
+        137.075,
+        -5.402,
+        137.634,
+        -4.129
+      ],
+      "source_url": "https://astrogeo-ard.s3-us-west-2.amazonaws.com/mars/mro/ctx/controlled/usgs/T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W/T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W-DRG.tif",
+      "id": "ctx_gale_image",
+      "product_id": "T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W",
+      "kind": "imagery",
+      "path": "ctx_gale_image.tile",
+      "title": "CTX grayscale orthoimage",
+      "vertical_datum": "not applicable",
+      "observation_dates": [],
+      "catalog_url": "https://stac.astrogeology.usgs.gov/api/collections/mro_ctx_controlled_usgs_dtms/items/T01_000815_1749_XN_05S222W__P22_009716_1773_XI_02S223W",
+      "validity_mask_path": "ctx_gale_image.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb"
+    },
+    {
+      "id": "mola128_gale",
+      "product_id": "MEGR00N090HB.IMG",
+      "title": "MOLA 128 ppd Gale",
+      "kind": "elevation",
+      "path": "mola128_gale.height",
+      "bounds": [
+        136.1953125,
+        -6.3046875,
+        138.8046875,
+        -3.0
+      ],
+      "width": 334,
+      "height": 423,
+      "prepared_spacing_m": 463,
+      "source_spacing_m": 463,
+      "projection": "IAU2000 planetocentric simple cylindrical",
+      "vertical_datum": "radial offset from 3396000 m",
+      "source_url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg128/megr00n090hb.img",
+      "catalog_url": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "sha256": "de652d37e09edfc6dcf00887262c8d213e5cc9ab94e87fd869afa6cfb62738aa",
+      "valid_fraction": 1.0,
+      "observation_dates": [
+        "1997-09-15",
+        "2001-06-30"
+      ],
+      "absolute_vertical_accuracy_m": null,
+      "lod_range": [
+        0,
+        18
+      ]
+    },
+    {
+      "id": "ctx_mosaic",
+      "product_id": "Gale_CTX_BlockAdj_dd",
+      "kind": "imagery",
+      "title": "CTX Gale mosaic (grayscale)",
+      "path": "ctx_mosaic.tile",
+      "bounds": [
+        135.0,
+        -6.6796875,
+        139.5703125,
+        -2.4609375
+      ],
+      "width": 2048,
+      "height": 2048,
+      "source_spacing_m": 81.40140956264587,
+      "prepared_spacing_m": 132.27729053929954,
+      "projection": "Mars geographic equirectangular, east positive",
+      "vertical_datum": "not applicable",
+      "catalog_url": "https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars",
+      "source_url": "https://trek.nasa.gov/tiles/Mars/EQ/Gale_CTX_BlockAdj_dd/1.0.0/default/default028mm/",
+      "observation_dates": [],
+      "lod_range": [
+        0,
+        18
+      ],
+      "sha256": "78c5049f8fdd71fdead0c40e129dffadb2a46a6251181df3abaace647d47cf5e",
+      "imagery_note": "NASA CTX mosaic WMTS. Instrument resolution up to 6m; this bundled overview is resampled.",
+      "validity_mask_path": "ctx_mosaic.validity.z",
+      "display_collar_m": 600,
+      "validity_mask_encoding": "bit-lsb"
+    },
+    {
+      "id": "ctx_jezero_view",
+      "product_id": "CTX_beta01_uncontrolled_5m_Caltech",
+      "kind": "imagery",
+      "title": "Jezero surrounding CTX atlas (preliminary, uncontrolled; Caltech)",
+      "path": "ctx_jezero_view.png",
+      "bounds": [
+        75.4049835205078,
+        17.3301525115967,
+        79.5160598754883,
+        19.5378952026367
+      ],
+      "width": 1024,
+      "height": 1024,
+      "source_spacing_m": 5.0,
+      "prepared_spacing_m": 237.971491637388,
+      "projection": "Mars 2000 sphere geographic, planetocentric, east-positive",
+      "vertical_datum": "not applicable",
+      "catalog_url": "https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars",
+      "source_url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile",
+      "observation_dates": [],
+      "lod_range": [
+        0,
+        18
+      ],
+      "sha256": "e9c605e5ecdf415f0ce619916dac89eb3e5768622a088f1ec54cb90021a9ca98",
+      "valid_fraction": 1.0,
+      "role": "view_background",
+      "imagery_note": "Bundled Jezero surrounding atlas joined from eight NASA CTX tiles; baked illumination; preliminary uncontrolled visible mosaic.",
+      "accuracy_note": "Preliminary uncontrolled mosaic; positional accuracy not established here",
+      "source_tiles": []
+    }
+  ],
+  "global_spacing_m": 926,
+  "areoid_spacing_deg": 0.0625,
+  "sources": [
+    "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived",
+    "https://stac.astrogeology.usgs.gov/docs/data/mars/hirise_dtms/"
+  ],
+  "built_utc": "2026-10-01T12:46:44Z"
+}

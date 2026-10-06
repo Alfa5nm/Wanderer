@@ -1,0 +1,63 @@
+{
+  "adapter": "NVIDIA GeForce GTX 1650",
+  "deployed": true,
+  "deployment_including_scene_activation": {
+    "frames": 866,
+    "max_frame_ms": 59.376,
+    "median_frame_ms": 6.944,
+    "p95_frame_ms": 7.136
+  },
+  "explore_click_1366x768": true,
+  "explore_click_1600x900": true,
+  "explore_click_1920x1080": true,
+  "orbit_1366x768": {
+    "frames": 414,
+    "max_frame_ms": 7.253,
+    "median_frame_ms": 6.939,
+    "p95_frame_ms": 7.103
+  },
+  "orbit_1600x900": {
+    "frames": 412,
+    "max_frame_ms": 7.354,
+    "median_frame_ms": 6.94,
+    "p95_frame_ms": 7.091
+  },
+  "orbit_1920x1080": {
+    "frames": 405,
+    "max_frame_ms": 7.262,
+    "median_frame_ms": 6.943,
+    "p95_frame_ms": 7.127
+  },
+  "panel_1366x768": {
+    "inside_viewport": true,
+    "panel_rect": "[P: (986.0014, 362.1585), S: (310.0003, 359.0003)]",
+    "visible_rect": "[P: (0.0, 0.0), S: (1600.0, 900.0)]"
+  },
+  "panel_1600x900": {
+    "inside_viewport": true,
+    "panel_rect": "[P: (986.0014, 362.1585), S: (310.0001, 359.0)]",
+    "visible_rect": "[P: (0.0, 0.0), S: (1600.0, 900.0)]"
+  },
+  "panel_1920x1080": {
+    "inside_viewport": true,
+    "panel_rect": "[P: (986.0015, 362.1582), S: (310.0008, 359.0001)]",
+    "visible_rect": "[P: (0.0, 0.0), S: (1600.0, 900.0)]"
+  },
+  "resolution_1366x768": {
+    "captured_pixels": "(1366, 768)",
+    "exact": true,
+    "window": "(1366, 768)"
+  },
+  "resolution_1600x900": {
+    "captured_pixels": "(1600, 900)",
+    "exact": true,
+    "window": "(1600, 900)"
+  },
+  "resolution_1920x1080": {
+    "captured_pixels": "(1920, 1080)",
+    "exact": true,
+    "window": "(1920, 1080)"
+  },
+  "synthetic_input_note": "Mouse events injected through viewport; no physical controller hardware available. Timings include desktop presentation and capture overhead.",
+  "texture_dimensions": "(4096.0, 2048.0)"
+}

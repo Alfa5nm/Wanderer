@@ -1,0 +1,159 @@
+[gd_resource type="Resource" script_class="PlanetDefinition" load_steps=17 format=3]
+
+[ext_resource type="Script" path="res://planetary_map/data/planet.gd" id="1"]
+[ext_resource type="Script" path="res://planetary_map/data/mission.gd" id="2"]
+[ext_resource type="Script" path="res://planetary_map/data/region.gd" id="3"]
+[ext_resource type="Script" path="res://planetary_map/data/site.gd" id="4"]
+[ext_resource type="Script" path="res://planetary_map/data/data_layer.gd" id="5"]
+
+[sub_resource type="Resource" id="Curiosity"]
+script = ExtResource("2")
+id = "curiosity"
+latitude = -4.5895
+longitude = 137.4417
+title = "Curiosity"
+subtitle = "Mars Science Laboratory"
+mission_id = "curiosity"
+category = "mission"
+mission_name = "Mars Science Laboratory"
+launch_date = "2011-11-26"
+landing_date = "2012-08-06"
+date = "2012-08-06"
+region_id = "gale"
+site_id = "bradbury"
+description = "A mobile laboratory investigating evidence of past environments that could have supported microbial life."
+external_references = PackedStringArray("https://mars.nasa.gov/internal_resources/824/", "https://ntrs.nasa.gov/api/citations/20130011617/downloads/20130011617.pdf", "https://www.jpl.nasa.gov/news/nasa-mars-rover-begins-driving-at-bradbury-landing/")
+
+[sub_resource type="Resource" id="Gale"]
+script = ExtResource("3")
+id = "gale"
+latitude = -4.5
+longitude = 137.4
+title = "Gale Crater"
+subtitle = "Curiosity landing region"
+mission_id = "curiosity"
+category = "region"
+max_distance = 2.15
+description = "A 154 km impact crater with a layered mountain at its center. Curiosity landed on its northern floor."
+external_references = PackedStringArray("https://science.nasa.gov/resource/daybreak-at-gale-crater/", "https://science.nasa.gov/resource/gale-craters-history-book/")
+deployment_scene = "res://main.tscn"
+deployment_label = "Curiosity mobility field lab"
+preload_paths = PackedStringArray("res://assets/curiosity.glb", "res://assets/ground.gdshader")
+
+[sub_resource type="Resource" id="Bradbury"]
+script = ExtResource("4")
+id = "bradbury"
+latitude = -4.5895
+longitude = 137.4417
+title = "Bradbury Landing"
+subtitle = "Curiosity touchdown site"
+mission_id = "curiosity"
+region_id = "gale"
+category = "site"
+date = "2012-08-06"
+max_distance = 1.55
+description = "Curiosity's landing site, named for author Ray Bradbury. Coordinates follow the NASA landing reconstruction."
+external_references = PackedStringArray("https://ntrs.nasa.gov/api/citations/20130011617/downloads/20130011617.pdf", "https://www.jpl.nasa.gov/news/nasa-mars-rover-begins-driving-at-bradbury-landing/")
+
+[sub_resource type="Resource" id="Visual"]
+script = ExtResource("5")
+id = "visual"
+title = "Visual"
+texture_path = "res://planetary_map/assets/mars_viking_4k.jpg"
+external_references = PackedStringArray("https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars", "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m/1.0.0/WMTSCapabilities.xml")
+
+[sub_resource type="Resource" id="perseverance"]
+script = ExtResource("2")
+id = "perseverance"
+latitude = 18.44
+longitude = 77.45
+title = "Perseverance"
+subtitle = "Jezero Crater landing anchor"
+category = "mission"
+mission_name = "Perseverance"
+landing_date = "2021-02-18"
+description = "Landing anchor in Jezero Crater. Rounded coordinates from NASA Mars24; detailed mission exploration is available for Curiosity."
+external_references = PackedStringArray("https://www.giss.nasa.gov/tools/mars24/help/landers.html")
+
+[sub_resource type="Resource" id="insight"]
+script = ExtResource("2")
+id = "insight"
+latitude = 4.5
+longitude = 135.62
+title = "InSight"
+subtitle = "Elysium Planitia landing anchor"
+category = "mission"
+mission_name = "InSight"
+landing_date = "2018-11-26"
+description = "Landing anchor in Elysium Planitia. Rounded coordinates from NASA Mars24; detailed mission exploration is available for Curiosity."
+external_references = PackedStringArray("https://www.giss.nasa.gov/tools/mars24/help/landers.html")
+
+[sub_resource type="Resource" id="spirit"]
+script = ExtResource("2")
+id = "spirit"
+latitude = -14.57
+longitude = 175.48
+title = "Spirit"
+subtitle = "Gusev Crater landing anchor"
+category = "mission"
+mission_name = "Spirit"
+landing_date = "2004-01-04"
+description = "Landing anchor in Gusev Crater. Rounded coordinates from NASA Mars24; detailed mission exploration is available for Curiosity."
+external_references = PackedStringArray("https://www.giss.nasa.gov/tools/mars24/help/landers.html")
+
+[sub_resource type="Resource" id="opportunity"]
+script = ExtResource("2")
+id = "opportunity"
+latitude = -1.95
+longitude = -5.53
+title = "Opportunity"
+subtitle = "Meridiani Planum landing anchor"
+category = "mission"
+mission_name = "Opportunity"
+landing_date = "2004-01-25"
+description = "Landing anchor in Meridiani Planum. Rounded coordinates from NASA Mars24; detailed mission exploration is available for Curiosity."
+external_references = PackedStringArray("https://www.giss.nasa.gov/tools/mars24/help/landers.html")
+
+[sub_resource type="Resource" id="viking1"]
+script = ExtResource("2")
+id = "viking1"
+latitude = 22.27
+longitude = -47.95
+title = "Viking 1"
+subtitle = "Chryse Planitia landing anchor"
+category = "mission"
+mission_name = "Viking 1"
+landing_date = "1976-07-20"
+description = "Landing anchor in Chryse Planitia. Rounded coordinates from NASA Mars24; detailed mission exploration is available for Curiosity."
+external_references = PackedStringArray("https://www.giss.nasa.gov/tools/mars24/help/landers.html")
+
+[sub_resource type="Resource" id="viking2"]
+script = ExtResource("2")
+id = "viking2"
+latitude = 48.27
+longitude = 134.28
+title = "Viking 2"
+subtitle = "Utopia Planitia landing anchor"
+category = "mission"
+mission_name = "Viking 2"
+landing_date = "1976-09-03"
+description = "Landing anchor in Utopia Planitia. Rounded coordinates from NASA Mars24; detailed mission exploration is available for Curiosity."
+external_references = PackedStringArray("https://www.giss.nasa.gov/tools/mars24/help/landers.html")
+
+[sub_resource type="Resource" id="phoenix"]
+script = ExtResource("2")
+id = "phoenix"
+latitude = 68.22
+longitude = -125.75
+title = "Phoenix"
+subtitle = "Vastitas Borealis landing anchor"
+category = "mission"
+mission_name = "Phoenix"
+landing_date = "2008-05-25"
+description = "Landing anchor in Vastitas Borealis. Rounded coordinates from NASA Mars24; detailed mission exploration is available for Curiosity."
+external_references = PackedStringArray("https://www.giss.nasa.gov/tools/mars24/help/landers.html")
+
+[resource]
+script = ExtResource("1")
+markers = Array[Resource]([SubResource("Curiosity"), SubResource("Gale"), SubResource("Bradbury"), SubResource("perseverance"), SubResource("insight"), SubResource("spirit"), SubResource("opportunity"), SubResource("viking1"), SubResource("viking2"), SubResource("phoenix")])
+layers = Array[Resource]([SubResource("Visual")])

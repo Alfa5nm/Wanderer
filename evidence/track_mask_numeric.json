@@ -1,0 +1,6 @@
+{
+  "crossing_order_independent": true,
+  "longitudinal_tread_survives": true,
+  "repeat_idempotent": true,
+  "split_segment_phase_continuity": true
+}
