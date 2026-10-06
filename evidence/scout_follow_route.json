@@ -1,0 +1,16 @@
+{
+  "checks": {
+    "human_remains_1x": true,
+    "human_walked_revised_course": true,
+    "render_size_(1600, 900)": true,
+    "revised_from_proximity": true,
+    "scenario_ready": true,
+    "session_projected_on_globe": true
+  },
+  "measurements": {
+    "planner_ms": 8116.028,
+    "points": 12,
+    "walk_displacement_m": 18.2803783416748,
+    "walk_seconds": 19.908
+  }
+}

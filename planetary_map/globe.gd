@@ -47,6 +47,8 @@ func _ready() -> void:
 	if not is_finite(definition.radius) or definition.radius <= 0:
 		push_warning("Invalid planet radius; using normalized sphere")
 		definition.radius = 1.0
+	definition=definition.duplicate(true)
+	for science_site in PlanetScienceSite.curated(): definition.markers.append(science_site)
 	lighting=PlanetLighting.new()
 	lighting.settings=visual_settings
 	add_child(lighting)
@@ -106,6 +108,7 @@ func _ready() -> void:
 	if terrain.roots_ready: hud.begin_boot_fade()
 	hud.heading.text = definition.title
 	build_survey_ui()
+	var scout_overlay := ScoutGlobeOverlay.new(); scout_overlay.globe=self; add_child(scout_overlay)
 	survey.cell_selected.connect(show_cell)
 	streamer.status_changed.connect(stream_status)
 	for data in definition.markers:
@@ -200,12 +203,26 @@ func show_selection() -> void:
 		hud.breadcrumb.text = "ORBITAL"
 		return
 	hud.panel.show_mission(data,mission,region,state == Navigation.MISSION_FOCUS)
+	if data.id.begins_with("scout_"):
+		hud.panel.explore.visible=false; hud.panel.deploy.visible=false
+	if data is PlanetScienceSite:
+		hud.panel.explore.visible=true; hud.panel.explore.text="DRIVE SCIENCE AREA"
+		hud.panel.terrain.visible=false
+		hud.panel.details.text="CURIOSITY SCIENCE CAMPAIGN · "+data.date
+		hud.panel.note.text="Archived rover position; sample-point offset and absolute accuracy unspecified."
+		hud.panel.deploy.visible=false
 	hud.breadcrumb.text = "← MARS  /  " + (region.title.to_upper() if region != null else data.title.to_upper())
 	if selection.controller_active:
 		if hud.panel.explore.visible: hud.panel.explore.grab_focus()
 		else: hud.panel.deploy.grab_focus()
 
 func explore_mission() -> void:
+	var science_target := find_marker(selected_id) as PlanetScienceSite
+	if science_target!=null:
+		var candidate := TerrainMissionRegion.new()
+		candidate.latitude=science_target.latitude; candidate.longitude=science_target.longitude; candidate.title=science_target.title
+		candidate.origin_radius_m=float(surface_service.sample(candidate.latitude,candidate.longitude).get("radial_m",0))
+		prepare_patch(candidate); return
 	if site == null or deployment.active: return
 	remember()
 	selected_id = site.id

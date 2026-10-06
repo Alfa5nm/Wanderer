@@ -1,0 +1,50 @@
+[
+  {
+    "id": "rocknest",
+    "title": "Rocknest — rover science position",
+    "latitude": -4.58999567,
+    "longitude": 137.448341795,
+    "date": "2012-10-07",
+    "description": "Rocknest was the site of Curiosity’s first soil scoop on Sol 61. Marker uses the archived rover localization, not the exact scoop bite.",
+    "position_verified": true,
+    "location_role": "historic rover localization associated with science area",
+    "coordinate_convention": "planetocentric latitude, east-positive longitude",
+    "record_sol": 59,
+    "science_sol": 61,
+    "next_localization_sol": 100,
+    "site": "5",
+    "drive": "104",
+    "pose": "-1",
+    "absolute_accuracy": "unspecified",
+    "target_offset": "not measured in this marker",
+    "references": [
+      "https://science.nasa.gov/photojournal/first-scoop-by-curiosity-sol-61-views/",
+      "https://planetarydata.jpl.nasa.gov/img/data/msl/msl_places/data_localizations/localized_interp.csv",
+      "https://planetarydata.jpl.nasa.gov/img/data/msl/msl_places/document/PLACES_PDS_SIS.pdf"
+    ]
+  },
+  {
+    "id": "yellowknife_bay",
+    "title": "Yellowknife Bay — John Klein campaign",
+    "latitude": -4.589484879,
+    "longitude": 137.449129568,
+    "date": "2013-02-08",
+    "description": "Curiosity first drilled the John Klein rock on Sol 182 in Yellowknife Bay. Marker uses the campaign rover localization, not the exact drill hole.",
+    "position_verified": true,
+    "location_role": "historic rover localization associated with science area",
+    "coordinate_convention": "planetocentric latitude, east-positive longitude",
+    "record_sol": 166,
+    "science_sol": 182,
+    "next_localization_sol": 272,
+    "site": "6",
+    "drive": "0",
+    "pose": "0",
+    "absolute_accuracy": "unspecified",
+    "target_offset": "not measured in this marker",
+    "references": [
+      "https://science.nasa.gov/photojournal/curiositys-first-sample-drilling/",
+      "https://planetarydata.jpl.nasa.gov/img/data/msl/msl_places/data_localizations/localized_interp.csv",
+      "https://planetarydata.jpl.nasa.gov/img/data/msl/msl_places/document/PLACES_PDS_SIS.pdf"
+    ]
+  }
+]

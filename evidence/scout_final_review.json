@@ -1,0 +1,91 @@
+{
+  "checks": {
+    "capture_hud_retracted": true,
+    "final_planner_returns": true,
+    "handoff_map_visible": true,
+    "render_size_(1366, 768)": true,
+    "render_size_(1600, 900)": true,
+    "render_size_(1920, 1080)": true,
+    "stable_contacts": true
+  },
+  "measurements": {
+    "adapter": "NVIDIA GeForce GTX 1650",
+    "during_worker_plan": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 29,
+        "last_worker_ms": 1.49,
+        "max_queue": 2,
+        "max_upload_ms": 2.119,
+        "uploads": 26
+      },
+      "frames": 842,
+      "max_ms": 72.824,
+      "p50_ms": 9.918,
+      "p95_ms": 13.149,
+      "pixels": "(1366, 768)",
+      "static_memory_mib": 442.588245391846,
+      "texture_memory_mib": 339.357915878296
+    },
+    "ik": {
+      "clamped_targets": 47,
+      "contact_samples": 3682,
+      "ik_us": 339,
+      "planted_drift_m": 0.000538546591997147,
+      "recoveries": 0,
+      "solver_error_m": 0.000538546591997147
+    },
+    "planner_ms": 2535.594,
+    "sustained_walk_(1366, 768)": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 29,
+        "last_worker_ms": 1.49,
+        "max_queue": 2,
+        "max_upload_ms": 2.119,
+        "uploads": 26
+      },
+      "frames": 1171,
+      "max_ms": 33.15,
+      "p50_ms": 6.645,
+      "p95_ms": 8.417,
+      "pixels": "(1366, 768)",
+      "static_memory_mib": 442.423551559448,
+      "texture_memory_mib": 339.274583816528
+    },
+    "sustained_walk_(1600, 900)": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 29,
+        "last_worker_ms": 1.49,
+        "max_queue": 2,
+        "max_upload_ms": 2.119,
+        "uploads": 26
+      },
+      "frames": 979,
+      "max_ms": 55.048,
+      "p50_ms": 7.626,
+      "p95_ms": 11.501,
+      "pixels": "(1600, 900)",
+      "static_memory_mib": 442.383382797241,
+      "texture_memory_mib": 353.190843582153
+    },
+    "sustained_walk_(1920, 1080)": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 28,
+        "last_worker_ms": 11.576,
+        "max_queue": 2,
+        "max_upload_ms": 2.119,
+        "uploads": 25
+      },
+      "frames": 720,
+      "max_ms": 87.297,
+      "p50_ms": 10.29,
+      "p95_ms": 14.7,
+      "pixels": "(1920, 1080)",
+      "static_memory_mib": 463.104516983032,
+      "texture_memory_mib": 375.746538162231
+    }
+  }
+}

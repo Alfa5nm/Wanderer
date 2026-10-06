@@ -3,6 +3,10 @@ render_mode cull_back;
 uniform sampler2D imagery : source_color, filter_linear_mipmap, repeat_disable;
 uniform sampler2D cavity_map : filter_linear_mipmap, repeat_disable;
 uniform vec4 terrain_bounds;
+uniform int presentation_mode=0;
+uniform sampler2D slope_map : filter_nearest, repeat_disable;
+uniform vec4 slope_bounds;
+uniform bool has_slope_map=false;
 uniform bool cinematic=true;
 uniform bool detail_maps_ready=false;
 uniform float cosmetic_seed=7462.0;
@@ -83,6 +87,19 @@ void fragment() {
         float dz=(sample_track(p+vec2(0,step_m.y)).g-sample_track(p-vec2(0,step_m.y)).g)*0.04/(2.0*step_m.y);
         vec3 wn=normalize(mat3(INV_VIEW_MATRIX)*NORMAL);
         NORMAL=normalize(mat3(VIEW_MATRIX)*(wn-vec3(dx,0,dz)));
+    }
+    if(presentation_mode==1) {
+        float grid=max(1.0-smoothstep(0.0,0.05,abs(fract(p.x/4.0)-0.5)),1.0-smoothstep(0.0,0.05,abs(fract(p.y/4.0)-0.5)));
+        ground=mix(vec3(0.34,0.32,0.28),vec3(0.60,0.53,0.40),grid*0.4);
+    }
+    if(presentation_mode==2) ground=observed;
+    if(presentation_mode==3 && has_slope_map) {
+        vec2 suv=(p-slope_bounds.xy)/slope_bounds.zw;
+        if(all(greaterThanEqual(suv,vec2(0))) && all(lessThanEqual(suv,vec2(1)))) {
+            vec2 assessment=texture(slope_map,suv).rg;
+            vec3 color=assessment.r<8.0/30.0 ? vec3(0.24,0.45,0.35) : assessment.r<0.5 ? vec3(0.75,0.52,0.20) : vec3(0.65,0.22,0.16);
+            ground=mix(ground,assessment.g>0.5 ? color : vec3(0.2),0.6);
+        }
     }
     ALBEDO=ground;
     AO=1.0-cavity*occlusion_strength;

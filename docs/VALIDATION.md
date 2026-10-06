@@ -1,6 +1,6 @@
 # Runtime validation
 
-Generated from local runtime measurements on 2026-10-02. Godot 4.6.1 stable, Jolt, Windows. Engineering cases use 3.71 m/s² and 1x simulation time with 120 Hz unless explicitly identified otherwise.
+Generated from local runtime measurements on 2026-10-07. Godot 4.6.1 stable, Jolt, Windows. Engineering cases use 3.71 m/s² and 1x simulation time with 120 Hz unless explicitly identified otherwise.
 
 **24/25 scoped software acceptance checks passed.** These tolerances qualify this prototype and its declared approximations, not flight hardware or Mars soil behavior.
 

@@ -1,5 +1,13 @@
 extends "res://scripts/world.gd"
 
+var astronaut: MarsAstronaut
+var human_control := false
+var rover_spawn_local := Vector2.ZERO
+var rover_spawn_yaw := 0.0
+var scout: ScoutAssessment
+var scout_presentation: ScoutPresentation
+var recording: MarsRecordingDirector
+
 var result: TerrainPatchResult
 var graph: TerrainGenerationGraph
 var service: PlanetSurfaceService
@@ -75,6 +83,7 @@ func _ready() -> void:
 
 func prepared(value: TerrainPatchResult) -> void:
 	var previous_hashes: Dictionary = result.hashes.duplicate() if result!=null else {}
+	var previous_region: String = result.region.signature() if result!=null else ""
 	result=value
 	if not initialized_patch:
 		initialized_patch=true
@@ -86,12 +95,14 @@ func prepared(value: TerrainPatchResult) -> void:
 		overhead.size=maxf(result.region.size_m.x,result.region.size_m.y)*1.15
 		overhead.far=2000
 		add_child(overhead)
+		setup_exploration()
 	else:
 		if previous_hashes.get("collision","")!=value.hashes.get("collision",""): install_geometry()
 		if previous_hashes.get("imagery","")!=value.hashes.get("imagery","") or previous_hashes.get("shading","")!=value.hashes.get("shading",""): apply_material()
 		if previous_hashes.get("rocks","")!=value.hashes.get("rocks",""): install_rocks()
 		if previous_hashes.get("gravel","")!=value.hashes.get("gravel",""): install_gravel()
 		install_route()
+		if previous_region!=result.region.signature(): configure_lighting()
 	update_appearance()
 	if detail!=null: detail.suspended=false
 	if information!=null: show_sources()
@@ -100,6 +111,31 @@ func prepared(value: TerrainPatchResult) -> void:
 		if result.route.get("origin","")=="user_planned": status.text+="\nUSER PLANNED PATH · not a historic traverse"
 		for warning in result.route.get("warnings",[]): status.text+="\n"+str(warning)
 		rebuild.disabled=false
+	if recording!=null: recording.patch_ready()
+
+func setup_exploration() -> void:
+	if ResourceLoader.exists("res://assets/astronaut/astronaut.glb"):
+		astronaut=MarsAstronaut.new(); astronaut.world=self
+		astronaut.position=Vector3(-5,result.field.sample(-5,0).height+0.05,0)
+		add_child(astronaut)
+	else: push_warning("Astronaut asset unavailable; rover exploration remains available.")
+	scout=ScoutAssessment.new(); scout.world=self; add_child(scout)
+	scout_presentation=ScoutPresentation.new(); scout_presentation.world=self; add_child(scout_presentation)
+	recording=MarsRecordingDirector.new(); recording.world=self; add_child(recording)
+
+func switch_actor() -> void:
+	if astronaut==null or astronaut.state=="fallen": return
+	human_control=not human_control
+	astronaut.controlled=human_control
+	orbit.set_process(not human_control); orbit.set_process_unhandled_input(not human_control)
+	astronaut.camera_rig.enabled=human_control
+	if human_control:
+		rover.command_v=0; rover.command_yaw=0; rover.brake=true
+		astronaut.camera_rig.focus=astronaut.position+Vector3.UP*1.1
+		astronaut.camera_rig.camera.current=true
+	else: orbit.camera.current=true
+	apply_mode()
+	if pace_selector!=null: pace_selector.disabled=human_control
 
 func make_terrain() -> void:
 	install_geometry()
@@ -193,9 +229,9 @@ func update_appearance() -> void:
 	if tracks!=null: tracks.bind_materials()
 
 func apply_mode() -> void:
-	var factor := pace if accelerated else 1.0
+	var factor := pace if accelerated and not human_control else 1.0
 	Engine.time_scale=factor
-	Engine.physics_ticks_per_second=int(rover.value("physics_hz")*factor)
+	Engine.physics_ticks_per_second=int(ProjectSettings.get_setting("physics/common/physics_ticks_per_second",120)) if human_control else int(rover.value("physics_hz")*factor)
 	if mode_label!=null: mode_label.text="%.0fx simulation · authentic rover physics" % factor
 
 func set_source_appearance(enabled: bool) -> void:
@@ -295,8 +331,8 @@ func spawn_rover() -> void:
 	rover=Node3D.new()
 	rover.set_script(RoverScript)
 	rover.name="Curiosity"
-	rover.spawn_basis=Basis(Quaternion(Vector3.UP,result.field.normal(0,0)))
-	rover.spawn_offset=Vector3(0,result.field.sample(0,0).height+0.08,0)
+	rover.spawn_basis=Basis(Quaternion(Vector3.UP,result.field.normal(rover_spawn_local.x,rover_spawn_local.y)))*Basis(Vector3.UP,rover_spawn_yaw)
+	rover.spawn_offset=Vector3(rover_spawn_local.x,result.field.sample(rover_spawn_local.x,rover_spawn_local.y).height+0.08,rover_spawn_local.y)
 	add_child(rover)
 	if not is_instance_valid(orbit): orbit=Node3D.new(); orbit.set_script(CameraScript); add_child(orbit)
 	orbit.camera.far=30000
@@ -309,6 +345,8 @@ func spawn_rover() -> void:
 	add_child(tracks)
 
 func configure_lighting() -> void:
+	if patch_lighting!=null: remove_child(patch_lighting); patch_lighting.queue_free()
+	if dust!=null: remove_child(dust); dust.queue_free()
 	for child in get_children():
 		if child is WorldEnvironment or child is DirectionalLight3D: remove_child(child); child.queue_free()
 	var settings = PlanetVisualSettings.new()
@@ -490,7 +528,7 @@ func show_sources() -> void:
 		text+="[url=%s]%s[/url] · %.2f m prepared / %.2f m source\n%s\n%s\nDates: %s\n" % [source.url,source.title,source.spacing_m,source.source_spacing_m,source.classification,source.accuracy,", ".join(source.dates)]
 	text+="MOLA fills regional elevation gaps. Global Viking imagery fills image gaps.\nRocks, roughness and friction are model assumptions."
 	text+="\nGENERATION INSPECTOR\nRebuilt outputs: "+", ".join(result.evaluated)+"\nReused outputs: "+", ".join(result.cache_hits)+"\nDisk cache: "+", ".join(result.disk_hits)+"\nHue, normals, gravel and rocks: illustrative\nCavity: derived from measured elevation\nOuter scenery: sourced, outside driving bounds"
-	text+="\nSky, haze and drifting/wheel dust: illustrative weather, not observations.\nCompatibility RGB scattering approximation; no native volumetric fog."
+	text+="\nSky, haze and drifting/wheel dust: illustrative weather, not observations.\nRenderer-specific shared atmosphere; native volumetric dust only in the optional Forward+ trial."
 	information.text=text
 
 func apply_settings() -> void:
@@ -514,6 +552,11 @@ func start_rebuild() -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_ESCAPE: return_to_mars(); return
 	if not initialized_patch: return
+	if (event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_H) or (event is InputEventJoypadButton and event.pressed and event.button_index==JOY_BUTTON_DPAD_UP):
+		switch_actor(); return
+	if human_control and event.is_action_pressed("reset_rover"):
+		astronaut.recover(); return
+	if human_control and event.is_action_pressed("mode"): return
 	super._input(event)
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode==KEY_T:
 		if overhead.current: orbit.camera.current=true
@@ -526,20 +569,20 @@ func _input(event: InputEvent) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not initialized_patch or builder.busy: return
 	if event is InputEventMouseButton and event.pressed and event.button_index==MOUSE_BUTTON_LEFT and event.shift_pressed:
-		var camera: Camera3D = overhead if overhead.current else orbit.camera
+		var camera: Camera3D = get_viewport().get_camera_3d()
 		var ray = PhysicsRayQueryParameters3D.create(camera.project_ray_origin(event.position),camera.project_ray_origin(event.position)+camera.project_ray_normal(event.position)*2000,1)
 		var hit = get_world_3d().direct_space_state.intersect_ray(ray)
 		if hit.is_empty() or not result.region.playable_bounds().has_point(Vector2(hit.position.x,hit.position.z)): return
-		graph.node("route").parameters.points=[Vector2(rover.chassis.global_position.x,rover.chassis.global_position.z),Vector2(hit.position.x,hit.position.z)]
-		graph.node("route").parameters.origin="user_planned"
-		start_rebuild()
-		status.text="Planning local path · not a historic rover traverse"
+		var active: Node3D = astronaut if human_control else rover.chassis
+		scout.propose(Vector2(active.global_position.x,active.global_position.z),Vector2(hit.position.x,hit.position.z))
+		status.text="UNVERIFIED PROPOSAL · scout before walking"
 
 func _process(dt: float) -> void:
 	if initialized_patch:
 		super._process(dt)
 		var telemetry: Dictionary = rover.telemetry()
 		hud.text="%.2f cm/s  ·  %03.0f°  ·  %.0fx time  ·  F1 telemetry" % [telemetry.speed*100*Engine.time_scale,fposmod(telemetry.heading,360),Engine.time_scale]
+		if human_control: hud.text="ASTRONAUT · %.2f m/s · Mars-inspired movement · 1x time" % Vector2(astronaut.velocity.x,astronaut.velocity.z).length()
 		if settings_scroll!=null: settings_scroll.custom_minimum_size.y=clampf(get_viewport().get_visible_rect().size.y-490,160,300) if settings_panel.visible else 0
 		var size: Vector2 = get_viewport().get_visible_rect().size
 		if size!=laid_out_size:
@@ -548,13 +591,15 @@ func _process(dt: float) -> void:
 			if control_label!=null:
 				control_label.position=Vector2(36,size.y-51)
 				control_label.add_theme_font_size_override("font_size",12)
-				control_label.text="WASD Drive   SPACE Brake   RMB Orbit   WHEEL Zoom   C Reset view   V Rover view   T Overhead   TAB Time   R Recover   ESC Mars"
+				control_label.text="H Human / Rover   F9 Capture   WASD Move   SPACE Brake / Brace   RMB Orbit   WHEEL Zoom   C Reset view   V Rover view   T Overhead   TAB Time   R Recover   ESC Mars"
 			hud.position=Vector2(36,size.y-77)
 			panel_back.position.x=size.x-635; panel.position.x=size.x-615
 		if detail!=null: detail.camera=get_viewport().get_camera_3d()
 
 func _physics_process(dt: float) -> void:
-	if initialized_patch: super._physics_process(dt)
+	if initialized_patch:
+		if human_control: rover.command_v=0; rover.command_yaw=0; rover.brake=true
+		else: super._physics_process(dt)
 
 func return_to_mars() -> void:
 	builder.cancel()

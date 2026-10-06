@@ -69,6 +69,7 @@ func make_button(parent: Node, text: String) -> Button:
 
 func show_mission(data: PlanetMarkerData, mission: PlanetMission, region: PlanetRegion, inspecting: bool) -> void:
 	selected_data = data
+	explore.text="EXPLORE MISSION →"
 	if mission == null:
 		title.text = data.title.to_upper()
 		details.text = data.subtitle

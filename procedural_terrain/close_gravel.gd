@@ -16,7 +16,7 @@ func _ready() -> void:
 	stone.radius=1; stone.height=2; stone.radial_segments=8; stone.rings=3
 
 func _process(_dt: float) -> void:
-	visible=not world.source_appearance
+	visible=not world.source_appearance and (world.recording==null or world.recording.stage==0)
 	if not visible: return
 	var camera := get_viewport().get_camera_3d()
 	if camera==null: return

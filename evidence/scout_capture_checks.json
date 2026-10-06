@@ -1,0 +1,86 @@
+{
+  "checks": {
+    "actual_proximity_discovers_hazard": true,
+    "feedback_revised_proposal": true,
+    "foot_contact_measured": true,
+    "foot_target_error_under_5cm": true,
+    "render_size_(1366, 768)": true,
+    "render_size_(1600, 900)": true,
+    "render_size_(1920, 1080)": true,
+    "repeatable_scenario_ready": true,
+    "reset_restores_unverified": true
+  },
+  "measurements": {
+    "adapter": "NVIDIA GeForce GTX 1650",
+    "ik": {
+      "clamped_targets": 21,
+      "contact_samples": 1464,
+      "ik_us": 440,
+      "planted_drift_m": 0.000188578094821423,
+      "recoveries": 0,
+      "solver_error_m": 0.000188578094821423
+    },
+    "planner_ms": 7658.522,
+    "prepare_ms": 246.648,
+    "scenario": {
+      "goal": "(39.68254, 18.88174)",
+      "hazard": "(39.68254, 12.88174)",
+      "kind": "SIMULATED OBSTACLE",
+      "ready": true,
+      "risk_bounds": "[P: (-127.0, -127.0), S: (254.0, 254.0)]",
+      "search_attempts": 1,
+      "start": "(39.68254, 0.881744)"
+    },
+    "walking_(1366, 768)": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 29,
+        "last_worker_ms": 1.983,
+        "max_queue": 2,
+        "max_upload_ms": 2.118,
+        "uploads": 26
+      },
+      "frames": 413,
+      "max_ms": 58.178,
+      "p50_ms": 7.064,
+      "p95_ms": 8.659,
+      "pixels": "(1366, 768)",
+      "static_memory_mib": 441.919423103333,
+      "texture_memory_mib": 339.274583816528
+    },
+    "walking_(1600, 900)": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 29,
+        "last_worker_ms": 1.983,
+        "max_queue": 2,
+        "max_upload_ms": 2.118,
+        "uploads": 26
+      },
+      "frames": 322,
+      "max_ms": 85.625,
+      "p50_ms": 8.187,
+      "p95_ms": 10.995,
+      "pixels": "(1600, 900)",
+      "static_memory_mib": 498.093983650208,
+      "texture_memory_mib": 353.190843582153
+    },
+    "walking_(1920, 1080)": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 27,
+        "last_worker_ms": 37.544,
+        "max_queue": 2,
+        "max_upload_ms": 2.118,
+        "uploads": 24
+      },
+      "frames": 290,
+      "max_ms": 86.449,
+      "p50_ms": 10.013,
+      "p95_ms": 11.947,
+      "pixels": "(1920, 1080)",
+      "static_memory_mib": 474.446045875549,
+      "texture_memory_mib": 375.746538162231
+    }
+  }
+}

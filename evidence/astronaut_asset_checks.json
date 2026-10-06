@@ -1,0 +1,138 @@
+{
+  "checks": {
+    "acyclic_hierarchy": true,
+    "no_authoring_controls": true,
+    "ten_clips": true,
+    "triangle_budget": true,
+    "decreasing_lod_counts": true,
+    "texture_cap": true,
+    "normalized_weights": true,
+    "valid_joint_indices": true,
+    "original_emu_preserved": true,
+    "glass_exports_transparency": true
+  },
+  "measurements": {
+    "triangles": {
+      "astronaut": 38976,
+      "astronaut_lod1": 21602,
+      "astronaut_lod2": 11489
+    },
+    "joints": 66,
+    "clips": [
+      "brace",
+      "fall",
+      "fast_walk",
+      "idle",
+      "recovery",
+      "stop",
+      "stumble",
+      "turn_left",
+      "turn_right",
+      "walk"
+    ],
+    "texture_sizes": [
+      [
+        1024,
+        1024
+      ],
+      [
+        1024,
+        1024
+      ],
+      [
+        470,
+        459
+      ],
+      [
+        384,
+        256
+      ],
+      [
+        384,
+        256
+      ],
+      [
+        471,
+        451
+      ],
+      [
+        471,
+        451
+      ],
+      [
+        491,
+        189
+      ],
+      [
+        569,
+        860
+      ],
+      [
+        1024,
+        1024
+      ],
+      [
+        1024,
+        1024
+      ],
+      [
+        280,
+        297
+      ],
+      [
+        442,
+        1024
+      ],
+      [
+        600,
+        100
+      ],
+      [
+        600,
+        100
+      ],
+      [
+        2048,
+        2048
+      ],
+      [
+        2048,
+        2048
+      ],
+      [
+        107,
+        640
+      ],
+      [
+        107,
+        640
+      ],
+      [
+        1024,
+        1024
+      ],
+      [
+        1024,
+        1024
+      ],
+      [
+        1024,
+        1024
+      ],
+      [
+        1024,
+        1024
+      ],
+      [
+        2048,
+        2048
+      ],
+      [
+        2048,
+        2048
+      ]
+    ],
+    "max_weight_error": 1.1920928955078125e-07,
+    "archive_sha256": "4f7ba4e0dc383f23fbe14234ead58f353102a43035e17fb3f71a4b6efac1b374"
+  }
+}

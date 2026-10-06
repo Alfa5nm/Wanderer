@@ -78,7 +78,7 @@ func run() -> void:
 	check("development_route_hidden",renderer.mesh == null)
 	renderer.queue_free()
 	await boot()
-	check("resource_content",globe.definition.markers.size()==10 and globe.mission.latitude == -4.5895 and globe.mission.landing_date == "2012-08-06")
+	check("resource_content",globe.definition.markers.size()==12 and globe.definition.markers.filter(func(m): return m is PlanetScienceSite).size()==2 and globe.mission.latitude == -4.5895 and globe.mission.landing_date == "2012-08-06")
 	check("boot_state",globe.state == globe.Navigation.PLANET_VIEW and globe.history.is_empty())
 	check("visual_texture",globe.surface.material_override.albedo_texture != null and globe.layer_manager.available_layers()==["visual"])
 	var bad_layer := PlanetDataLayer.new()

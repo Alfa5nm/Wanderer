@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "astar_detours_obstacle": true,
+    "clearance_validated": true,
+    "gamepad_switch": true,
+    "geometry_collision_unchanged": true,
+    "human_time_1x_120hz": true,
+    "human_walks": true,
+    "idle_grounded": true,
+    "injected_left_stick_moves": true,
+    "injected_right_stick_camera": true,
+    "invalid_coverage_no_route": true,
+    "keyboard_h_switch": true,
+    "pelvis_bounded": true,
+    "physical_bones_bound": true,
+    "proposal_unverified": true,
+    "ragdoll_active": true,
+    "ragdoll_finite": true,
+    "replan_completes": true,
+    "required_bones": true,
+    "rover_pace_restored": true,
+    "safe_recovery": true,
+    "science_positions_verified": true,
+    "session_deduplicates": true,
+    "session_survives_scene": true,
+    "speed_limit": true,
+    "stops_and_grounded": true,
+    "ten_animation_clips": true
+  },
+  "measurements": {
+    "ik": {
+      "clamped_targets": 5,
+      "contact_samples": 2462,
+      "ik_us": 508,
+      "planted_drift_m": 0.0158933699131012,
+      "recoveries": 1,
+      "solver_error_m": 0.0158933699131012
+    },
+    "planner_ms": 8407.296
+  }
+}

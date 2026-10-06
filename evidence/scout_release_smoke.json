@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "final_foot_lock": true,
+    "preparation_failure_keeps_ready_patch": true,
+    "render_size_(1366, 768)": true,
+    "render_size_(1600, 900)": true,
+    "render_size_(1920, 1080)": true,
+    "reset_proposal": true,
+    "reset_restores_camera": true,
+    "reset_without_terrain_rebuild": true
+  },
+  "measurements": {
+    "final_walk_1600x900": {
+      "detail": {
+        "cancelled_requests": 1,
+        "disk_hits": 29,
+        "last_worker_ms": 20.206,
+        "max_queue": 2,
+        "max_upload_ms": 2.779,
+        "uploads": 26
+      },
+      "frames": 1385,
+      "max_ms": 91.402,
+      "p50_ms": 8.287,
+      "p95_ms": 9.708,
+      "pixels": "(1600, 900)",
+      "static_memory_mib": 493.231355667114,
+      "texture_memory_mib": 354.012689590454
+    },
+    "ik": {
+      "clamped_targets": 25,
+      "contact_samples": 1674,
+      "ik_us": 301,
+      "planted_drift_m": 0.000412344787037,
+      "recoveries": 0,
+      "solver_error_m": 0.000412344787037
+    }
+  }
+}

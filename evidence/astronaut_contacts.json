@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "blocked_recovery_rejected": true,
+    "clear_recovery_allowed": true,
+    "idle_flat_ground": true,
+    "ik_endpoint_under_1cm": true,
+    "pelvis_reach_limit": true,
+    "planted_lock_under_5cm": true,
+    "steps_20cm": true,
+    "stop_on_step": true,
+    "walks_20deg_ramp": true
+  },
+  "contact_metrics": {
+    "clamped_targets": 54,
+    "contact_samples": 1152,
+    "ik_us": 860,
+    "planted_drift_m": 0.0000658531353110448,
+    "recoveries": 1,
+    "solver_error_m": 0.0000658531353110448
+  },
+  "position": "(0.0, 0.867835, 8.306116)"
+}
