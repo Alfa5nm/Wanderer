@@ -135,24 +135,69 @@ rig.animation_data_create()
 def rotation_world(name,axis,angle):
     bone=rig.pose.bones[name]; rest=bone.bone.matrix_local.to_quaternion()
     bone.rotation_mode='QUATERNION'; bone.rotation_quaternion=rest.inverted() @ Quaternion(Vector(axis),angle) @ rest
+def direction_world(name, direction):
+    """Orient anatomical bone in armature space, accounting for its posed parent."""
+    bone=rig.pose.bones[name]
+    rest=bone.bone.matrix_local.to_quaternion()
+    old=(bone.bone.tail_local-bone.bone.head_local).normalized()
+    desired=old.rotation_difference(Vector(direction).normalized()) @ rest
+    parent_pose=bone.parent.matrix.to_quaternion() if bone.parent else Quaternion()
+    parent_rest=bone.parent.bone.matrix_local.to_quaternion() if bone.parent else Quaternion()
+    local_rest=parent_rest.inverted() @ rest
+    bone.rotation_quaternion=local_rest.inverted() @ parent_pose.inverted() @ desired
+    bpy.context.view_layer.update()
+
 def pose(phase,amount,kind):
-    for bone in rig.pose.bones: bone.rotation_mode='QUATERNION'; bone.rotation_quaternion=Quaternion(); bone.location=Vector((0,0,0))
+    for bone in rig.pose.bones:
+        bone.rotation_mode='QUATERNION'; bone.rotation_quaternion=Quaternion(); bone.location=Vector((0,0,0))
+    moving=kind in ['walk','fast_walk']
+    gait=phase/math.tau
+    # Lower the pelvis slightly for knee clearance; no root translation is exported.
+    rig.pose.bones['hips'].location=rig.pose.bones['hips'].bone.matrix_local.to_quaternion().inverted() @ Vector((0,0,-0.035 if moving else -0.012))
+    bpy.context.view_layer.update()
     for side,sign in [('L',1),('R',-1)]:
-        name='upper_arm.'+side
-        bone=rig.pose.bones[name]; old=(bone.bone.tail_local-bone.bone.head_local).normalized()
-        desired=Vector((sign*0.12,-0.08,-1)).normalized()
-        rest=bone.bone.matrix_local.to_quaternion()
-        bone.rotation_quaternion=rest.inverted() @ old.rotation_difference(desired) @ rest
-        swing=math.sin(phase+(0 if side=='L' else math.pi))*amount
-        rotation_world('thigh.'+side,(1,0,0),swing*0.36)
-        rotation_world('shin.'+side,(1,0,0),max(0,-swing)*0.60)
-        rotation_world('foot.'+side,(1,0,0),-swing*0.12)
-        bone.rotation_quaternion=bone.rotation_quaternion @ Quaternion((1,0,0),-swing*0.22)
+        cycle=(gait+(0 if side=='L' else .5))%1
+        forward=0.0; lift=0.0
+        if moving:
+            half_stride=.30 if kind=='walk' else .35
+            if cycle<.60:
+                forward=half_stride*(1-2*cycle/.60)
+            else:
+                u=(cycle-.60)/.40
+                smooth=u*u*(3-2*u)
+                forward=half_stride*(-1+2*smooth)
+                lift=(.085 if kind=='walk' else .105)*math.sin(math.pi*u)**2
+        thigh=rig.pose.bones['thigh.'+side]; shin=rig.pose.bones['shin.'+side]
+        ankle=rig.pose.bones['foot.'+side].bone.head_local.copy()
+        ankle.y-=forward; ankle.z+=lift
+        hip=thigh.head.copy()
+        first=thigh.bone.length; second=shin.bone.length
+        delta=ankle-hip; distance=min(delta.length,(first+second)*.995)
+        line=delta.normalized(); cosine=max(-1,min(1,(first*first+distance*distance-second*second)/(2*first*distance)))
+        pole=Vector((0,-1,0)); pole=(pole-line*pole.dot(line)).normalized()
+        knee=hip+line*first*cosine+pole*first*math.sqrt(max(0,1-cosine*cosine))
+        direction_world('thigh.'+side,knee-hip)
+        direction_world('shin.'+side,ankle-shin.head)
+        # Flat sole through support, small toe clearance through swing.
+        rest=rig.pose.bones['foot.'+side].bone.matrix_local.to_quaternion()
+        desired=rest
+        bone=rig.pose.bones['foot.'+side]
+        local_rest=bone.parent.bone.matrix_local.to_quaternion().inverted() @ rest
+        bone.rotation_quaternion=local_rest.inverted() @ bone.parent.matrix.to_quaternion().inverted() @ desired
+        bpy.context.view_layer.update()
+        # Contralateral arm swing in the sagittal plane, with relaxed elbows/wrists.
+        swing=(-forward/.30)*(.36 if kind=='walk' else .43) if moving else math.sin(phase)*.012
+        if kind=='brace': swing=.20
+        direction_world('upper_arm.'+side,Vector((sign*.13,-math.sin(swing),-math.cos(swing))))
+        elbow=swing+.28
+        direction_world('forearm.'+side,Vector((sign*.07,-math.sin(elbow),-math.cos(elbow))))
+        direction_world('hand.'+side,Vector((sign*.04,-math.sin(elbow-.08),-math.cos(elbow-.08))))
     if kind in ['brace','stumble','recovery']:
-        rotation_world('spine',(1,0,0),0.14 if kind=='brace' else 0.28*math.sin(phase*0.5))
-    if kind=='fall': rotation_world('root',(1,0,0),-min(phase/(2*math.pi),1)*1.35)
-    if kind in ['turn_left','turn_right']: rotation_world('chest',(0,0,1),(-1 if kind=='turn_left' else 1)*0.12*math.sin(phase*0.5))
-clips={'idle':(2,0.02),'walk':(1,1),'fast_walk':(.7,1.15),'turn_left':(1,.15),'turn_right':(1,.15),'stop':(.5,.1),'brace':(1,0),'stumble':(.65,.45),'fall':(.8,0),'recovery':(2,0.2)}
+        rotation_world('spine',(1,0,0),.14 if kind=='brace' else .12*math.sin(phase*.5))
+    if kind=='fall': rotation_world('root',(1,0,0),-min(phase/math.tau,1)*1.35)
+    if kind in ['turn_left','turn_right']:
+        rotation_world('chest',(0,0,1),(-1 if kind=='turn_left' else 1)*.07*math.sin(phase))
+clips={'idle':(2,.02),'walk':(1,1),'fast_walk':(.73,1),'turn_left':(1,.15),'turn_right':(1,.15),'stop':(.5,.1),'brace':(1,0),'stumble':(.65,.45),'fall':(.8,0),'recovery':(2,.2)}
 scene=bpy.context.scene
 scene.render.fps=30
 for name,(seconds,amount) in clips.items():

@@ -22,7 +22,7 @@ if ($Rover) {
     Write-Output 'Rover measurements saved; the existing external source checksum discrepancy remains documented.'
 }
 if ($Captures) {
-    foreach ($testTask in @('scout_capture','scout_follow_route','scout_final_review','scout_release_smoke')) {
+    foreach ($testTask in @('astronaut_gait_review','scout_capture','scout_follow_route','scout_final_review','scout_release_smoke')) {
         & $Godot --path . --script "res://tests/$testTask.gd" *> "evidence/astronaut_batch_$testTask.log"
         if ($LASTEXITCODE -ne 0) { $failuresTask += $testTask }
         Write-Output "$testTask exit=$LASTEXITCODE"

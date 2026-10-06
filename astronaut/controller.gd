@@ -22,7 +22,6 @@ var fall_clock := 0.0
 var unsupported := 0.0
 var last_floor := Vector3.ZERO
 var pelvis_offset := 0.0
-var ik_clock := 0.0
 var metrics := {"ik_us":0,"planted_drift_m":0.0,"solver_error_m":0.0,"contact_samples":0,"clamped_targets":0,"recoveries":0}
 
 func find_type(node: Node,type: String) -> Node:
@@ -49,6 +48,9 @@ func _ready() -> void:
 				animation.get_animation(key).loop_mode=Animation.LOOP_LINEAR
 	camera_rig=AstronautCamera.new(); camera_rig.actor=self
 	get_parent().add_child.call_deferred(camera_rig)
+	var contacts := SkeletonModifier3D.new()
+	contacts.set_script(load("res://astronaut/gait_contacts.gd")); contacts.actor=self
+	skeleton.add_child(contacts)
 	configure_ik()
 	var alignment := SkeletonModifier3D.new()
 	alignment.set_script(load("res://astronaut/foot_alignment.gd")); alignment.actor=self
@@ -71,7 +73,7 @@ func configure_ik() -> void:
 		solver.set_target_node(i,solver.get_path_to(target))
 		solver.set_pole_node(i,solver.get_path_to(pole))
 		var id := skeleton.find_bone("foot."+side)
-		feet.append({"target":target,"pole":pole,"id":id,"planted":false,"anchor":Vector3.ZERO,"support":false,"normal":Vector3.UP})
+		feet.append({"target":target,"pole":pole,"id":id,"planted":false,"anchor":Vector3.ZERO,"support":false,"normal":Vector3.UP,"heading":Vector3.FORWARD})
 
 func configure_ragdoll() -> void:
 	simulator=PhysicalBoneSimulator3D.new(); simulator.name="FallPhysics"
@@ -98,7 +100,11 @@ func play_clip(clip: String) -> void:
 	if animation==null: return
 	for key in animation.get_animation_list():
 		if String(key)==clip or String(key).ends_with("/"+clip) or String(key).ends_with("|"+clip):
-			if animation.current_animation!=key: animation.play(key,0.15)
+			if animation.current_animation!=key:
+				var keep_cycle := String(animation.current_animation).contains("walk") and String(key).contains("walk")
+				var cycle := animation.current_animation_position/maxf(animation.current_animation_length,0.001) if keep_cycle else 0.0
+				animation.play(key,0.15)
+				if keep_cycle: animation.seek(cycle*animation.get_animation(key).length,true)
 			return
 
 func support(point: Vector3) -> Dictionary:
@@ -148,16 +154,18 @@ func _physics_process(dt: float) -> void:
 	else: unsupported+=dt
 	if (unsupported>1.0 and velocity.y < -2.5) or (get_slide_collision_count()>0 and impact>4.5): fall(); return
 	var horizontal := Vector2(velocity.x,velocity.z).length()
-	if animation!=null and animation.current_animation_length>0:
+	if animation!=null and not String(animation.current_animation).is_empty() and animation.current_animation_length>0:
 		phase=fposmod(animation.current_animation_position/animation.current_animation_length,1.0)
-	state="recovery" if recovery_clock>0 else "brace" if brace else "stop" if direction.length()<0.1 and horizontal>0.08 else "turn_left" if absf(turn_delta)>0.65 and turn_delta<0 else "turn_right" if absf(turn_delta)>0.65 else "fast_walk" if horizontal>1.15 else "walk" if horizontal>0.08 else "idle"
+	var previous_state := state
+	state="recovery" if recovery_clock>0 else "brace" if brace else "stop" if direction.length()<0.1 and horizontal>0.08 else "fast_walk" if horizontal>1.15 else "walk" if horizontal>0.08 else "turn_left" if absf(turn_delta)>0.65 and turn_delta<0 else "turn_right" if absf(turn_delta)>0.65 else "idle"
+	if state in ["walk","fast_walk"] and not previous_state in ["walk","fast_walk"]:
+		for foot in feet: foot.planted=false
 	var accel := (velocity-previous)/maxf(dt,0.0001)
 	var slope_lean := get_floor_normal().dot(global_basis.z) if is_on_floor() else 0.0
 	lean=clampf(accel.dot(global_basis.z)*0.025+horizontal*0.035+slope_lean*0.12+(0.05 if brace else 0.0),-0.12,0.12)
 	play_clip(state)
 	if animation!=null: animation.speed_scale=maxf(0.25,horizontal/(1.6 if fast else 1.0)) if horizontal>0.08 else 1.0/maxf(Engine.time_scale,0.001)
-	ik_clock+=dt/maxf(Engine.time_scale,0.001)
-	if ik_clock>=1.0/60.0: update_ik(horizontal,minf(ik_clock,0.05)); ik_clock=0
+
 
 func measure_contacts() -> void:
 	if state=="fallen": return
@@ -182,48 +190,56 @@ func step_up(direction: Vector3,dt: float) -> void:
 			var down := KinematicCollision3D.new()
 			if test_move(Transform3D(raised.basis,raised.origin+step_motion),Vector3.DOWN*0.3,down) and down.get_normal().y>=cos(deg_to_rad(25)):
 				global_position+=step_motion+Vector3.UP*(0.25-down.get_travel().length())
-				ik_clock=1.0/60.0
 				for foot in feet: foot.planted=false; foot.support=false
 
 func update_ik(speed: float,dt: float) -> void:
 	var began := Time.get_ticks_usec()
 	var minimum := 0.0
+	if animation!=null and not String(animation.current_animation).is_empty() and animation.current_animation_length>0:
+		phase=fposmod(animation.current_animation_position/animation.current_animation_length,1.0)
 	for i in 2:
 		var foot: Dictionary = feet[i]
+		# This runs before TwoBoneIK, using this frame's untouched animation pose.
 		var pose := skeleton.global_transform*skeleton.get_bone_global_pose(foot.id)
 		var hit := support(pose.origin)
 		var toe := support(pose.origin+global_basis.z*0.12)
 		var heel := support(pose.origin-global_basis.z*0.08)
 		foot.support=not hit.is_empty() and not toe.is_empty() and not heel.is_empty()
-		var stance: bool = speed<0.08 or fposmod(phase+i*0.5,1.0)<0.58
+		var cycle := fposmod(phase+i*0.5,1.0)
+		var walking := state in ["walk","fast_walk"] and speed>0.08
+		var stance: bool = not walking or cycle<0.60
+		var desired: Vector3 = pose.origin
 		if foot.support:
 			foot.normal=(hit.normal+toe.normal+heel.normal).normalized()
-			var desired: Vector3 = hit.position+Vector3.UP*0.10
-			if stance and not foot.planted: foot.anchor=desired; foot.planted=true
-			if not stance: foot.planted=false
-			if foot.planted:
-				if foot.anchor.distance_to(desired)>0.5: foot.anchor=desired; metrics.clamped_targets+=1
-				desired=foot.anchor
-			var root_id := skeleton.find_bone("thigh.L" if i==0 else "thigh.R")
-			var middle_id := skeleton.find_bone("shin.L" if i==0 else "shin.R")
-			var root := skeleton.global_transform*skeleton.get_bone_global_pose(root_id)
-			var length := skeleton.get_bone_rest(middle_id).origin.length()+skeleton.get_bone_rest(foot.id).origin.length()
-			var horizontal_reach := Vector2(root.origin.x-desired.x,root.origin.z-desired.z).length()
-			var reach := length*0.995
-			var allowed_height := sqrt(maxf(0,reach*reach-horizontal_reach*horizontal_reach))
-			var required_offset := desired.y+allowed_height-root.origin.y+pelvis_offset
+			if stance:
+				desired=hit.position+Vector3.UP*0.10
+				if not foot.planted: foot.anchor=desired; foot.heading=global_basis.z; foot.planted=true
+				# Release on large turns/step transfers, rather than crossing the legs.
+				if foot.anchor.distance_to(desired)>0.40 or foot.heading.dot(global_basis.z)<cos(deg_to_rad(20)): foot.planted=false
+				else: desired=foot.anchor
+			else:
+				foot.planted=false
+				# Preserve authored clearance; ground adaptation cannot cancel swing lift.
+				var lift := (0.105 if state=="fast_walk" else 0.085)*pow(sin(PI*(cycle-0.60)/0.40),2)
+				desired.y=hit.position.y+0.10+lift
+		else: foot.planted=false
+		var root_id := skeleton.find_bone("thigh.L" if i==0 else "thigh.R")
+		var middle_id := skeleton.find_bone("shin.L" if i==0 else "shin.R")
+		var root := skeleton.global_transform*skeleton.get_bone_global_pose(root_id)
+		var length := skeleton.get_bone_rest(middle_id).origin.length()+skeleton.get_bone_rest(foot.id).origin.length()
+		var horizontal_reach := Vector2(root.origin.x-desired.x,root.origin.z-desired.z).length()
+		var reach := length*0.995
+		var allowed_height := sqrt(maxf(0,reach*reach-horizontal_reach*horizontal_reach))
+		var required_offset := desired.y+allowed_height-root.origin.y+pelvis_offset
+		if foot.planted:
 			if required_offset < -0.15 or horizontal_reach>reach:
-				# End stance before the leg becomes unreachable; do not drag a locked foot.
-				foot.planted=false; desired=hit.position+Vector3.UP*0.10
-				metrics.clamped_targets+=1
+				foot.planted=false; desired=pose.origin; metrics.clamped_targets+=1
 			else: minimum=minf(minimum,required_offset)
-
-			foot.target.global_position=desired
-		else:
-			foot.planted=false; foot.target.global_position=pose.origin
-		foot.pole.global_position=global_position+global_basis.z*1.0+global_basis.x*(0.22 if i==1 else -0.22)+Vector3.UP*0.6
+		foot.target.global_position=desired
+		# Anatomical hip lane, forward knee bend; never send L/R poles across the body.
+		foot.pole.global_position=root.origin+global_basis.z*0.8
 	minimum=clampf(minimum,-0.15,0.0)
-	pelvis_offset=minimum if minimum<pelvis_offset else lerpf(pelvis_offset,minimum,1-exp(-dt*12))
+	pelvis_offset=minimum if minimum<pelvis_offset else lerpf(pelvis_offset,minimum,1-exp(-dt*16))
 	model.position.y=pelvis_offset
 	metrics.ik_us=maxi(metrics.ik_us,int(Time.get_ticks_usec()-began))
 

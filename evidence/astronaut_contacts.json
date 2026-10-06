@@ -11,12 +11,12 @@
     "walks_20deg_ramp": true
   },
   "contact_metrics": {
-    "clamped_targets": 54,
-    "contact_samples": 1152,
-    "ik_us": 860,
-    "planted_drift_m": 0.0000658531353110448,
+    "clamped_targets": 2,
+    "contact_samples": 1318,
+    "ik_us": 431,
+    "planted_drift_m": 0.000416743569076061,
     "recoveries": 1,
-    "solver_error_m": 0.0000658531353110448
+    "solver_error_m": 0.000416743569076061
   },
   "position": "(0.0, 0.867835, 8.306116)"
 }

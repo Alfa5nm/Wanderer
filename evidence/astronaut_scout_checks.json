@@ -29,13 +29,13 @@
   },
   "measurements": {
     "ik": {
-      "clamped_targets": 5,
-      "contact_samples": 2462,
-      "ik_us": 508,
-      "planted_drift_m": 0.0158933699131012,
+      "clamped_targets": 1,
+      "contact_samples": 2307,
+      "ik_us": 382,
+      "planted_drift_m": 0.000303035951219499,
       "recoveries": 1,
-      "solver_error_m": 0.0158933699131012
+      "solver_error_m": 0.000303035951219499
     },
-    "planner_ms": 8407.296
+    "planner_ms": 7445.803
   }
 }
